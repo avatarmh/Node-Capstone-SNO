@@ -1,0 +1,36 @@
+.membership-period {
+
+}
+
+form {
+    margin: 2rem 0;
+}
+
+form input[type="text"] {
+    display: block;
+    border: 1px solid black;
+    width: 100%;
+}
+
+@media only screen and (min-width: 720px) {
+    
+    
+    form {
+      
+      width: 50%;
+      margin: auto;
+      
+    }
+    
+}
+
+@media only screen and (max-width: 425px) {
+    
+    
+    nav {
+      
+      font-size: 12px;
+      
+    }
+    
+}

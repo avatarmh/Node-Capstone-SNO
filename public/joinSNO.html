@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SNO</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="styles/shared.css">
+  <link rel="stylesheet" href="styles/joinSNO.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header role="banner">
+    <img class="logo" alt="SNOlogo" src="SNOlogo.png" />
+    <nav role="navigation">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/about.html">About</a>
+        </li>
+        <li>
+          <a href="/conferences.html">Conferences</a>
+        </li>
+        <li>
+          <a href="/joinSNO.html">Join SNO</a>
+        </li>
+        <li>
+          <a href="/login.html">Login</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="content">
+    <div class="membership-period">
+      <p class="membership-period-header">MEMBERSHIP</p>
+      <p>Membership is for the current calendar year. Last year’s memberships expired on December 31, 2017. Join now and your
+        membership lasts until December 31, 2018.</p>
+      <p>
+        <sup class="asterisk">*</sup> Required field</p>
+    </div>
+
+    <form class="sno-membership">
+      <div class="login-credentials">
+        <label for="email">Email</label>
+        <input name="email" title="Email" class="email" type="text" required/>
+
+        <label for="password">Password</label>
+        <input name="password" title="Password" class="SNO-password" type="text" required/>
+      </div>
+      <div class="radio-mem-type">
+        <p>Membership Options and Rates</p>
+        <ul class="radio-group">
+          <li>
+            <input id="radio_1" type="radio" class="radio">
+            <label for="">Student Member: $30.00</label>
+          </li>
+          <li>
+            <input id="radio_2" type="radio" class="radio">
+            <label for="">Recent Graduate: $90.00</label>
+          </li>
+          <li>
+            <input id="radio_3" type="radio" class="radio">
+            <label for="">Regular Member: $150.00</label>
+          </li>
+          <li>
+            <input id="radio_4" type="radio" class="radio">
+            <label for="">Regular 3-year Member: $350.00</label>
+          </li>
+          <li>
+            <input id="radio_5" type="radio" class="radio">
+            <label for="">Contributing Member: $275.00</label>
+          </li>
+          <li>
+            <input id="radio_6" type="radio" class="radio">
+            <label for="">Gold Member: $500.00</label>
+          </li>
+          <li>
+            <input id="radio_7" type="radio" class="radio">
+            <label for="">Platinum Member: $1,000.00</label>
+          </li>
+        </ul>
+      </div>
+      
+    <div>
+
+    </div>
+      <select class="member-type" name="member-type" id="member-type-dropdown">
+          <option class="options" value="0">Please Select</option>
+        <option value="5">Academia</option>
+        <option value="4">Industry</option>
+        <option value="3">Government</option>
+        <option value="2">Student</option>
+        <option value="1">Retired</option>
+  
+      </select>
+      <div class="member-type-other">
+        <div class="member-type-other-checkbox">
+          <input type="checkbox">
+          <label for="">other</label>
+        </div>
+        <input type="text">
+      </div>
+    </div>
+  
+
+
+    </form>
+
+
+  </div>
+</body>
+
+
+
+          <!-- <p class="error hidden">Enter title and valid url</p> -->
+<!-- <br>
+          <textarea name="bookmark-description" rows="10" cols="80" title="Description" class="js-bookmark-list-description" placeholder="e.g., longer description here"></textarea>
+        </div>
+
+        <div class="side2">
+
+          <div class="radio-div">
+            <input type="radio" id="rating5" name="bookmark-rating" class="js-bookmark-list-rating" value="5"></input>
+            <label for="rating5">5 star</label>
+          </div>
+
+          <div class="radio-div">
+            <input type="radio" id="rating4" name="bookmark-rating" class="js-bookmark-list-rating" value="4"></input>
+            <label for="rating4">4 star</label>
+          </div>
+
+          <div class="radio-div">
+            <input type="radio" id="rating3" name="bookmark-rating" class="js-bookmark-list-rating" value="3"></input>
+            <label for="rating3">3 star</label>
+          </div>
+
+          <div class="radio-div">
+            <input type="radio" id="rating2" name="bookmark-rating" class="js-bookmark-list-rating" value="2"></input>
+            <label for="rating2">2 star</label>
+          </div>
+
+          <div class="radio-div">
+            <input type="radio" id="rating1" name="bookmark-rating" class="js-bookmark-list-rating" value="1"></input>
+            <label for="rating1">1 star</label>
+          </div>
+
+          <button id="submitItemButton" name="add" title="Click to submit your bookmark" type="submit">Submit</button>
+          <input role='button' type="button" id="cancelButton" value="Cancel" />
+        </form>
+
+      </section>
+      <section role='region' class="bookmark-list">
+        <ul class="bookmarks-list js-bookmarks-list">
+          <li class="hidden bookmark-item">
+            <header>
+              <span class="header-text">Article on Cats</span>
+              <button class="remove-bookmark-button">X</button>
+              <button class="edit-bookmark-item" name="edit">Edit</button>
+            </header>
+            <article>
+              <p class="description">
+                The Lion in the Living
+              </p>
+            </article>
+
+
+
+          </li>
+        </ul>
+      </section>
+    </div>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="scripts/api.js"></script>
+    <script type="text/javascript" src="scripts/Item.js"></script>
+    <script type="text/javascript" src="scripts/store.js"></script>
+    <script type="text/javascript" src="scripts/bookmarks-list.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script> -->
+
+</html>
