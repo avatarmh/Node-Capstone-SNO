@@ -1,6 +1,6 @@
-.content {
+/* .content {
     font-weight: bold;
-}
+} */
 .membership-period-header {
     color: blue;
 }
@@ -15,13 +15,13 @@ form input[type="text"] {
     width: 100%;
 }
 
-.radio-member-type p {
+.form-header {
     margin-top: 3rem;
+    color: blue;
 }
 
-.member-type-other {
-    width: 100%;
-    margin: auto;
+.radio-member-type p {
+    margin-top: 3rem;
 }
 
 .member-type {
@@ -29,7 +29,9 @@ form input[type="text"] {
 }
 
 .member-type-other {
-    margin: 0.5rem 0 0 0;
+    width: 100%;
+    margin: auto;
+    margin-top: 0.5rem;
 }
 
 #other-member-input {
@@ -37,11 +39,14 @@ form input[type="text"] {
     width: 82%;
 }
 
+.fullname input {
+    margin-bottom: 1rem;
+}
+
 .fullname {
     margin-top: 3rem;
     width: 100%;
 }
-
 
 .address {
     font-weight: normal;

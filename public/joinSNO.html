@@ -57,7 +57,7 @@
       </div>
 
       <div class="radio-member-type">
-        <p>Membership Options and Rates</p>
+        <p class"form-header">Membership Options and Rates</p>
         <ul class="radio-group">
           <li>
             <input id="radio_1" type="radio" class="radio">
@@ -108,52 +108,72 @@
         <input id="other-member-input" type="text">
     </div>
   
-
+ 
     <div class="fullname">
+      <p class="form-header">Name</p>
+
+
       <label for="firstname">First Name<span class="asterisk">*</span></label>
-      <input name="firstname" title="firstname" class="firstname" type="text" required/>
+      <input name="firstname" class="firstname" type="text" required/>
 
       <label for="middleinitial">Middle Initial</label>
-      <input name="middleinitial" title="middleinitial" class="middleinitial" type="text"/>
+      <input name="middleinitial" class="middleinitial" type="text"/>
 
       <label for="middleinitial">Last Name<span class="asterisk">*</span></label>
-      <input name="lastname" title="lastname" class="lastname" type="text" required/>
+      <input name="lastname" class="lastname" type="text" required/>
     </div>
 
     
-    <p>Address</p>
+    <p class="form-header">Address</p>
 
     <div class="address">
 
       <label for="street-1">Street Address 1<span class="asterisk">*</span></label>
-      <input name="street-1" title="street-1" class="street-1" type="text" required/>
+      <input name="street-1" class="street-1" type="text" required/>
 
       <label for="street-2">Street Address 2</label>
-      <input name="street-2" title="street-2" class="street-2" type="text"/>
+      <input name="street-2" class="street-2" type="text"/>
 
       <label for="city">City<span class="asterisk">*</span></label>
-      <input name="city" title="city" class="city" type="text" required/>
+      <input name="city" class="city" type="text" required/>
 
-      <label for="state-prov-dept">State/Province/Dept<span class="asterisk">*</span></label>
-      <input name="state-prov-dept" title="state-prov-dept" class="state-prov-dept" type="text" required/>
+      <label for="state-prov-dept">State/Province/Department<span class="asterisk">*</span></label>
+      <input name="state-prov-dept" class="state-prov-dept" type="text" required/>
 
       <label for="postal-code">Postal or Zip Code<span class="asterisk">*</span></label>
-      <input name="postal-code" title="postal-code" class="postal-code" type="text" required/>
+      <input name="postal-code" class="postal-code" type="text" required/>
 
       <label for="Country">Country<span class="asterisk">*</span></label>
-      <input name="country" title="country" class="country" type="text" required/>
+      <input name="country" class="country" type="text" required/>
     </div> 
+
+    <p class="form-header">Other Contact Information</p>
 
     <div class="other-contact-info">
         <label for="phone">Phone Number<span class="asterisk">*</span></label>
-        <input name="phone" title="phone" class="phone" type="text" required/>
+        <input name="phone" class="phone" type="text" required/>
 
         <label for="alt-phone">Alternate Phone Number</label>
-        <input name="alt-phone" title="alt-phone" class="alt-phone" type="text"/>
+        <input name="alt-phone" class="alt-phone" type="text"/>
     
         <label for="fax">Fax</label>
-        <input name="fax" title="fax" class="fax" type="text"/>
+        <input name="fax" class="fax" type="text"/>
     </div>
+ 
+
+    <div class="radio-member-type">
+        <p class"form-header">Gender</p>
+        <ul class="radio-group-gender">
+          <li>
+            <input id="radio_1" type="radio" class="radio">
+            <label for="">Male</label>
+          </li>
+          <li>
+            <input id="radio_2" type="radio" class="radio">
+            <label for="">Female</label>
+          </li>
+        </ul>
+      </div>
  
  
   </form>
