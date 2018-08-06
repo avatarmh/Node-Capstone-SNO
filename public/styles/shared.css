@@ -50,17 +50,18 @@ img.logo {
 
 .asterisk {
     color: red;
-    font-size: .8rem;
-}
-
-.radio-mem-type {
+    font-size: 1rem;
     font-weight: bold;
 }
 
-.radio-mem-type .radio-group {
+.radio-member-type {
+    font-weight: bold;
+}
+
+.radio-member-type .radio-group {
     padding: 0;
 }
-.radio-mem-type li {
+.radio-member-type li {
     list-style: none;
 }
 
