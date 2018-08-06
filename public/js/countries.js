@@ -1,4 +1,4 @@
-const countries = [
+window.countries = [
   { key: "AF", name: "Afghanistan" },
   { key: "AX", name: "Åland Islands" },
   { key: "AL", name: "Albania" },

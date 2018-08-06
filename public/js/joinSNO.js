@@ -1,4 +1,4 @@
-let dropdownCountries = countries.map(countryData => {
+dropdownCountries = window.countries.map(countryData => {
   return `<option value="${countryData.key}">${countryData.name}</option>`;
 });
 
