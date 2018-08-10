@@ -1,6 +1,6 @@
-/* .content {
-    font-weight: bold;
-} */
+.content {
+    font-weight: normal;
+}
 .membership-period-header {
     color: blue;
 }
@@ -20,11 +20,17 @@ form input[type="text"] {
     color: blue;
 }
 
-.radio-member-type p {
-    margin-top: 3rem;
+input {
+    margin-bottom: 0.5rem;
 }
 
-.member-type {
+.radio-member-type p {
+    margin-top: 3rem;
+    font-weight: normal;
+    
+}
+
+.radio-group {
     font-weight: normal;
 }
 
@@ -39,18 +45,15 @@ form input[type="text"] {
     width: 82%;
 }
 
-.fullname input {
-    margin-bottom: 1rem;
-}
-
 .fullname {
     margin-top: 3rem;
     width: 100%;
 }
 
 .address {
-    font-weight: normal;
+    width: 100%;
 }
+
 @media only screen and (min-width: 720px) {
     form {
         width: 50%;

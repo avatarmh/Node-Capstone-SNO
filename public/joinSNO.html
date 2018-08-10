@@ -38,6 +38,8 @@
       </ul>
     </nav>
   </header>
+
+
   <div class="content">
     <div class="membership-period">
       <p class="membership-period-header">MEMBERSHIP</p>
@@ -54,10 +56,12 @@
 
         <label for="password">Password</label>
         <input name="password" title="Password" class="SNO-password" type="text" required/>
+        <img class="robot-test" alt="robot-test" src="confirm-humanity.png" />
+
       </div>
 
       <div class="radio-member-type">
-        <p class"form-header">Membership Options and Rates</p>
+        <p class="form-header">Membership Options and Rates</p>
         <ul class="radio-group">
           <li>
             <input id="radio_1" type="radio" class="radio">
@@ -124,10 +128,9 @@
     </div>
 
 
-    <p class="form-header">Address</p>
 
     <div class="address">
-
+      <p class="form-header">Address</p>
       <label for="street-1">Street Address 1<span class="asterisk">*</span></label>
       <input name="street-1" class="street-1" type="text" required/>
 
@@ -142,12 +145,9 @@
 
       <label for="postal-code">Postal or Zip Code<span class="asterisk">*</span></label>
       <input name="postal-code" class="postal-code" type="text" required/>
-
-
-
-
+      
       <label for="Country">Country<span class="asterisk">*</span></label>
-
+     
       <select id="country-dropdown" name="country" required>
         <option value="" selected disabled>-- Please Select a Country --</option>
       </select>
@@ -160,9 +160,9 @@
 
     </div>
 
-    <p class="form-header">Other Contact Information</p>
 
     <div class="other-contact-info">
+        <p class="form-header">Other Contact Information</p>
         <label for="phone">Phone Number<span class="asterisk">*</span></label>
         <input name="phone" class="phone" type="number" required/>
 
