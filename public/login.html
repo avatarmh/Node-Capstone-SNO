@@ -10,58 +10,67 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="styles/shared.css">
   <link rel="stylesheet" href="styles/login.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
-  
-    <header role="banner">
-        <img class="logo" alt="SNOlogo" src="SNOlogo.png" />
-        <nav role="navigation">
-          <ul>
-            <li>
-              <a href="/index.html">Home</a>
-            </li>
-            <li>
-              <a href="/about.html">About</a>
-            </li>
-            <li>
-              <a href="/conferences.html">Conferences</a>
-            </li>
-            <li>
-              <a href="/joinSNO.html">Join SNO</a>
-            </li>
-            <li>
-              <a href="/login.html">Login</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    
-  
-      <div class="content">    
-          <form class="login">
-            <div class="login-credentials">
-              <label for="email">Email</label>
-              <input type="text" name="email" title="Email" class="email" type="username" required/>
-      
-              <label for="password">Password</label>
-              <input type="text" name="password" title="Password" class="SNO-password" type="password" required/>
-              <a href="/new-password.html" class="new-password">Forgot password?</a>
-            </div>
-      
+
+  <header role="banner">
+    <img class="logo" alt="SNOlogo" src="SNOlogo.png" />
+    <nav role="navigation">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/about.html">About</a>
+        </li>
+        <li>
+          <a href="/conferences.html">Conferences</a>
+        </li>
+        <li>
+          <a href="/joinSNO.html">Join SNO</a>
+        </li>
+        <li>
+          <a href="/login.html">Login</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="content">
+    <form class="login">
+      <div class="login-credentials">
+        <label for="email">Email</label>
+        <input type="text" name="email" title="Email" class="email" type="username" required/>
+
+        <label for="password">Password</label>
+        <input type="text" name="password" title="Password" class="SNO-password" type="password" required/>
+        <a href="/new-password.html" class="new-password">Forgot password?</a>
+      </div>
+
       <div class="page-buttons">
-          <button id="login-button" name="add" title="Login" type="submit">Login</button>
-          <input role='button' type="button" id="cancelButton" value="Cancel" />
-        </div>
+        <button id="login-button" name="add" title="Login" type="submit">Login</button>
+      </div>
 
       <div class="terms">
-        <p>By proceeding, I agree to <a href="/terms-service-privacy" class="terms-link">
-          SNO’S Terms of Service and Privacy Policy></a>
-          </p>
+        <p>By proceeding, I agree to
+          <a href="/terms-service-privacy" class="terms-link">
+            SNO’S Terms of Service and Privacy Policy</a>
+        </p>
+        <p class="member"></p>
       </div>
-      
 
-  </body>
+      <div class="not-yet-member">
+          <p>Not yet a SNO member?
+            <a href="joinSNO.html" class="join-SNO">
+              Join SNO here.</a>
+          </p>
+          <p class="member"></p>
+        </div>
+  
+</body>
 
-  </html>
+</html>

@@ -40,232 +40,250 @@
   </header>
 
   <main role="main">
-  <div class="content">
-    <div class="membership-period">
-      <p class="membership-period-header">MEMBERSHIP</p>
-      <p>Membership is for the current calendar year. Last year’s memberships expired on December 31, 2017. Join now and your
-        membership lasts until December 31, 2018.</p>
-      <p>
-        <span class="asterisk">*</span>Required field</p>
-    </div>
-
-    <form class="sno-membership">
-      <div class="login-credentials">
-        <p class="form-header">Join SNO</p>
-        <label for="email">Email</label>
-        <input type="text" name="email" title="Email" class="email" type="username" required/>
-
-        <label for="password">Password</label>
-        <input type="text" name="password" title="Password" class="SNO-password" type="password" required/>
-        <img class="robot-test" alt="robot-test" src="confirm-humanity.png" />
-
+    <div class="content">
+      <div class="membership-period">
+        <p class="membership-period-header">MEMBERSHIP</p>
+        <p>Membership is for the current calendar year. Last year’s memberships expired on December 31, 2017. Join now and your
+          membership lasts until December 31, 2018.</p>
+        <p>
+          <span class="asterisk">*</span>Required field</p>
       </div>
 
-      <div class="radio-member-type membership-options">
-        <p class="form-header">Membership Options and Payment<span class="asterisk">*</span></p>
-        <ul class="radio-group">
-          <li>
-            <input id="radio_1" type="radio" class="radio">
-            <label for="">Student Member: $30.00</label>
-          </li>
-          <li>
-            <input id="radio_2" type="radio" class="radio">
-            <label for="">Recent Graduate: $90.00</label>
-          </li>
-          <li>
-            <input id="radio_3" type="radio" class="radio">
-            <label for="">Regular Member: $150.00</label>
-          </li>
-          <li>
-            <input id="radio_4" type="radio" class="radio">
-            <label for="">Regular 3-year Member: $350.00</label>
-          </li>
-          <li>
-            <input id="radio_5" type="radio" class="radio">
-            <label for="">Contributing Member: $275.00</label>
-          </li>
-          <li>
-            <input id="radio_6" type="radio" class="radio">
-            <label for="">Gold Member: $500.00</label>
-          </li>
-          <li>
-            <input id="radio_7" type="radio" class="radio">
-            <label for="">Platinum Member: $1,000.00</label>
-          </li>
-        </ul>
-      </div>
+      <form class="sno-membership">
+        <div class="login-credentials">
+          <p class="form-header">Join SNO</p>
+          <label for="email">Email</label>
+          <input type="text" name="email" title="Email" class="email" type="username" required/>
+
+          <label for="password">Password</label>
+          <input type="text" name="password" title="Password" class="SNO-password" type="password" required/>
+          <img class="robot-test" alt="robot-test" src="confirm-humanity.png" />
+
+        </div>
+
+        <div class="radio-member-type membership-options">
+          <p class="form-header">Membership Options and Payment
+            <span class="asterisk">*</span>
+          </p>
+          <ul class="radio-group">
+            <li>
+              <input id="radio_1" type="radio" class="radio">
+              <label for="">Student Member: $30.00</label>
+            </li>
+            <li>
+              <input id="radio_2" type="radio" class="radio">
+              <label for="">Recent Graduate: $90.00</label>
+            </li>
+            <li>
+              <input id="radio_3" type="radio" class="radio">
+              <label for="">Regular Member: $150.00</label>
+            </li>
+            <li>
+              <input id="radio_4" type="radio" class="radio">
+              <label for="">Regular 3-year Member: $350.00</label>
+            </li>
+            <li>
+              <input id="radio_5" type="radio" class="radio">
+              <label for="">Contributing Member: $275.00</label>
+            </li>
+            <li>
+              <input id="radio_6" type="radio" class="radio">
+              <label for="">Gold Member: $500.00</label>
+            </li>
+            <li>
+              <input id="radio_7" type="radio" class="radio">
+              <label for="">Platinum Member: $1,000.00</label>
+            </li>
+          </ul>
+        </div>
 
 
-    <div class="member-type">
-      <label>Member Type<span class="asterisk">*</span>
-        <select class="member-type dropdown-menu" name="member-type" id="member-type-dropdown">
-          <option class="options" value="0"></option>
-          <option value="5">Academia</option>
-          <option value="4">Industry</option>
-          <option value="3">Government</option>
-          <option value="2">Student</option>
-          <option value="1">Retired</option>
-        </select>
-      </label>
-    </div>
+        <div class="member-type">
+          <label>Member Type
+            <span class="asterisk">*</span>
+            <select class="member-type dropdown-menu" name="member-type" id="member-type-dropdown">
+              <option class="options" value="0"></option>
+              <option value="5">Academia</option>
+              <option value="4">Industry</option>
+              <option value="3">Government</option>
+              <option value="2">Student</option>
+              <option value="1">Retired</option>
+            </select>
+          </label>
+        </div>
 
-    <div class="member-type menu-other">
-        <input id="member-type-checkbox" type="checkbox">
-        <label for="other">Other</label>
-        <input id="other-input" type="text">
-    </div>
-
-
-    <div class="fullname">
-      <p class="form-header">Name</p>
-
-
-      <label for="firstname">First Name<span class="asterisk">*</span></label>
-      <input name="firstname" class="firstname" type="text" required/>
-
-      <label for="middleinitial">Middle Initial</label>
-      <input name="middleinitial" class="middleinitial" type="text"/>
-
-      <label for="middleinitial">Last Name<span class="asterisk">*</span></label>
-      <input name="lastname" class="lastname" type="text" required/>
-    </div>
-
-
-
-    <div class="address">
-      <p class="form-header">Address</p>
-      <label for="street-1">Street Address 1<span class="asterisk">*</span></label>
-      <input name="street-1" class="street-1" type="text" required/>
-
-      <label for="street-2">Street Address 2</label>
-      <input name="street-2" class="street-2" type="text"/>
-
-      <label for="city">City<span class="asterisk">*</span></label>
-      <input name="city" class="city" type="text" required/>
-
-      <label for="state-prov-dept">State/Province/Department<span class="asterisk">*</span></label>
-      <input name="state-prov-dept" class="state-prov-dept" type="text" required/>
-
-      <label for="postal-code">Postal or Zip Code<span class="asterisk">*</span></label>
-      <input name="postal-code" class="postal-code" type="text" required/>
-      
-      <label for="Country">Country<span class="asterisk">*</span></label>
-      <select id="country-dropdown" class="dropdown-menu" name="country" required>
-        <option class="options" value="" selected disabled></option>
-      </select>
-    </div>
-
-
-
-    <div class="other-contact-info">
-        <p class="form-header">Additional Contact Information</p>
-        <label for="phone">Phone Number<span class="asterisk">*</span></label>
-        <input type="text" id="phone" name="phone" required />
-
-        <label for="alt-phone">Alternate Phone Number</label>
-        <input  type="text" name="alt-phone" class="alt-phone"/>
-
-        <label for="fax">Fax</label>
-        <input type="text" name="fax" class="fax"/>
-    </div>
-
-  
-    <div class="radio-gender-type">
-        <p class="form-header">Gender</p>
-        <ul class="radio-group">
-          <li>
-            <input id="radio_1" type="radio" class="radio">
-            <label for="">Male</label>
-          </li>
-          <li>
-            <input id="radio_2" type="radio" class="radio">
-            <label for="">Female</label>
-          </li>
-        </ul>
-      </div>
-
-    <div class="affiliation">
-          <p class="form-header">Affiliation/Interest</p>
-          <label for="affiliation">Institution/Company<span class="asterisk">*</span></label>
-          <input type="text" id="affiliation" name="affiliation" required />
-  
-          <label for="position">Position/Title</label>
-          <input  type="text" name="position" class="position"/>
-  
-          <label for="dept-unit">Department/Business Unit</label>
-          <input type="text" name="dept-unit" class="dept-unit"/>
-      </div>
-
-    <div>
-      <label for="research-focus">General Focus of Nanotechnology Research<span class="asterisk">*</span></label>
-      <select class="research-focus dropdown-menu" name="research-focus" id="research-focus-dropdown">
-        <option class="options" value="0"></option>
-        <option value="5">Synthesis/Characterization</option>
-        <option value="4">Applications</option>
-        <option value="3">Implications</option>
-        <option value="2">Societal/Policy Aspects</option>
-        <option value="1">Economic Aspects</option>
-      </select>
-    </div>
-
-    <div class="research-focus menu-other">
-      <input id="research-focus-checkbox" type="checkbox">
-      <label for="other">Other</label>
-      <input id="other-input" type="text">
-    </div>
-    
-    <div class="interests">
-      <p></p>
-        <label for="specific-interests">Specific interests in sustainable nanotechnology</label>
-        <textarea id="specific-SNO-interests"  rows="2rem" title="Description" class="specific-SNO-interests">
-    </textarea>
-  </div>
-
-  <div class="radio-member-type SNO-interest">
-      <p class="form-header">Interest in SNO Involvement<span class="asterisk">*</span>
-        (select all that apply)</p>
-      <ul class="radio-group">
-        <li>
-          <input id="radio_1" type="checkbox">
-          <label for="">Officer/Leader</label>
-        </li>
-        <li>
-          <input id="radio_2" type="checkbox">
-          <label for="">Committe chair</label>
-        </li>
-        <li>
-          <input id="radio_3" type="checkbox">
-          <label for="">Committee member</label>
-        </li>
-        <li>
-          <input id="radio_4" type="checkbox">
-          <label for="">Journal  editor</label>
-        </li>
-        <li>
-          <input id="radio_5" type="checkbox">
-          <label for="">Conference organizer</label>
-        </li>
-        <li>
-          <input id="radio_6" type="checkbox">
-          <label for="">Session organizer</label>
-        </li>
-        <li>
-          <input id="sno-interest-checkbox" type="checkbox">
+        <div class="member-type menu-other">
+          <input id="member-type-checkbox" type="checkbox">
           <label for="other">Other</label>
           <input id="other-input" type="text">
-        </li>
-       </ul>
+        </div>
+
+        <div class="fullname">
+          <p class="form-header">Name</p>
+
+
+          <label for="firstname">First Name
+            <span class="asterisk">*</span>
+          </label>
+          <input name="firstname" class="firstname" type="text" required/>
+
+          <label for="middleinitial">Middle Initial</label>
+          <input name="middleinitial" class="middleinitial" type="text" />
+
+          <label for="middleinitial">Last Name
+            <span class="asterisk">*</span>
+          </label>
+          <input name="lastname" class="lastname" type="text" required/>
+        </div>
+
+        <div class="address">
+          <p class="form-header">Address</p>
+          <label for="street-1">Street Address 1
+            <span class="asterisk">*</span>
+          </label>
+          <input name="street-1" class="street-1" type="text" required/>
+
+          <label for="street-2">Street Address 2</label>
+          <input name="street-2" class="street-2" type="text" />
+
+          <label for="city">City
+            <span class="asterisk">*</span>
+          </label>
+          <input name="city" class="city" type="text" required/>
+
+          <label for="state-prov-dept">State/Province/Department
+            <span class="asterisk">*</span>
+          </label>
+          <input name="state-prov-dept" class="state-prov-dept" type="text" required/>
+
+          <label for="postal-code">Postal or Zip Code
+            <span class="asterisk">*</span>
+          </label>
+          <input name="postal-code" class="postal-code" type="text" required/>
+
+          <label for="Country">Country
+            <span class="asterisk">*</span>
+          </label>
+          <select id="country-dropdown" class="dropdown-menu" name="country" required>
+            <option class="options" value="" selected disabled></option>
+          </select>
+        </div>
+
+        <div class="other-contact-info">
+          <p class="form-header">Additional Contact Information</p>
+          <label for="phone">Phone Number
+            <span class="asterisk">*</span>
+          </label>
+          <input type="text" id="phone" name="phone" required />
+
+          <label for="alt-phone">Alternate Email</label>
+          <input type="text" name="alt-email" class="alt-email" />
+
+          <label for="fax">Fax</label>
+          <input type="text" name="fax" class="fax" />
+        </div>
+
+
+        <div class="radio-gender-type">
+          <p class="form-header">Gender</p>
+          <ul class="radio-group">
+            <li>
+              <input id="radio_1" type="radio" class="radio">
+              <label for="">Male</label>
+            </li>
+            <li>
+              <input id="radio_2" type="radio" class="radio">
+              <label for="">Female</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="affiliation">
+          <p class="form-header">Affiliation/Interest</p>
+          <label for="affiliation">Institution/Company
+            <span class="asterisk">*</span>
+          </label>
+          <input type="text" id="affiliation" name="affiliation" required />
+
+          <label for="position">Position/Title</label>
+          <input type="text" name="position" class="position" />
+
+          <label for="dept-unit">Department/Business Unit</label>
+          <input type="text" name="dept-unit" class="dept-unit" />
+        </div>
+
+        <div>
+          <label for="research-focus">General Focus of Nanotechnology Research
+            <span class="asterisk">*</span>
+          </label>
+          <select class="research-focus dropdown-menu" name="research-focus" id="research-focus-dropdown">
+            <option class="options" value="0"></option>
+            <option value="5">Synthesis/Characterization</option>
+            <option value="4">Applications</option>
+            <option value="3">Implications</option>
+            <option value="2">Societal/Policy Aspects</option>
+            <option value="1">Economic Aspects</option>
+          </select>
+        </div>
+
+        <div class="research-focus menu-other">
+          <input id="research-focus-checkbox" type="checkbox">
+          <label for="other">Other</label>
+          <input id="other-input" type="text">
+        </div>
+
+        <div class="interests">
+          <label for="specific-interests">Specific interests in sustainable nanotechnology</label>
+          <textarea id="specific-SNO-interests" rows="2rem" title="Description" class="specific-SNO-interests"></textarea>
+        </div>
+
+        <div class="radio-member-type SNO-interest">
+          <p class="form-header">
+            Interest in SNO Involvement
+            <span class="asterisk">*</span>(select all that apply)
+          </p>
+          <ul class="radio-group">
+            <li>
+              <input id="radio_1" type="checkbox">
+              <label for="">Officer/Leader</label>
+            </li>
+            <li>
+              <input id="radio_2" type="checkbox">
+              <label for="">Committe chair</label>
+            </li>
+            <li>
+              <input id="radio_3" type="checkbox">
+              <label for="">Committee member</label>
+            </li>
+            <li>
+              <input id="radio_4" type="checkbox">
+              <label for="">Journal editor</label>
+            </li>
+            <li>
+              <input id="radio_5" type="checkbox">
+              <label for="">Conference organizer</label>
+            </li>
+            <li>
+              <input id="radio_6" type="checkbox">
+              <label for="">Session organizer</label>
+            </li>
+            <li>
+              <input id="sno-interest-checkbox" type="checkbox">
+              <label for="other">Other</label>
+              <input id="other-input" type="text">
+            </li>
+          </ul>
+        </div>
+
+        <div class="page-buttons">
+          <button id="submit-button" name="submit-button" type="submit">Submit</button>
+        </div>
+
+
+
+
+      </form>
     </div>
-
-  <div class="page-buttons">
-    <button id="submit-button" name="submit-button" type="submit">Submit</button>
-   </div>
-
-
-
-
-  </form>
-  </div>
   </main>
 
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
@@ -273,4 +291,5 @@
   <script src="/js/countries.js"></script>
   <script src="/js/joinSNO.js"></script>
 </body>
+
 </html>
