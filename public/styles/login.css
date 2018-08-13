@@ -1,0 +1,54 @@
+form {
+    margin: 2rem 0;
+}
+
+form input[type="text"] {
+    display: block;
+    border: 1px solid black;
+    width: 100%;
+}
+
+input {
+    margin-bottom: 0.5rem;
+}
+
+.new-password {
+    float: right;
+    color: blue;
+    margin-top: 0;
+}
+
+.terms-link {
+    text-align: center;
+    color: blue;
+    margin-top: 0:
+}
+
+button, input[type="button"], input[type="submit"] {
+    margin: 1rem;
+    border-radius: 0px;
+    border: 1px solid black;
+}
+
+.page-buttons {
+   text-align: center;
+}
+
+@media only screen and (min-width: 720px) {
+    form {
+        width: 50%;
+        margin: auto
+    }
+    
+}
+
+@media only screen and (max-width: 425px) {
+    
+    
+    nav {
+      
+      font-size: 12px;
+      
+    }
+    
+}
