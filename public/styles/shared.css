@@ -17,9 +17,7 @@ header {
 
 nav {
     display: inline-block;
-    /* width: 95%; */
-    /* float: right; */
-    text-align: center;
+     text-align: center;
     padding-right: 0px;
     margin-right: 0px;
 }
@@ -45,40 +43,12 @@ img.logo {
 }
 
 .content {
-    padding: 10px;   
+    padding: 10px;
+        font-weight: normal;  
 }
 
 .asterisk {
     color: red;
     font-size: 1rem;
     font-weight: bold;
-}
-
-.radio-member-type {
-    font-weight: bold;
-}
-
-.radio-member-type .radio-group {
-    padding: 0;
-}
-.radio-member-type li {
-    list-style: none;
-}
-
-.member-type {
-    width: 100%;
-    border: 1px solid;
-    border-radius: 0;
-
-}
-
-.member-type-other-checkbox {
-    width: 25%;
-    margin-right: 3%;
-    float: left;
-}
-
-.member-type-other input[type="text"] {
-    float: left;
-    width: 70%;
 }

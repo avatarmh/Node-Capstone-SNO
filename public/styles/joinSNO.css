@@ -1,6 +1,3 @@
-.content {
-    font-weight: normal;
-}
 .membership-period-header {
     color: blue;
 }
@@ -24,23 +21,47 @@ input {
     margin-bottom: 0.5rem;
 }
 
-.radio-member-type p {
-    margin-top: 3rem;
-    font-weight: normal;
-    
-}
 
 .radio-group {
-    font-weight: normal;
+    padding: 0;
 }
 
-.member-type-other {
+.radio-group li {
+    list-style: none;
+}
+
+.dropdown-menu {
+    width: 100%;
+    border: 1px solid;
+    border-radius: 0;
+
+}
+
+/*
+
+.member-type-other-checkbox {
+    width: 25%;
+    margin-right: 3%;
+    float: left;
+}
+
+.member-type-other input[type="text"] {
+    float: left;
+    width: 70%;
+} */
+
+.radio-member-type p {
+    margin-top: 3rem;
+}
+
+
+.menu-other {
     width: 100%;
     margin: auto;
     margin-top: 0.5rem;
 }
 
-#other-member-input {
+#other-input {
     float: right;
     width: 82%;
 }
@@ -50,8 +71,20 @@ input {
     width: 100%;
 }
 
-.address {
+textarea {
+    border: 1px solid black;
     width: 100%;
+
+}
+
+button, input[type="button"], input[type="submit"] {
+    margin: 2rem;
+    border-radius: 0px;
+    border: 1px solid black;
+}
+
+.page-buttons {
+   text-align: center;
 }
 
 @media only screen and (min-width: 720px) {

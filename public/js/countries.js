@@ -233,10 +233,7 @@ window.countries = [
   { key: "UG", name: "Uganda" },
   { key: "UA", name: "Ukraine" },
   { key: "AE", name: "United Arab Emirates (the)" },
-  {
-    key: "GB",
-    name: "United Kingdom of Great Britain and Northern Ireland (the)"
-  },
+  { key: "GB", name: "United Kingdom of Great Britain and Northern Ireland (the)"},
   { key: "UM", name: "United States Minor Outlying Islands (the)" },
   { key: "US", name: "United States of America (the)" },
   { key: "UY", name: "Uruguay" },
