@@ -1,34 +1,17 @@
-header {
-    border: 1px solid grey;
-    position: fixed;
-    background-color: white;
-    top: 0;
-    right: 0;
-    left: 0;
-}
-main {
-    margin-top: 80px;
-}
 .membership-period-header {
     color: blue;
-    font-size: 14px;
 }
 
-form {
-    margin: 2rem 0;
+h4 {
+    margin-top: 3rem;
+    color: #19A361;
 }
 
-input[type="text"], input[type="password"] {
+form input[type="text"] {
     display: block;
     border: 1px solid black;
     width: 100%;
 }
-
-/* form input[type="password"] {
-    display: block;
-    border: 1px solid black;
-    width: 100%;
-} */
 
 .form-header {
     margin-top: 3rem;
@@ -55,6 +38,18 @@ input {
 
 }
 
+/*
+
+.member-type-other-checkbox {
+    width: 25%;
+    margin-right: 3%;
+    float: left;
+}
+
+.member-type-other input[type="text"] {
+    float: left;
+    width: 70%;
+} */
 
 .radio-member-type p {
     margin-top: 3rem;

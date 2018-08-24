@@ -42,7 +42,7 @@
   <main role="main">
     <div class="content">
       <div class="membership-period">
-        <p class="membership-period-header">MEMBERSHIP</p>
+        <h1 class="membership-period-header">MEMBERSHIP</h1>
         <p>Membership is for the current calendar year. Last year’s memberships expired on December 31, 2017. Join now and your
           membership lasts until December 31, 2018.</p>
         <p>
@@ -52,135 +52,140 @@
       <form class="sno-membership">
         <div class="login-credentials">
           <p class="form-header">Join SNO</p>
-          <label for="email">Email</label>
-          <input type="text" name="email" title="Email" class="email" type="username" required/>
+          <label id="email-label" for="email">Email</label>
+          <input aria-labelledby="email-label" type="text" name="email" class="email" required/>
 
-          <label for="password">Password</label>
-          <input type="text" name="password" title="Password" class="SNO-password" type="password" required/>
+          <label id="password-label" for="password">Password</label>
+          <input aria-labelledby="password-label" name="password" class="password" type="password" required/>
           <img class="robot-test" alt="robot-test" src="confirm-humanity.png" />
 
         </div>
 
-        <div class="radio-member-type membership-options">
-          <p class="form-header">Membership Options and Payment
-            <span class="asterisk">*</span>
-          </p>
+        <div role="radiogroup" class="radio-member-type membership-options">
+          <label id="membership-radio" class="form-header" for="membership-choice">Membership Options and Payment <span class="asterisk">*</span></label>
           <ul class="radio-group">
-            <li>
-              <input id="radio_1" type="radio" class="radio">
-              <label for="">Student Member: $30.00</label>
-            </li>
-            <li>
-              <input id="radio_2" type="radio" class="radio">
-              <label for="">Recent Graduate: $90.00</label>
-            </li>
-            <li>
-              <input id="radio_3" type="radio" class="radio">
-              <label for="">Regular Member: $150.00</label>
-            </li>
-            <li>
-              <input id="radio_4" type="radio" class="radio">
-              <label for="">Regular 3-year Member: $350.00</label>
-            </li>
-            <li>
-              <input id="radio_5" type="radio" class="radio">
-              <label for="">Contributing Member: $275.00</label>
-            </li>
-            <li>
-              <input id="radio_6" type="radio" class="radio">
-              <label for="">Gold Member: $500.00</label>
-            </li>
-            <li>
-              <input id="radio_7" type="radio" class="radio">
-              <label for="">Platinum Member: $1,000.00</label>
-            </li>
-          </ul>
+                   <li>
+                    <input aria-labelledby="membership-radio" name="membership-choice" type="radio" class="radio">
+                       Student Member: $30.00
+                     </input>
+                  </li>
+                  <li>
+                    <input aria-labelledby="membership-radio" name="membership-choice" type="radio" class="radio">
+                       Recent Graduate: $90.00
+                     </input>
+                  </li>
+                  <li>
+                    <input aria-labelledby="membership-radio" name="membership-choice" type="radio" class="radio">
+                       Regular Member: $150.00
+                     </input>
+                  </li>
+                  <li>
+                    <input aria-labelledby="membership-radio" name="membership-choice" type="radio" class="radio">
+                       Regular 3-year Member: $350.00
+                     </input>
+                  </li>
+                  <li>
+                    <input aria-labelledby="membership-radio" name="membership-choice" type="radio" class="radio">
+                    Contributing Member: $275.00
+                  </input>
+                  </li>
+                  <li>
+                    <input aria-labelledby="membership-radio" name="membership-choice" type="radio" class="radio">
+                    Gold Member: $500.00
+                  </input>
+                  </li>
+                  <li>
+                    <input aria-labelledby="membership-radio" name="membership-choice" type="radio" class="radio">
+                    Platinum Member: $1,000.00
+                  </input>
+                  </li>
+                </ul>
         </div>
 
 
-        <div class="member-type">
-          <label>Member Type
+ 
+          <div>
+          <label id="member-type" >Member Type</label>
             <span class="asterisk">*</span>
-            <select class="member-type dropdown-menu" name="member-type" id="member-type-dropdown">
-              <option class="options" value="0"></option>
+            <select aria-labelledby="member-type" class="member-type dropdown-menu" name="member-type">
+              <option class="options" value=""></option>
               <option value="5">Academia</option>
               <option value="4">Industry</option>
               <option value="3">Government</option>
               <option value="2">Student</option>
               <option value="1">Retired</option>
+              <option value="Other">Other</option>
             </select>
-          </label>
         </div>
 
         <div class="member-type menu-other">
-          <input id="member-type-checkbox" type="checkbox">
-          <label for="other">Other</label>
-          <input id="other-input" type="text">
-        </div>
+           <label id="other-member-type" for="other-member-type">Other Member Type</label>
+           <input aria-labelledby="other-member-type" name="other--member-type" type="text">
+          </div>
 
         <div class="fullname">
           <p class="form-header">Name</p>
 
 
-          <label for="firstname">First Name
+          <label id="first-name" for="firstname">First Name
             <span class="asterisk">*</span>
           </label>
-          <input name="firstname" class="firstname" type="text" required/>
+          <input aria-labelledby="first-name" name="firstname" class="firstname" type="text" required/>
 
-          <label for="middleinitial">Middle Initial</label>
-          <input name="middleinitial" class="middleinitial" type="text" />
+          <label id="middle-initial" for="middleinitial">Middle Initial</label>
+          <input aria-labelledby="middle-initial" name="middleinitial" class="middleinitial" type="text" />
 
-          <label for="middleinitial">Last Name
+          <label id="last-name" for="last-name">Last Name
             <span class="asterisk">*</span>
           </label>
-          <input name="lastname" class="lastname" type="text" required/>
+          <input aria-labelledby="last-name" name="lastname" class="lastname" type="text" required/>
         </div>
 
         <div class="address">
           <p class="form-header">Address</p>
-          <label for="street-1">Street Address 1
+          <label id="street-1" for="street-1">Street Address 1
             <span class="asterisk">*</span>
           </label>
-          <input name="street-1" class="street-1" type="text" required/>
+          <input aria-labelledby="street-1" name="street-1" class="street-1" type="text" required/>
 
-          <label for="street-2">Street Address 2</label>
-          <input name="street-2" class="street-2" type="text" />
+          <label id="street-2" for="street-2">Street Address 2</label>
+          <input aria-labelledby="street-2" ame="street-2" class="street-2" type="text" />
 
-          <label for="city">City
+          <label id="city" for="city">City
             <span class="asterisk">*</span>
           </label>
-          <input name="city" class="city" type="text" required/>
+          <input aria-labelledby="city" name="city" class="city" type="text" required/>
 
-          <label for="state-prov-dept">State/Province/Department
+          <label id="state-prov-dept" for="state-prov-dept">State/Province/Department
             <span class="asterisk">*</span>
           </label>
-          <input name="state-prov-dept" class="state-prov-dept" type="text" required/>
+          <input aria-labelledby="state-prov-dept"name="state-prov-dept" class="state-prov-dept" type="text" required/>
 
-          <label for="postal-code">Postal or Zip Code
+          <label id="postal-code" for="postal-code">Postal or Zip Code
             <span class="asterisk">*</span>
           </label>
-          <input name="postal-code" class="postal-code" type="text" required/>
+          <input aria-labelledby="postal-code" name="postal-code" class="postal-code" type="text" required/>
 
-          <label for="Country">Country
+          <label id="country" for="Country">Country
             <span class="asterisk">*</span>
           </label>
-          <select id="country-dropdown" class="dropdown-menu" name="country" required>
+          <select aria-labelledby="country" id="country-dropdown" class="dropdown-menu" name="country" required>
             <option class="options" value="" selected disabled></option>
           </select>
         </div>
 
         <div class="other-contact-info">
           <p class="form-header">Additional Contact Information</p>
-          <label for="phone">Phone Number
+          <label id="phone-number" for="phone">Phone Number
             <span class="asterisk">*</span>
           </label>
-          <input type="text" id="phone" name="phone" required />
+          <input aria-labelledby="phone-number" type="text" id="phone" name="phone" required />
 
-          <label for="alt-phone">Alternate Email</label>
-          <input type="text" name="alt-email" class="alt-email" />
+          <label id="alt-phone" for="alt-phone">Alternate Email</label>
+          <input aria-labelledby="alt-phone" type="text" name="alt-email" class="alt-email" />
 
-          <label for="fax">Fax</label>
-          <input type="text" name="fax" class="fax" />
+          <label id="fax" for="fax">Fax</label>
+          <input aria-labelledby="fax" type="text" name="fax" class="fax" />
         </div>
 
 
@@ -188,32 +193,34 @@
           <p class="form-header">Gender</p>
           <ul class="radio-group">
             <li>
-              <input id="radio_1" type="radio" class="radio">
-              <label for="">Male</label>
+              <input aria-labelledby="gender-radio-1" type="radio" class="radio">
+              <label id="gender-radio-1" for="male">Male</label>
             </li>
             <li>
-              <input id="radio_2" type="radio" class="radio">
-              <label for="">Female</label>
+              <input aria-labelledby="gender-radio-2" type="radio" class="radio">
+              <label id="gender-radio-2" for="female">Female</label>
             </li>
           </ul>
         </div>
 
         <div class="affiliation">
           <p class="form-header">Affiliation/Interest</p>
-          <label for="affiliation">Institution/Company
+
+<!-- why didn't axe pick this first label up first -->
+          <label id+"affiliation" for="affiliation">Institution/Company
             <span class="asterisk">*</span>
           </label>
-          <input type="text" id="affiliation" name="affiliation" required />
+          <input aria-labelledby="affiliation" type="text" id="affiliation" name="affiliation" required />
 
-          <label for="position">Position/Title</label>
-          <input type="text" name="position" class="position" />
+          <label id="position" for="position">Position/Title</label>
+          <input aria-labelledby="position" type="text" name="position" class="position" />
 
-          <label for="dept-unit">Department/Business Unit</label>
-          <input type="text" name="dept-unit" class="dept-unit" />
+          <label id="dept-unit" for="dept-unit">Department/Business Unit</label>
+          <input aria-labelledby="dept-unit" type="text" name="dept-unit" class="dept-unit" />
         </div>
 
-        <div>
-          <label for="research-focus">General Focus of Nanotechnology Research
+        <!-- <div>
+          <label id="research-focus" for="research-focus">General Focus of Nanotechnology Research
             <span class="asterisk">*</span>
           </label>
           <select class="research-focus dropdown-menu" name="research-focus" id="research-focus-dropdown">
@@ -224,17 +231,16 @@
             <option value="2">Societal/Policy Aspects</option>
             <option value="1">Economic Aspects</option>
           </select>
-        </div>
+        </div> -->
 
         <div class="research-focus menu-other">
-          <input id="research-focus-checkbox" type="checkbox">
-          <label for="other">Other</label>
-          <input id="other-input" type="text">
+          <input aria-labelledby="research-focus-checkbox" name="research-focus-checkbox" type="checkbox">
+          <label id="research-focus-checkbox" for="other">Other</label>
         </div>
 
         <div class="interests">
-          <label for="specific-interests">Specific interests in sustainable nanotechnology</label>
-          <textarea id="specific-SNO-interests" rows="2rem" title="Description" class="specific-SNO-interests"></textarea>
+          <label id="specific-interests" for="specific-interests">Specific interests in sustainable nanotechnology</label>
+          <textarea aria-labelledby="specific-interests" id="specific-SNO-interests" rows="2rem" class="specific-SNO-interests"></textarea>
         </div>
 
         <div class="radio-member-type SNO-interest">
@@ -244,36 +250,39 @@
           </p>
           <ul class="radio-group">
             <li>
-              <input id="radio_1" type="checkbox">
-              <label for="">Officer/Leader</label>
+              <input aria-labelledby="involve-radio-1" name="involve-radio-1" type="checkbox">
+              <label id="involve-radio-1" for="">Officer/Leader</label>
             </li>
             <li>
-              <input id="radio_2" type="checkbox">
-              <label for="">Committe chair</label>
+              <input aria-labelledby="involve-radio-2" name="involve-radio-2" type="checkbox">
+              <label id="involve-radio-2" for="">Committe chair</label>
             </li>
             <li>
-              <input id="radio_3" type="checkbox">
-              <label for="">Committee member</label>
+              <input aria-labelledby="involve-radio-3" name="involve-radio-3" type="checkbox">
+              <label id="involve-radio-3" for="">Committee member</label>
             </li>
             <li>
-              <input id="radio_4" type="checkbox">
-              <label for="">Journal editor</label>
+              <input aria-labelledby="involve-radio-4" name="involve-radio-4" type="checkbox">
+              <label id="involve-radio-4" for="">Journal editor</label>
             </li>
             <li>
-              <input id="radio_5" type="checkbox">
-              <label for="">Conference organizer</label>
+              <input aria-labelledby="involve-radio-5" name="involve-radio-5" type="checkbox">
+              <label id="involve-radio-5" for="">Conference organizer</label>
             </li>
             <li>
-              <input id="radio_6" type="checkbox">
-              <label for="">Session organizer</label>
+              <input aria-labelledby="involve-radio-6" name="involve-radio-6" type="checkbox">
+              <label id="involve-radio-6" for="">Session organizer</label>
             </li>
             <li>
-              <input id="sno-interest-checkbox" type="checkbox">
-              <label for="other">Other</label>
-              <input id="other-input" type="text">
+              <input aria-labelledby="sno-interest-checkbox" name="sno-interest-checkbox" type="checkbox">
+              <label id="sno-interest-checkbox" for="other">Other</label>
+ 
+              <!-- What if there's no label on the input
+              <input id="other-input-interest" type="text"> -->
             </li>
           </ul>
-        </div>
+        </div> 
+
 
         <div class="page-buttons">
           <button id="submit-button" name="submit-button" type="submit">Submit</button>

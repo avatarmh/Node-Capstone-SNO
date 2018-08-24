@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SNO</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/profile.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header role="banner">
+        <img class="logo" alt="SNOlogo" src="SNOlogo.png" />
+        <nav role="navigation">
+            <ul>
+                <li>
+                    <a href="/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="/about.html">About</a>
+                </li>
+                <li>
+                    <a href="/conferences.html">Conferences</a>
+                </li>
+                <li>
+                    <a href="/joinSNO.html">Join SNO</a>
+                </li>
+                <li>
+                    <a href="/login.html">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <div class="content">
+            <form class="sno-profile">
+                <div class="login-credentials">
+                    <p class="form-header">Change Password</p>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" title="Email" class="email" type="username" required/>
+
+                    <label for="password">Password</label>
+                    <input type="text" name="password" title="Password" class="password" type="password" required/>
+                    <label for="new-password">New Password</label>
+                    <input type="text" name="new-password" title="New Password" class="new-password" type="password" required/>
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="text" name="confirm-password" title="Confirm Password" class="confirm-password" type="password" required/>
+                    <img class="robot-test" alt="robot-test" src="confirm-humanity.png" />
+                </div>
+
+                <div class="fullname">
+                    <p class="form-header">Change Name</p>
+
+
+                    <label for="firstname">First Name
+                        <span class="asterisk">*</span>
+                    </label>
+                    <input name="firstname" class="firstname" type="text" required/>
+
+                    <label for="middleinitial">Middle Initial</label>
+                    <input name="middleinitial" class="middleinitial" type="text" />
+
+                    <label for="middleinitial">Last Name
+                        <span class="asterisk">*</span>
+                    </label>
+                    <input name="lastname" class="lastname" type="text" required/>
+                </div>
+
+                <div class="address">
+                    <p class="form-header">Change Address</p>
+                    <label for="street-1">Street Address 1
+                        <span class="asterisk">*</span>
+                    </label>
+                    <input name="street-1" class="street-1" type="text" required/>
+
+                    <label for="street-2">Street Address 2</label>
+                    <input name="street-2" class="street-2" type="text" />
+
+                    <label for="city">City
+                        <span class="asterisk">*</span>
+                    </label>
+                    <input name="city" class="city" type="text" required/>
+
+                    <label for="state-prov-dept">State/Province/Department
+                        <span class="asterisk">*</span>
+                    </label>
+                    <input name="state-prov-dept" class="state-prov-dept" type="text" required/>
+
+                    <label for="postal-code">Postal or Zip Code
+                        <span class="asterisk">*</span>
+                    </label>
+                    <input name="postal-code" class="postal-code" type="text" required/>
+
+                    <label for="Country">Country
+                        <span class="asterisk">*</span>
+                    </label>
+                    <select id="country-dropdown" class="dropdown-menu" name="country" required>
+                        <option class="options" value="" selected disabled></option>
+                    </select>
+                </div>
+
+                <div class="other-contact-info">
+                    <p class="form-header">Change Additional Contact Information</p>
+                    <label for="phone">Phone Number
+                        <span class="asterisk">*</span>
+                    </label>
+                    <input type="text" id="phone" name="phone" required />
+
+                    <label for="alt-phone">Alternate Email</label>
+                    <input type="text" name="alt-email" class="alt-email" />
+
+                    <label for="fax">Fax</label>
+                    <input type="text" name="fax" class="fax" />
+                </div>
+
+
+                <div class="radio-gender-type">
+                    <p class="form-header">Gender</p>
+                    <ul class="radio-group">
+                        <li>
+                            <input id="radio_1" type="radio" class="radio">
+                            <label for="">Male</label>
+                        </li>
+                        <li>
+                            <input id="radio_2" type="radio" class="radio">
+                            <label for="">Female</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="affiliation">
+                    <p class="form-header">Change Affiliation/Interest</p>
+                    <label for="affiliation">Institution/Company
+                        <span class="asterisk">*</span>
+                    </label>
+                    <input type="text" id="affiliation" name="affiliation" required />
+
+                    <label for="position">Position/Title</label>
+                    <input type="text" name="position" class="position" />
+
+                    <label for="dept-unit">Department/Business Unit</label>
+                    <input type="text" name="dept-unit" class="dept-unit" />
+                </div>
+
+                <div>
+                    <label for="research-focus">Change General Focus of Nanotechnology Research
+                        <span class="asterisk">*</span>
+                    </label>
+                    <select class="research-focus dropdown-menu" name="research-focus" id="research-focus-dropdown">
+                        <option class="options" value="0"></option>
+                        <option value="5">Synthesis/Characterization</option>
+                        <option value="4">Applications</option>
+                        <option value="3">Implications</option>
+                        <option value="2">Societal/Policy Aspects</option>
+                        <option value="1">Economic Aspects</option>
+                    </select>
+                </div>
+
+                <div class="research-focus menu-other">
+                    <input id="research-focus-checkbox" type="checkbox">
+                    <label for="other">Other</label>
+                    <input id="other-input" type="text">
+                </div>
+
+                <div class="interests">
+                    <label for="specific-interests">Change Specific interests in sustainable nanotechnology</label>
+                    <textarea id="specific-SNO-interests" rows="2rem" title="Description" class="specific-SNO-interests"></textarea>
+                </div>
+
+                <div class="radio-member-type SNO-interest">
+                    <p class="form-header">
+                        Change Interest in SNO Involvement
+                        <span class="asterisk">*</span>(select all that apply)
+                    </p>
+                    <ul class="radio-group">
+                        <li>
+                            <input id="radio_1" type="checkbox">
+                            <label for="">Officer/Leader</label>
+                        </li>
+                        <li>
+                            <input id="radio_2" type="checkbox">
+                            <label for="">Committe chair</label>
+                        </li>
+                        <li>
+                            <input id="radio_3" type="checkbox">
+                            <label for="">Committee member</label>
+                        </li>
+                        <li>
+                            <input id="radio_4" type="checkbox">
+                            <label for="">Journal editor</label>
+                        </li>
+                        <li>
+                            <input id="radio_5" type="checkbox">
+                            <label for="">Conference organizer</label>
+                        </li>
+                        <li>
+                            <input id="radio_6" type="checkbox">
+                            <label for="">Session organizer</label>
+                        </li>
+                        <li>
+                            <input id="sno-interest-checkbox" type="checkbox">
+                            <label for="other">Other</label>
+                            <input id="other-input" type="text">
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="page-buttons">
+                    <button id="submit-button" name="submit-button" type="submit">Submit</button>
+                </div>
+
+
+
+
+            </form>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <script src="/js/countries.js"></script>
+    <script src="/js/profile.js"></script>
+</body>
+
+</html>
