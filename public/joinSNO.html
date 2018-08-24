@@ -120,7 +120,7 @@
 
         <div class="member-type menu-other">
            <label id="other-member-type" for="other-member-type">Other Member Type</label>
-           <input aria-labelledby="other-member-type" name="other--member-type" type="text">
+           <input aria-labelledby="other-member-type" name="other-member-type" type="text">
           </div>
 
         <div class="fullname">
@@ -219,26 +219,28 @@
           <input aria-labelledby="dept-unit" type="text" name="dept-unit" class="dept-unit" />
         </div>
 
-        <!-- <div>
+        <div>
           <label id="research-focus" for="research-focus">General Focus of Nanotechnology Research
             <span class="asterisk">*</span>
           </label>
-          <select class="research-focus dropdown-menu" name="research-focus" id="research-focus-dropdown">
-            <option class="options" value="0"></option>
+          <select aria-labelledby="research-focus" class="research-focus dropdown-menu" name="research-focus" id="research-focus-dropdown">
+            <option class="options" value=""></option>
             <option value="5">Synthesis/Characterization</option>
             <option value="4">Applications</option>
             <option value="3">Implications</option>
             <option value="2">Societal/Policy Aspects</option>
             <option value="1">Economic Aspects</option>
+            <option value="Other">Other</option>
           </select>
-        </div> -->
-
-        <div class="research-focus menu-other">
-          <input aria-labelledby="research-focus-checkbox" name="research-focus-checkbox" type="checkbox">
-          <label id="research-focus-checkbox" for="other">Other</label>
         </div>
 
-        <div class="interests">
+        <div class="research-focu menu-other">
+          <label id="other-research-focus" for="other-research-focus">Other Research Focus (if none of above)</label>
+          <input aria-labelledby="other-research-focus" name="other-research-focus" type="text">
+         </div>
+
+
+         <div class="interests">
           <label id="specific-interests" for="specific-interests">Specific interests in sustainable nanotechnology</label>
           <textarea aria-labelledby="specific-interests" id="specific-SNO-interests" rows="2rem" class="specific-SNO-interests"></textarea>
         </div>
@@ -274,12 +276,10 @@
               <label id="involve-radio-6" for="">Session organizer</label>
             </li>
             <li>
-              <input aria-labelledby="sno-interest-checkbox" name="sno-interest-checkbox" type="checkbox">
-              <label id="sno-interest-checkbox" for="other">Other</label>
- 
-              <!-- What if there's no label on the input
-              <input id="other-input-interest" type="text"> -->
-            </li>
+              <label id="other-sno-interest" for="other">Other SNO Interest</label>
+              <input aria-labelledby="other-sno-interest" name="other-sno-interest" type="text"> 
+             
+             </li>
           </ul>
         </div> 
 
