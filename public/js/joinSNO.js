@@ -4,3 +4,7 @@ dropdownCountries = window.countries.map(countryData => {
 
 $("#country-dropdown").append(dropdownCountries);
 
+$(".sno-membership").submit((event) => {
+  event.preventDefault()
+  window.location.href = "/login.html"
+})

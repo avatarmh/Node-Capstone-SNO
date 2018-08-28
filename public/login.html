@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>SNO</title>
+  <title>SNO Login</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible">
@@ -39,38 +39,43 @@
     </nav>
   </header>
 
+  <main role="main">
 
-  <div class="content">
-    <form class="login">
-      <div class="login-credentials">
-        <label for="email">Email</label>
-        <input type="text" name="email" title="Email" class="email" type="username" required/>
+    <div class="content">
+      <form class="login">
+        <div class="login-credentials">
+          <label id="email-label" for="email">Email</label>
+          <input aria-labelledby="email-label" type="text" name="email" title="Email" class="email" type="username" required/>
 
-        <label for="password">Password</label>
-        <input type="text" name="password" title="Password" class="SNO-password" type="password" required/>
-        <a href="/new-password.html" class="new-password">Forgot password?</a>
-      </div>
+          <label id="password-label" for="password">Password</label>
+          <input aria-labelledby="password-label" type="text" name="password" title="Password" class="SNO-password" type="password" required/>
+          <a href="/new-password.html" class="new-password">Forgot password?</a>
+        </div>
 
-      <div class="page-buttons">
-        <button id="login-button" name="add" title="Login" type="submit">Login</button>
-      </div>
+        <div class="page-buttons">
+          <button id="login-button" name="login-button" type="submit">Login</button>
+        </div>
 
-      <div class="terms">
-        <p>By proceeding, I agree to
-          <a href="/terms-service-privacy" class="terms-link">
-            SNO’S Terms of Service and Privacy Policy</a>
-        </p>
-        <p class="member"></p>
-      </div>
 
-      <div class="not-yet-member">
+
+        <div class="terms">
+          <p>By proceeding, I agree to
+            <a href="/terms-service-privacy" class="terms-link">
+              SNO’S Terms of Service and Privacy Policy</a>
+          </p>
+          <p class="member"></p>
+        </div>
+
+        <div class="not-yet-member">
           <p>Not yet a SNO member?
             <a href="joinSNO.html" class="join-SNO">
               Join SNO here.</a>
           </p>
           <p class="member"></p>
         </div>
-  
+  </main>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="/js/login.js"></script>
 </body>
 
 </html>

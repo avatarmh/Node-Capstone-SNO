@@ -1,91 +1,27 @@
-.membership-period-header {
+h1 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 3rem;
+    text-align: center;
     color: blue;
 }
 
-h4 {
-    margin-top: 3rem;
-    color: #19A361;
+h2 {font-size: 14px;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: left;
+    color: black;
 }
+p {
+    font-size: 12px;
+}    
 
-form input[type="text"] {
-    display: block;
-    border: 1px solid black;
-    width: 100%;
-}
-
-.form-header {
-    margin-top: 3rem;
-    color: blue;
-}
-
-input {
-    margin-bottom: 0.5rem;
-}
-
-
-.radio-group {
-    padding: 0;
-}
-
-.radio-group li {
-    list-style: none;
-}
-
-.dropdown-menu {
-    width: 100%;
-    border: 1px solid;
-    border-radius: 0;
-
-}
-
-/*
-
-.member-type-other-checkbox {
-    width: 25%;
-    margin-right: 3%;
-    float: left;
-}
-
-.member-type-other input[type="text"] {
-    float: left;
-    width: 70%;
-} */
-
-.radio-member-type p {
-    margin-top: 3rem;
-}
-
-
-.menu-other {
-    width: 100%;
-    margin: auto;
-    margin-top: 0.5rem;
-}
-
-#other-input {
-    float: right;
-    width: 82%;
-}
-
-.fullname {
-    margin-top: 3rem;
-    width: 100%;
-}
-
-textarea {
-    border: 1px solid black;
-    width: 100%;
-
-}
-
-button, input[type="button"], input[type="submit"] {
-    margin: 2rem;
-    border-radius: 0px;
-    border: 1px solid black;
-}
-
-.page-buttons {
-   text-align: center;
+.news-item {
+    width: 95%;
+    margin: 10px auto;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid black ;
 }
 
 @media only screen and (min-width: 720px) {
