@@ -1,8 +1,10 @@
 'use strict';
 require('dotenv').config();
 const express = require('express');
-const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 const passport = require('passport');
 
 // Here we use destructuring assignment with renaming so the two variables
@@ -16,11 +18,15 @@ const { router: usersRouter } = require('./users');
 const { router: authRouter, localStrategy, jwtStrategy } = require('./auth');
 const { router: newsRouter } = require('./news');
 
-mongoose.Promise = global.Promise;
-
 const { PORT, DATABASE_URL } = require('./config');
 
 const app = express();
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+ 
+// parse application/json
+app.use(bodyParser.json())
 
 // Logging
 app.use(morgan('common'));

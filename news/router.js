@@ -1,13 +1,9 @@
 'use strict';
 const express = require('express');
-const bodyParser = require('body-parser');
-
+//const bodyParser = require('body-parser');
 const { NewsItem } = require('./models');
-
 const router = express.Router();
-
-
-const jsonParser = bodyParser.json();
+//const jsonParser = bodyParser.json();
 
 // GET requests to /posts => return 5 blogposts
 router.get('/', (req, res) => {
@@ -47,13 +43,15 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
 
+  console.log(req.body);
+
   const requiredFields = ['title', 'date', 'source', 'summary'];
   for (let i = 0; i < requiredFields.length; i++) {
     const field = requiredFields[i];
     if (!(field in req.body)) {
       const message = `Missing \`${field}\` in request body`;
       console.error(message);
-      return res.status(400).send(message);
+      return res.status(400).send({ message, status: 'fail' });
     }
   }
 
@@ -62,7 +60,7 @@ router.post('/', (req, res) => {
       title: req.body.title,
       date: req.body.date,
       source: req.body.source,
-      summry: req.body.summary
+      summary: req.body.summary
     })
     .then(newsitems => res.status(201).json(newsitems.serialize()))
     .catch(err => {
@@ -86,7 +84,7 @@ router.put('/:id', (req, res) => {
   // if the user sent over any of the updatableFields, we udpate those values
   // in document
   const toUpdate = {};
-  const updateableFields = ['title', 'date', 'source', 'summary', 'created'];
+  const updateableFields = ['title', 'date', 'source', 'summary'];
 
   updateableFields.forEach(field => {
     if (field in req.body) {
@@ -94,17 +92,17 @@ router.put('/:id', (req, res) => {
     }
   });
 
-  BlogPost
+  NewsItem
     // all key/value pairs in toUpdate will be updated -- that's what `$set` does
     .findByIdAndUpdate(req.params.id, { $set: toUpdate })
-    .then(blogpost => res.status(204).end())
+    .then(newsitem => res.status(204).end())
     .catch(err => res.status(500).json({ message: 'Internal server error' }));
 });
 
 router.delete('/:id', (req, res) => {
-  BlogPost
+  NewsItem
     .findByIdAndRemove(req.params.id)
-    .then(blogpost => res.status(204).end())
+    .then(newsitem => res.status(204).end())
     .catch(err => res.status(500).json({ message: 'Internal server error' }));
 });
 

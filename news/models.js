@@ -4,7 +4,6 @@ mongoose.Promise = global.Promise;
 
 const newsItemSchema = mongoose.Schema({
     title: { type: String, required: true },
-    //   if possible put default at 00/00/00 - need to see format
     date: { type: Date },
     source: { type: String },
     summary: { type: String },
@@ -17,7 +16,7 @@ newsItemSchema.methods.serialize = function() {
         title: this.title,
         date: this.date,
         source: this.source,
-        summary: this.type,
+        summary: this.summary,
         created: this.created
       };
 };
