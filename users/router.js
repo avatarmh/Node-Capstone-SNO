@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
     });
   }
 
-  const stringFields = ['username', 'password', 'firstName', 'middleInitial', 'lastName', 'membershipChoice', 'memberType', 'street1', 'street2', 'city', 'stateProvDept', 'country'];
+  const stringFields = ['username', 'password', 'firstName', 'middleInitial', 'lastName', 'membershipChoice', 'memberType', 'street1', 'street2', 'city', 'stateProvDept', 'postalCode', 'country', 'phone', 'altEmail', 'fax', 'gender'];
   const nonStringField = stringFields.find(
     field => field in req.body && typeof req.body[field] !== 'string'
   );
@@ -90,7 +90,7 @@ router.post('/', (req, res) => {
     });
   }
 
-  let { username, password, firstName = '', middleInitial = '', lastName = '', membershipChoice = '', memberType = '', street1 = '', street2 = '', city = '', stateProvDept = '', country = '' , phone = '', altEmail = '', fax = ''} = req.body;
+  let { username, password, firstName = '', middleInitial = '', lastName = '', membershipChoice = '', memberType = '', street1 = '', street2 = '', city = '', stateProvDept = '', postalCode = '', country = '' , phone = '', altEmail = '', fax = '', gender = ''} = req.body;
   // Username and password come in pre-trimmed, otherwise we throw an error
   // before this
   firstName = firstName.trim();
@@ -102,10 +102,12 @@ router.post('/', (req, res) => {
   street2 = street2.trim();
   city = city.trim();
   stateProvDept = stateProvDept.trim();
+  postalCode = postalCode.trim();
   country = country.trim();
   phone = phone.trim();
   altEmail = altEmail.trim();
-  fax = fax.trim()
+  fax = fax.trim();
+
 
 
   return User.find({ username })
@@ -136,10 +138,12 @@ router.post('/', (req, res) => {
         street2,
         city,
         stateProvDept,
+        postalCode,
         country,
         phone,
         altEmail,
-        fax
+        fax,
+        gender
       });
     })
     .then(user => {

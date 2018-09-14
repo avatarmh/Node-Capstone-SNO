@@ -31,7 +31,8 @@ $(".sno-membership").submit((event) => {
   //   rate: "$30.00"}
   // ]
 
-  var membershipChoice = $("input[name=membership-choice]").val();
+  var membershipChoice = $("input[name=membership-choice]:checked").val();
+  console.log(membershipChoice)
 
   var memberType = $('.member-type option:selected').val();
   if (memberType === "other") {
@@ -52,6 +53,10 @@ $(".sno-membership").submit((event) => {
   var phone = $("input[name=phone]").val();
   var altEmail = $("input[name=alt-email]").val();
   var fax = $("input[name=fax]").val();
+
+  // optional gender input
+  var gender = $("input[name=gender]:checked").val();
+  console.log(gender)
   
   const userDetails = {
     username,
@@ -65,10 +70,12 @@ $(".sno-membership").submit((event) => {
     street2,
     city,
     stateProvDept,
+    postalCode,
     country,
     phone,
     altEmail,
-    fax
+    fax,
+    gender
   };
   console.log(JSON.stringify(userDetails));
   $.ajax({

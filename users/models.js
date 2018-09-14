@@ -30,7 +30,8 @@ const UserSchema = mongoose.Schema({
   // other contact info
   phone: {type: String, required: true},
   altEmail: {type: String, default: ''},
-  fax: {type: String, default: ''}
+  fax: {type: String, default: ''},
+  gender: {type: String, default: ''}
 
 });
 
@@ -50,7 +51,8 @@ UserSchema.methods.serialize = function () {
     country: this.country || '',
     phone: this.phone || '',
     altEmail: this.altEmail || '',
-    fax: this.fax || ''
+    fax: this.fax || '',
+    gender: this.gender || ''
   };
 };
 
