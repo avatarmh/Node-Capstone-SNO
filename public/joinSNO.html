@@ -70,37 +70,37 @@
           <label id="membership-radio" class="form-header" for="membership-choice">Membership Options and Payment <span class="asterisk">*</span></label>
           <ul class="radio-group">
                    <li>
-                    <input aria-labelledby="membership-radio" name="membership-choice" type="radio" class="radio">
+                    <input aria-labelledby="membership-radio" value="student-member" name="membership-choice" type="radio" class="radio">
                        Student Member: $30.00
                      </input>
                   </li>
                   <li>
-                    <input aria-labelledby="membership-radio" name="membership-choice" type="radio" class="radio">
+                    <input aria-labelledby="membership-radio" value="recent-graduate" name="membership-choice" type="radio" class="radio">
                        Recent Graduate: $90.00
                      </input>
                   </li>
                   <li>
-                    <input aria-labelledby="membership-radio" name="membership-choice" type="radio" class="radio">
+                    <input aria-labelledby="membership-radio" value="regular-member" name="membership-choice" type="radio" class="radio">
                        Regular Member: $150.00
                      </input>
                   </li>
                   <li>
-                    <input aria-labelledby="membership-radio" name="membership-choice" type="radio" class="radio">
+                    <input aria-labelledby="membership-radio" value="regular-member-3years" name="membership-choice" type="radio" class="radio">
                        Regular 3-year Member: $350.00
                      </input>
                   </li>
                   <li>
-                    <input aria-labelledby="membership-radio" name="membership-choice" type="radio" class="radio">
+                    <input aria-labelledby="membership-radio" value="contributing-member" name="membership-choice" type="radio" class="radio">
                     Contributing Member: $275.00
                   </input>
                   </li>
                   <li>
-                    <input aria-labelledby="membership-radio" name="membership-choice" type="radio" class="radio">
+                    <input aria-labelledby="membership-radio" value="gold-member" name="membership-choice" type="radio" class="radio">
                     Gold Member: $500.00
                   </input>
                   </li>
                   <li>
-                    <input aria-labelledby="membership-radio" name="membership-choice" type="radio" class="radio">
+                    <input aria-labelledby="membership-radio" value="platinum-member" name="membership-choice" type="radio" class="radio">
                     Platinum Member: $1,000.00
                   </input>
                   </li>
@@ -114,12 +114,12 @@
             <span class="asterisk">*</span>
             <select aria-labelledby="member-type" class="member-type dropdown-menu" name="member-type">
               <option class="options" value=""></option>
-              <option value="5">Academia</option>
-              <option value="4">Industry</option>
-              <option value="3">Government</option>
-              <option value="2">Student</option>
-              <option value="1">Retired</option>
-              <option value="Other">Other</option>
+              <option value="academia">Academia</option>
+              <option value="industry">Industry</option>
+              <option value="government">Government</option>
+              <option value="student">Student</option>
+              <option value="retired">Retired</option>
+              <option value="other">Other</option>
             </select>
         </div>
 
@@ -154,7 +154,7 @@
           <input aria-labelledby="street-1" name="street-1" class="street-1" type="text" required/>
 
           <label id="street-2" for="street-2">Street Address 2</label>
-          <input aria-labelledby="street-2" ame="street-2" class="street-2" type="text" />
+          <input aria-labelledby="street-2" name="street-2" class="street-2" type="text" />
 
           <label id="city" for="city">City
             <span class="asterisk">*</span>
@@ -174,7 +174,7 @@
           <label id="country" for="Country">Country
             <span class="asterisk">*</span>
           </label>
-          <select aria-labelledby="country" id="country-dropdown" class="dropdown-menu" name="country" required>
+          <select aria-labelledby="country" id="country-dropdown" class="country dropdown-menu" name="country" required>
             <option class="options" value="" selected disabled></option>
           </select>
         </div>

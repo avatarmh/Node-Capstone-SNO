@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
     });
   }
 
-  const stringFields = ['username', 'password', 'firstName', 'lastName'];
+  const stringFields = ['username', 'password', 'firstName', 'middleInitial', 'lastName', 'membershipChoice', 'memberType', 'street1', 'street2', 'city', 'stateProvDept', 'country'];
   const nonStringField = stringFields.find(
     field => field in req.body && typeof req.body[field] !== 'string'
   );
@@ -90,11 +90,20 @@ router.post('/', (req, res) => {
     });
   }
 
-  let { username, password, firstName = '', lastName = '' } = req.body;
+  let { username, password, firstName = '', middleInitial = '', lastName = '', membershipChoice = '', memberType = '', street1 = '', street2 = '', city = '', stateProvDept = '', country = '' } = req.body;
   // Username and password come in pre-trimmed, otherwise we throw an error
   // before this
   firstName = firstName.trim();
+  middleInitial = middleInitial.trim();
   lastName = lastName.trim();
+  membershipChoice = membershipChoice.trim();
+  memberType = memberType.trim();
+  street1 = street1.trim();
+  street2 = street2.trim();
+  city = city.trim();
+  stateProvDept = stateProvDept.trim();
+  country = country.trim();
+
 
   return User.find({ username })
     .count()
@@ -116,7 +125,15 @@ router.post('/', (req, res) => {
         username,
         password: hash,
         firstName,
-        lastName
+        middleInitial,
+        lastName,
+        membershipChoice,
+        memberType,
+        street1,
+        street2,
+        city,
+        stateProvDept,
+        country
       });
     })
     .then(user => {
@@ -126,6 +143,7 @@ router.post('/', (req, res) => {
     .catch(err => {
       // Forward validation errors on to the client, otherwise give a 500
       // error because something unexpected has happened
+      console.log(err);
       if (err.reason === 'ValidationError') {
         return res.status(err.code).json(err);
       }
