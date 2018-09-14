@@ -36,23 +36,22 @@ $(".sno-membership").submit((event) => {
   var memberType = $('.member-type option:selected').val();
   if (memberType === "other") {
     memberType = $("input[name=other-member-type]").val();
-    // how can I make this invalid - maybe you were right
+    // how can I require if "other" - maybe you were right
+    // if (memberType === null) {
+    // ? or can I put a condition required in the html
   }
-
+  // address inputs
   var street1 = $("input[name=street-1]").val();
-  console.log(street1);
   var street2 = $("input[name=street-2]").val();
-  console.log(street2);
   var city = $("input[name=city]").val();
-  console.log(city);
   var stateProvDept = $("input[name=state-prov-dept]").val();
-  console.log(stateProvDept);
   var postalCode = $("input[name=postal-code]").val();
-  console.log(postalCode);
   var country = $('.country option:selected').val();
-  console.log(country);
 
-
+  // other contact inputs
+  var phone = $("input[name=phone]").val();
+  var altEmail = $("input[name=alt-email]").val();
+  var fax = $("input[name=fax]").val();
   
   const userDetails = {
     username,
@@ -66,7 +65,10 @@ $(".sno-membership").submit((event) => {
     street2,
     city,
     stateProvDept,
-    country
+    country,
+    phone,
+    altEmail,
+    fax
   };
   console.log(JSON.stringify(userDetails));
   $.ajax({

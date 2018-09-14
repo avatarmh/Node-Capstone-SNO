@@ -90,7 +90,7 @@ router.post('/', (req, res) => {
     });
   }
 
-  let { username, password, firstName = '', middleInitial = '', lastName = '', membershipChoice = '', memberType = '', street1 = '', street2 = '', city = '', stateProvDept = '', country = '' } = req.body;
+  let { username, password, firstName = '', middleInitial = '', lastName = '', membershipChoice = '', memberType = '', street1 = '', street2 = '', city = '', stateProvDept = '', country = '' , phone = '', altEmail = '', fax = ''} = req.body;
   // Username and password come in pre-trimmed, otherwise we throw an error
   // before this
   firstName = firstName.trim();
@@ -103,6 +103,9 @@ router.post('/', (req, res) => {
   city = city.trim();
   stateProvDept = stateProvDept.trim();
   country = country.trim();
+  phone = phone.trim();
+  altEmail = altEmail.trim();
+  fax = fax.trim()
 
 
   return User.find({ username })
@@ -133,7 +136,10 @@ router.post('/', (req, res) => {
         street2,
         city,
         stateProvDept,
-        country
+        country,
+        phone,
+        altEmail,
+        fax
       });
     })
     .then(user => {

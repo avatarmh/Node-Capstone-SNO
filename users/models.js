@@ -14,16 +14,23 @@ const UserSchema = mongoose.Schema({
     type: String,
     required: true
   },
+  // name
   firstName: { type: String, required: true},
   middleInitial: { type: String, maxlength: 2, default: ''},
   lastName: { type: String, required: true },
+  // member info
   membershipChoice: { type: String, required: true },
   memberType: { type: String, required: true },
+  // address
   street1: { type: String, required: true },
   street2: { type: String, default: '' },
   city: { type: String, required: true },
   stateProvDept: { type: String, required: true },
-  country: { type: String, required: true }
+  country: { type: String, required: true },
+  // other contact info
+  phone: {type: String, required: true},
+  altEmail: {type: String, default: ''},
+  fax: {type: String, default: ''}
 
 });
 
@@ -40,7 +47,10 @@ UserSchema.methods.serialize = function () {
     street2: this.street2 || '',
     city: this.city || '',
     stateProvDept: this.stateProvDept || '',
-    country: this.country || ''
+    country: this.country || '',
+    phone: this.phone || '',
+    altEmail: this.altEmail || '',
+    fax: this.fax || ''
   };
 };
 
