@@ -57,6 +57,9 @@ $(".sno-membership").submit((event) => {
   // optional gender input
   var gender = $("input[name=gender]:checked").val();
   console.log(gender)
+
+  // Affiliation inputs
+  var affiliation = $("input[name=affiliation]").val();
   
   const userDetails = {
     username,
@@ -75,7 +78,8 @@ $(".sno-membership").submit((event) => {
     phone,
     altEmail,
     fax,
-    gender
+    gender,
+    affiliation
   };
   console.log(JSON.stringify(userDetails));
   $.ajax({

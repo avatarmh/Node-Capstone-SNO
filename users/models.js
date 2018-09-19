@@ -31,7 +31,8 @@ const UserSchema = mongoose.Schema({
   phone: {type: String, required: true},
   altEmail: {type: String, default: ''},
   fax: {type: String, default: ''},
-  gender: {type: String, default: ''}
+  gender: {type: String, default: ''},
+  affiliation: {type: String, default: ''}
 
 });
 
@@ -52,7 +53,8 @@ UserSchema.methods.serialize = function () {
     phone: this.phone || '',
     altEmail: this.altEmail || '',
     fax: this.fax || '',
-    gender: this.gender || ''
+    gender: this.gender || '',
+    affiliation: this.affiliation || ''
   };
 };
 
