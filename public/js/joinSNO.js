@@ -13,6 +13,27 @@ $("#country-dropdown").append(dropdownCountries);
 
 
 // capture values from joinSNO.html
+// enable "other-member-type" and "other-research-focus"
+// when "other" option is selected from dropdown menus
+
+$('.member-type-menu').change(function() {
+  if ($(this).find('option:selected').val() === "other") {
+    $('input[name=other-member-type]').prop('disabled', false)
+  } else {
+    $('input[name=other-member-type]').val("")
+    $('input[name=other-member-type]').prop('disabled', true)
+  }
+})
+
+$('.research-focus-menu').change(function() {
+  console.log('logging')
+  if ($(this).find('option:selected').val() === "other") {
+    $('input[name=other-research-focus]').prop('disabled', false)
+  } else {
+    $('input[name=other-research-focus]').val("")
+    $('input[name=other-research-focus]').prop('disabled', true)
+  }
+})
 
 $(".sno-membership").submit((event) => {
   const url = "/api/users/";
@@ -32,9 +53,7 @@ $(".sno-membership").submit((event) => {
   // ]
 
   var membershipChoice = $("input[name=membership-choice]:checked").val();
-  console.log(membershipChoice)
-
-  var memberType = $('.member-type option:selected').val();
+  var memberType = $('.member-type-menu option:selected').val();
   if (memberType === "other") {
     memberType = $("input[name=other-member-type]").val();
     // how can I require if "other" - maybe you were right
@@ -61,8 +80,13 @@ $(".sno-membership").submit((event) => {
   // affiliation, position, department/BU, focus, otherFoci, interests
   var affiliation = $("input[name=affiliation]").val();
   var position = $("input[name=position]").val();
-  var department = $("input[name=department]").val();
-  var focus = $("input[name=focus]").val();
+  var deptUnit = $("input[name=dept-unit]").val();
+  // var memberType = $('.member-type option:selected').val();
+  var researchFocus = $('.research-focus-menu option:selected').val();
+  if (researchFocus === "other") {
+    researchFocus = $("input[name=other-research-focus]").val();
+  }
+  var specificSNOInterest = $("#specific-SNO-interests").val()
   
   const userDetails = {
     username,
@@ -84,10 +108,11 @@ $(".sno-membership").submit((event) => {
     gender,
     affiliation,
     position,
-    department,
-    focus
+    deptUnit,
+    researchFocus,
+    specificSNOInterest
   };
-  console.log(JSON.stringify(userDetails));
+  
   $.ajax({
     url,
     method: 'POST',
@@ -95,7 +120,7 @@ $(".sno-membership").submit((event) => {
     contentType: 'application/json',
     data: JSON.stringify(userDetails),
     success: (data) => {
-      console.log(data);
+      window.location.href = "/login.html"
     },
     error: (error) => {
       console.log(error);

@@ -9,6 +9,11 @@ header {
 main {
     margin-top: 80px;
 }
+
+.content {
+    background-color: #DCDCDC;
+}
+
 .membership-period-header {
     color: blue;
     font-size: 14px;

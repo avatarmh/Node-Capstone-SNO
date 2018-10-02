@@ -20,7 +20,8 @@ router.post('/', (req, res) => {
     });
   }
 
-  const stringFields = ['username', 'password', 'firstName', 'middleInitial', 'lastName', 'membershipChoice', 'memberType', 'street1', 'street2', 'city', 'stateProvDept', 'postalCode', 'country', 'phone', 'altEmail', 'fax', 'gender', 'affiliation'];
+  const stringFields = ['username', 'password', 'firstName', 'middleInitial', 'lastName', 'membershipChoice', 'memberType', 
+  'street1', 'street2', 'city', 'stateProvDept', 'postalCode', 'country', 'phone', 'altEmail', 'fax', 'gender', 'affiliation', 'position', 'deptUnit', 'researchFocus', 'specificSNOInterest'];
   const nonStringField = stringFields.find(
     field => field in req.body && typeof req.body[field] !== 'string'
   );
@@ -90,13 +91,14 @@ router.post('/', (req, res) => {
     });
   }
 
-  let { username, password, firstName = '', middleInitial = '', lastName = '', membershipChoice = '', memberType = '', street1 = '', street2 = '', city = '', stateProvDept = '', postalCode = '', country = '' , phone = '', altEmail = '', fax = '', gender = '', affiliation = ''} = req.body;
+  let { username, password, firstName = '', middleInitial = '', lastName = '', membershipChoice = '', memberType = '', street1 = '', street2 = '', city = '', stateProvDept = '', postalCode = '', country = '' , phone = '', altEmail = '', fax = '', gender = '', affiliation = '', position = '', deptUnit = '', researchFocus = '', specificSNOInterest = ''} = req.body;
   // Username and password come in pre-trimmed, otherwise we throw an error
   // before this
+
   firstName = firstName.trim();
   middleInitial = middleInitial.trim();
   lastName = lastName.trim();
-  membershipChoice = membershipChoice.trim();
+  membershipChoice.trim();
   memberType = memberType.trim();
   street1 = street1.trim();
   street2 = street2.trim();
@@ -107,7 +109,12 @@ router.post('/', (req, res) => {
   phone = phone.trim();
   altEmail = altEmail.trim();
   fax = fax.trim();
+  gender = gender.trim();
   affiliation = affiliation.trim();
+  position = position.trim();
+  deptUnit = deptUnit.trim();
+  researchFocus = researchFocus.trim();
+  specificSNOInterest = specificSNOInterest.trim();
 
 
 
@@ -129,7 +136,7 @@ router.post('/', (req, res) => {
     .then(hash => {
       return User.create({
         username,
-        password: hash,
+        password: hash, 
         firstName,
         middleInitial,
         lastName,
@@ -145,7 +152,11 @@ router.post('/', (req, res) => {
         altEmail,
         fax,
         gender,
-        affiliation
+        affiliation,
+        position,
+        deptUnit,
+        researchFocus,
+        specificSNOInterest
       });
     })
     .then(user => {

@@ -27,12 +27,17 @@ const UserSchema = mongoose.Schema({
   city: { type: String, required: true },
   stateProvDept: { type: String, required: true },
   country: { type: String, required: true },
-  // other contact info
+  // other info
   phone: {type: String, required: true},
   altEmail: {type: String, default: ''},
   fax: {type: String, default: ''},
   gender: {type: String, default: ''},
-  affiliation: {type: String, default: ''}
+  // affiliation info
+  affiliation: {type: String, default: ''},
+  position: {type: String, default: ''},
+  deptUnit: {type: String, default: ''},
+  researchFocus: {type: String, default: ''},
+  specificSNOInterest: {type: String, default: ''}
 
 });
 
@@ -54,7 +59,12 @@ UserSchema.methods.serialize = function () {
     altEmail: this.altEmail || '',
     fax: this.fax || '',
     gender: this.gender || '',
-    affiliation: this.affiliation || ''
+    affiliation: this.affiliation || '',
+    position: this.position || '',
+    deptUnit: this.deptUnit || '',
+    researchFocus: this.researchFocus || '',
+    specificSNOInterest: this.specificSNOInterest || ''
+
   };
 };
 
