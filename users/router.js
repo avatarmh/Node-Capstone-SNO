@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
   }
 
   const stringFields = ['username', 'password', 'firstName', 'middleInitial', 'lastName', 'membershipChoice', 'memberType', 
-  'street1', 'street2', 'city', 'stateProvDept', 'postalCode', 'country', 'phone', 'altEmail', 'fax', 'gender', 'affiliation', 'position', 'deptUnit', 'researchFocus', 'specificSNOInterest'];
+  'street1', 'street2', 'city', 'stateProvDept', 'postalCode', 'country', 'phone', 'altEmail', 'fax', 'gender', 'affiliation', 'position', 'deptUnit', 'researchFocus'];
   const nonStringField = stringFields.find(
     field => field in req.body && typeof req.body[field] !== 'string'
   );
@@ -91,7 +91,7 @@ router.post('/', (req, res) => {
     });
   }
 
-  let { username, password, firstName = '', middleInitial = '', lastName = '', membershipChoice = '', memberType = '', street1 = '', street2 = '', city = '', stateProvDept = '', postalCode = '', country = '' , phone = '', altEmail = '', fax = '', gender = '', affiliation = '', position = '', deptUnit = '', researchFocus = '', specificSNOInterest = ''} = req.body;
+  let { username, password, firstName = '', middleInitial = '', lastName = '', membershipChoice = '', memberType = '', street1 = '', street2 = '', city = '', stateProvDept = '', postalCode = '', country = '' , phone = '', altEmail = '', fax = '', gender = '', affiliation = '', position = '', deptUnit = '', researchFocus = '', specificSNOInterest = []} = req.body;
   // Username and password come in pre-trimmed, otherwise we throw an error
   // before this
 
@@ -114,9 +114,6 @@ router.post('/', (req, res) => {
   position = position.trim();
   deptUnit = deptUnit.trim();
   researchFocus = researchFocus.trim();
-  specificSNOInterest = specificSNOInterest.trim();
-
-
 
   return User.find({ username })
     .count()

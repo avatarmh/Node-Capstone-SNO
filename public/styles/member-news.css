@@ -24,6 +24,20 @@ p {
     border: 1px solid black ;
 }
 
+.remove-newsitem-button {
+    float: right;
+    font-size: 14px;
+    margin-top: -2rem;
+    margin-right: -0rem;
+}
+
+.edit-newsitem-button{
+  float: right;
+  font-size: 14px;
+  margin-top: -.5rem;
+  margin-right: .25rem;
+}
+
 @media only screen and (min-width: 720px) {
     form {
         width: 50%;

@@ -50,7 +50,7 @@
       </div>
 
 
-      <form class="sno-membership">
+      <form class="sno-membership" novalidate>
         <div class="login-credentials">
           <p class="form-header">Join SNO</p>
           <label id="email-label" for="email">Email
@@ -255,38 +255,39 @@
             Interest in SNO Involvement
             <span class="asterisk">*</span>(select all that apply)
           </p>
-          <ul class="radio-group">
+          <p id="sno-interest-error">
+          </p>
+          <ul class="radio-group SNO-interest">
             <li>
-              <input aria-labelledby="involve-radio-1" name="involve-radio-1" type="checkbox">
+              <input aria-labelledby="involve-radio-1" value="officer-leader" name="involve-radio-1" type="checkbox">
               <label id="involve-radio-1" for="">Officer/Leader</label>
             </li>
             <li>
-              <input aria-labelledby="involve-radio-2" name="involve-radio-2" type="checkbox">
-              <label id="involve-radio-2" for="">Committe chair</label>
+              <input aria-labelledby="involve-radio-2" value="committee-chair" name="involve-radio-2" type="checkbox">
+              <label id="involve-radio-2" for="">Committee chair</label>
             </li>
             <li>
-              <input aria-labelledby="involve-radio-3" name="involve-radio-3" type="checkbox">
+              <input aria-labelledby="involve-radio-3" value="committee-member" name="involve-radio-3" type="checkbox">
               <label id="involve-radio-3" for="">Committee member</label>
             </li>
             <li>
-              <input aria-labelledby="involve-radio-4" name="involve-radio-4" type="checkbox">
+              <input aria-labelledby="involve-radio-4" value="journal-editorr" name="involve-radio-4" type="checkbox">
               <label id="involve-radio-4" for="">Journal editor</label>
             </li>
             <li>
-              <input aria-labelledby="involve-radio-5" name="involve-radio-5" type="checkbox">
+              <input aria-labelledby="involve-radio-5" value="conference-organizer" name="involve-radio-5" type="checkbox">
               <label id="involve-radio-5" for="">Conference organizer</label>
             </li>
             <li>
-              <input aria-labelledby="involve-radio-6" name="involve-radio-6" type="checkbox">
+              <input aria-labelledby="involve-radio-6" value="session-organizer" name="involve-radio-6" type="checkbox">
               <label id="involve-radio-6" for="">Session organizer</label>
             </li>
             <li>
               <label id="other-sno-interest" for="other">Other SNO Interest</label>
               <input aria-labelledby="other-sno-interest" name="other-sno-interest" type="text"> 
-             
              </li>
           </ul>
-        </div> 
+         </div> 
 
 
         <div class="page-buttons">

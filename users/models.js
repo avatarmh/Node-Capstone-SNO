@@ -37,7 +37,7 @@ const UserSchema = mongoose.Schema({
   position: {type: String, default: ''},
   deptUnit: {type: String, default: ''},
   researchFocus: {type: String, default: ''},
-  specificSNOInterest: {type: String, default: ''}
+  specificSNOInterest: {type: Array, default: []}
 
 });
 
@@ -63,7 +63,7 @@ UserSchema.methods.serialize = function () {
     position: this.position || '',
     deptUnit: this.deptUnit || '',
     researchFocus: this.researchFocus || '',
-    specificSNOInterest: this.specificSNOInterest || ''
+    specificSNOInterest: this.specificSNOInterest || []
 
   };
 };

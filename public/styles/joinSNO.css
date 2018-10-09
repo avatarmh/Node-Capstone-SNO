@@ -29,11 +29,9 @@ input[type="text"], input[type="password"] {
     width: 100%;
 }
 
-/* form input[type="password"] {
-    display: block;
-    border: 1px solid black;
-    width: 100%;
-} */
+.new-password {
+    
+}
 
 .form-header {
     margin-top: 3rem;

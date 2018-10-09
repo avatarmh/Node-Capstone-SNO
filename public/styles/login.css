@@ -8,6 +8,12 @@ form input[type="text"] {
     width: 100%;
 }
 
+form input[type="password"] {
+    /* display: block; */
+    border: 1px solid black;
+    width: 100%;
+}
+
 input {
     margin-bottom: 0.5rem;
 }
@@ -36,7 +42,7 @@ button, input[type="button"] {
     border: 1px solid black;
 }
 
-.page-buttons {
+.submit {
     display: block;
     text-align: center;
 }
