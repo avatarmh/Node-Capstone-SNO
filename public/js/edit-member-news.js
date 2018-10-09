@@ -1,41 +1,66 @@
-// $(document).ready(function() {
-//     const url = "api/news/"
-//     $.ajax({
-//         url,
-//         method: 'GET',
-//         dataType: 'json',
-//         contentType: 'application/json',
-//         success: (data) => {
-//             console.log(data);
-//             const results = generateNewsItemsString(data.newsitems);
-//             $('.news').html(results);
-//         },
-//         error: (error) => {
-//           console.log(error);
-//         }
-//       });
 
-//     function generateNewsItemElement(item) {
-//         let formattedDate = moment(item.created).format('MM/DD/YYYY');
 
-//         return `
-//         <div class='news-item'>
-//         <h2>${item.title}</h2>
-//         <button class= "remove-newsitem-button">X</button>
-//         <a href="/edit-member-news.html" class= "edit-newsitem-button"><i class="far fa-edit"></i></a>
-//         </header>
-//         <h2>Published on: ${formattedDate}</h2>
-//         <h2>Source: ${item.source}</h2>
-//         <p>
-//           Summary: ${item.summary}
-//         </p>
-//         </div>`;
-//       }
-    
-//     function generateNewsItemsString(itemList) {
-//         const items = itemList.map(item => generateNewsItemElement(item));
-//         return items.join("");
-//       }
+
+
+$(document).ready(function() {
+  let searchParams = new URLSearchParams(window.location.search)
+  let id = searchParams.get('id')
+
+  const url = `api/news/${id}`
+  $.ajax({
+    url,
+    method: 'GET',
+    dataType: 'json',
+    contentType: 'application/json',
+    success: (data) => {
+      console.log(data);
+      fillFormInputsWithItem(data);
+    },
+    error: (error) => {
+      console.log(error);
+    }
+  });
+
+
+  function fillFormInputsWithItem(item) {
+      $(".title").val(item.title)
+  }
+
+  $(".edit-form").submit((event) => {
+    event.preventDefault()
+    const url = "/api/news/";
+    const newsDetails = {
+      title: $("input[name=title]").val()
+      // summary:,
+      // source
+    };
+    $.ajax({
+      url,
+      method: id? "PUT" : "POST",
+      dataType: 'json',
+      contentType: 'application/json',
+      data: JSON.stringify(newsDetails),
+      success: (data) => {
+        console.log(data)
+      // NEWS SUCCESFULLY CREATED
+        window.location.href = "/member-news.html"
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    });
+  })
+
+
+
+
+})
+
+
+
+
+
+
 
 //       function handleDeleteItemClicked() {
 //         $(".js-bookmarks-list").on("click", ".remove-bookmark-button", event => {
@@ -52,11 +77,11 @@
 //           });
 //         });
 //       }
-    
+
 //       function handleEditItemSubmit() {
 //         $(".js-bookmarks-list").on("click", ".edit-bookmark-item", event => {
 //           event.preventDefault();
-    
+
 //           const id = getItemIdFromElement(event.currentTarget);
 //           const item = store.findById(id);
 //           $("#min-rating-dropdown").hide();
