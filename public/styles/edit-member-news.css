@@ -7,7 +7,9 @@ h1 {
 }
 
 h2 {font-size: 14px;
-   /* font-style: italic; */
+    /* font-style: italic; */
+    font-weight: normal;
+    /* font-weight: lighter !important; */
     margin-top: 0rem;
     text-align: center;
     color: black;
@@ -17,11 +19,26 @@ p {
 }    
 
 .news-item {
-    width: 95%;
-    margin: 10px auto;
-    padding-left: 8px;
-    padding-right: 8px;
-    border: 1px solid black ;
+    margin: auto;
+    padding: 10px;
+}
+
+input[type="text"] {
+    display: block;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+label {
+    display:block;
+    font-weight: bold;
+}
+textarea {
+    display:block;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 .remove-newsitem-button {

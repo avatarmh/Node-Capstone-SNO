@@ -8,6 +8,7 @@ $(document).ready(function() {
         success: (data) => {
             console.log(data);
             const results = generateNewsItemsString(data.newsitems);
+           // console.log('resssssss', results)
             $('.news').html(results);
         },
         error: (error) => {
@@ -17,7 +18,7 @@ $(document).ready(function() {
 
     function generateNewsItem(item) {
         let formattedDate = moment(item.created).format('MM/DD/YYYY');
-        console.log(item.id);
+//        console.log('in generatenewsitem', item.id);
         return `
         <div class='news-item'>
         <h2>${item.title}</h2>

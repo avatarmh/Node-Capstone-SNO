@@ -41,29 +41,29 @@
 
   <main role="main">
     <h1 class="news-source">NANOTECH NEWS</h1>
-    <h2 class="news-source">(add/edit mode)</h2>
+    <h2 class="news-source">Add or Edit</h2>
 
     <div class="news-item">
-        <form class="edit-form">
-          <div class="login-credentials">
-  
-            <label id="title-label" for="title">Title:</label>
-            <input aria-labelledby="title-label" id="title" type="text" name="title" title="title" class="title" required/>
- 
-            <label id="date-label" for="date">Date:</label>
-            <input aria-labelledby="date-label" id="date" type="text" name="date" title="date" class="date"required/>
+      <form class="edit-form">
+        <div class="login-credentials">
 
-            <label id="source-label" for="source">Source:</label>
-            <input aria-labelledby="source-label" id="source" type="text" name="source" title="source" class="source" required/>
+          <label id="title-label" for="title">Title:</label>
+          <textarea aria-labelledby="title-label" id="title" name="title" title="title" class="title" required></textarea>
 
-            <label id="summary-label" for="summary">Summary:</label>
-            <textarea aria-labelledby="summary-label" id="summary" name="summary" title="summary" class="summary" required></textarea>
-            </div>
+          <label id="date-label" for="date">Publication date:</label>
+          <input aria-labelledby="date-label" id="date" type="text" name="date" title="date" class="date" required/>
 
-          <div class="page-buttons">
-            <button id="login-button" name="login-button" type="submit">Save</button>
-          </div>
-        </form>
+          <label id="source-label" for="source">Source:</label>
+          <input aria-labelledby="source-label" id="source" type="text" name="source" title="source" class="source" required/>
+
+          <label id="summary-label" for="summary">Summary:</label>
+          <textarea aria-labelledby="summary-label" id="summary" name="summary" title="summary" class="summary" required></textarea>
+        </div>
+
+        <div class="page-buttons">
+          <button id="login-button" name="login-button" type="submit">Save</button>
+        </div>
+      </form>
     </div>
   </main>
   <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
