@@ -46,7 +46,7 @@ $(document).ready(function() {
       data: JSON.stringify(newsDetails),
       success: (data) => {
         console.log(data)
-        // NEWS SUCCESFULLY CREATED
+        // NEWS ITEM SUCCESFULLY CREATED
         window.location.href = "/member-news.html"
       },
       error: (error) => {
