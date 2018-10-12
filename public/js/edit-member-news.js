@@ -32,6 +32,7 @@ $(document).ready(function() {
   $(".edit-form").submit((event) => {
     event.preventDefault()
     const url = "/api/news/";
+    const slug = id ? id : "",
     const newsDetails = {
       title: $("input[name=title]").val(),
       date: $("input[name=date]").val(),
@@ -39,7 +40,7 @@ $(document).ready(function() {
       summary: $("textarea[name=summary]").val()
     }
     $.ajax({
-      url,
+      url:url+slug,
       method: id? "PUT" : "POST",
       dataType: 'json',
       contentType: 'application/json',
