@@ -55,6 +55,16 @@ textarea {
   margin-right: .25rem;
 }
 
+button, input[type="button"], input[type="submit"] {
+    margin: 2rem;
+    border-radius: 0px;
+    border: 1px solid black;
+}
+
+.page-buttons {
+   text-align: center;
+}
+
 @media only screen and (min-width: 720px) {
     form {
         width: 50%;
