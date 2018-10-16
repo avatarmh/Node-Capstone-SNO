@@ -1,35 +1,35 @@
-$(document).ready(function() {
+$(document).ready(function () {
   let searchParams = new URLSearchParams(window.location.search)
   let id = searchParams.get('id')
 
-
-
   const url = `api/news/${id}`
-  $.ajax({
-    url,
-    method: 'GET',
-    dataType: 'json',
-    contentType: 'application/json',
-    success: (data) => {
-      console.log(data);
-      fillFormInputsWithItem(data);
-    },
-    error: (error) => {
-      console.log(error);
-    }
-  });
 
+  if (id) {
+    $.ajax({
+      url,
+      method: 'GET',
+      dataType: 'json',
+      contentType: 'application/json',
+      success: (data) => {
+        console.log(data);
+        fillFormInputsWithItem(data);
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    });
+  }
 
 
   function fillFormInputsWithItem(item) {
-    let formattedDate = moment(item.created).format('MM/DD/YYYY');
+    let formattedDate = moment(item.created).format('MM/DD/YY');
     $(".title").val(item.title);
     $(".date").val(formattedDate);
     $(".source").val(item.source);
     $(".summary").val(item.summary);
   }
 
-console.log("--")
+  console.log("--")
   $(".edit-form").submit(event => {
     console.log("HI")
     event.preventDefault()
@@ -43,10 +43,10 @@ console.log("--")
       id
     }
 
-      console.log(newsDetails)
+    console.log(newsDetails)
     $.ajax({
-      url:url+slug,
-      method: id? "PUT" : "POST",
+      url: url + slug,
+      method: id ? "PUT" : "POST",
       dataType: 'json',
       contentType: 'application/json',
       data: JSON.stringify(newsDetails),
@@ -59,6 +59,7 @@ console.log("--")
         console.log(error);
       }
     });
+
 
   });
 

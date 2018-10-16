@@ -1,12 +1,12 @@
 h1 {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     margin-top: 3rem;
     text-align: center;
     color: blue;
 }
 
-h2 {font-size: 14px;
+h2 {font-size: 16px;
     font-weight: bold;
     margin-top: 1rem;
     text-align: left;
@@ -24,18 +24,25 @@ p {
     border: 1px solid black ;
 }
 
-.remove-newsitem-button {
+.delete-newsitem-button {
     float: right;
     font-size: 14px;
     margin-top: -2rem;
     margin-right: -0rem;
 }
 
-.edit-newsitem-button{
+.edit-newsitem-button {
   float: right;
   font-size: 14px;
   margin-top: -.5rem;
   margin-right: .25rem;
+}
+
+#add-newsitem-button {
+    float: left;
+    font-size: 14px;
+    margin-top: -2rem;
+    margin-left: 2rem;
 }
 
 @media only screen and (min-width: 720px) {
