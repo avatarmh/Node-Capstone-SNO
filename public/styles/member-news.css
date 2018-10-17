@@ -27,22 +27,23 @@ p {
 .delete-newsitem-button {
     float: right;
     font-size: 14px;
-    margin-top: -2rem;
-    margin-right: -0rem;
+    margin-top: -4.5rem;
+    margin-right: -0.8rem;
+    color: blue;
 }
 
 .edit-newsitem-button {
   float: right;
   font-size: 14px;
-  margin-top: -.5rem;
-  margin-right: .25rem;
+  margin-top: -3.25rem;
+  margin-right: -0.5rem;
 }
 
-#add-newsitem-button {
-    float: left;
+.add-newsitem-button {
+    float: right;
     font-size: 14px;
-    margin-top: -2rem;
-    margin-left: 2rem;
+    margin-top: -1.9rem;
+    margin-right: 1rem;
 }
 
 @media only screen and (min-width: 720px) {
