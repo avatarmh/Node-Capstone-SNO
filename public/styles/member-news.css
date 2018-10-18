@@ -17,6 +17,7 @@ p {
 }    
 
 .news-item {
+    position: relative;
     width: 95%;
     margin: 10px auto;
     padding-left: 8px;
@@ -25,10 +26,10 @@ p {
 }
 
 .delete-newsitem-button {
-    float: right;
     font-size: 14px;
-    margin-top: -4.5rem;
-    margin-right: -0.8rem;
+    position: absolute;
+    top: 20px;
+    right: 0px;
     color: blue;
 }
 
