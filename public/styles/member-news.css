@@ -44,7 +44,7 @@ p {
 .add-newsitem-button {
     position: absolute;
     font-size: 14px;
-    margin-top: -1.9rem;
+    top: 118px;
     right: 15px;
     color: blue;
 }
