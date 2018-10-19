@@ -29,22 +29,24 @@ p {
     font-size: 14px;
     position: absolute;
     top: 20px;
-    right: 0px;
+    right: 7px;
     color: blue;
 }
 
 .edit-newsitem-button {
-  float: right;
-  font-size: 14px;
-  margin-top: -3.25rem;
-  margin-right: -0.5rem;
+    font-size: 14px;
+    position: absolute;
+    top: 3px;
+    right: 1.2px;
+    color: blue;
 }
 
 .add-newsitem-button {
-    float: right;
+    position: absolute;
     font-size: 14px;
     margin-top: -1.9rem;
-    margin-right: 1rem;
+    right: 15px;
+    color: blue;
 }
 
 @media only screen and (min-width: 720px) {

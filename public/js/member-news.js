@@ -22,11 +22,13 @@ $(document).ready(function() {
     return `
         <div class='news-item'>
         <h2>${item.title}</h2>
-        <button id=${item.id}  class= "delete-newsitem-button">X</button>
+        <span id=${item.id}  class= "delete-newsitem-button">X</span>
         <a href="/edit-member-news.html?id=${item.id}" class= "edit-newsitem-button"><i class="far fa-edit"></i></a>
         </header>
-        <p>Published on: ${formattedDate}</h2>
-        <p>Source: ${item.source}</h2>
+        <p>Published on: ${formattedDate}
+        </p>
+        <p>Source: ${item.source}
+        </p>
         <p>
           Summary: ${item.summary}
         </p>

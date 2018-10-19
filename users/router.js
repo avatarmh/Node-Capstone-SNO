@@ -177,6 +177,7 @@ router.post('/', (req, res) => {
 // verify this in the Mongo shell.
 router.get('/', (req, res) => {
   return User.find()
+    .sort({'lastName':1})
     .then(users => res.json(users.map(user => user.serialize())))
     .catch(err => res.status(500).json({ message: 'Internal server error' }));
 });
