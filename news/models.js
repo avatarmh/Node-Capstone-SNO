@@ -7,7 +7,8 @@ const newsItemSchema = mongoose.Schema({
     date: { type: Date },
     source: { type: String },
     summary: { type: String },
-    created: { type: Date, default: Date.now }
+    created: { type: Date, default: Date.now },
+    // ownerID: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }
 });
 
 newsItemSchema.methods.serialize = function() {
