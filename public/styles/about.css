@@ -17,7 +17,7 @@ main {
 h1 {
     font-size: 16px;
     font-weight: bold;
-    margin-top: 3rem;
+    margin-top: 1rem;
     text-align: center;
     color: blue;
 }
@@ -37,15 +37,19 @@ form {
     width: 95%;
 }
 
+.mission-goals ol {
+    padding-left: 5%;
+}
+
 .fields-of-study ul {
     list-style: none;
     padding: 0;
     margin: 0;
     }
 
-    .fields-of-study li::before {
+.fields-of-study li:before {
     content: "\2022";
-    font-size: 170%;
+    font-size: large;
     vertical-align: middle;
-    color: rgb(30, 163, 30);
+    color: rgb(21, 163, 21);
   }
