@@ -16,6 +16,8 @@ $(".login").submit((event) => {
     data: JSON.stringify(userDetails),
     success: (data) => {
       console.log(data)
+      localStorage.setItem ("token", data.authToken)
+      localStorage.setItem ("userID", data.userID)
       window.location.href = "/member-news.html"
     },
     error: (error) => {

@@ -8,7 +8,7 @@ const newsItemSchema = mongoose.Schema({
     source: { type: String },
     summary: { type: String },
     created: { type: Date, default: Date.now },
-    // ownerID: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }
+    ownerID: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }
 });
 
 newsItemSchema.methods.serialize = function() {
@@ -18,7 +18,8 @@ newsItemSchema.methods.serialize = function() {
         date: this.date,
         source: this.source,
         summary: this.summary,
-        created: this.created
+        created: this.created,
+        ownerID: this.ownerID
       };
 };
 

@@ -1,7 +1,7 @@
 $(document).ready(function () {
   let searchParams = new URLSearchParams(window.location.search)
   let id = searchParams.get('id')
-
+  $(".subtitle").text(`${id ? "Edit" : "Add"} News`)
   const url = `api/news/${id}`
 
   if (id) {
@@ -10,6 +10,9 @@ $(document).ready(function () {
       method: 'GET',
       dataType: 'json',
       contentType: 'application/json',
+      headers: {
+        "Authorization":`Bearer ${localStorage.getItem("token")}`
+      },
       success: (data) => {
         console.log(data);
         fillFormInputsWithItem(data);
@@ -50,6 +53,9 @@ $(document).ready(function () {
       dataType: 'json',
       contentType: 'application/json',
       data: JSON.stringify(newsDetails),
+      headers: {
+        "Authorization":`Bearer ${localStorage.getItem("token")}`
+      },
       success: (data) => {
         console.log(data)
         // NEWS ITEM SUCCESFULLY CREATED

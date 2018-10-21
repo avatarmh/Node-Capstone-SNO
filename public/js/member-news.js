@@ -5,6 +5,9 @@ $(document).ready(function() {
         method: 'GET',
         dataType: 'json',
         contentType: 'application/json',
+        headers: {
+          "Authorization":`Bearer ${localStorage.getItem("token")}`
+        },
         success: (data) => {
             console.log(data);
             const results = generateNewsItemsString(data.newsitems);
@@ -16,14 +19,24 @@ $(document).ready(function() {
         }
       });
 
+  function generateButtons(item, userID) {
+    if (item.ownerID === userID) {
+      return `
+      <span id=${item.id}  class= "delete-newsitem-button">X</span>
+      <a href="/edit-member-news.html?id=${item.id}" class= "edit-newsitem-button"><i class="far fa-edit"></i></a>
+      `
+    }
+    return ""
+  }
+
   function generateNewsItem(item) {
+    const userID = localStorage.getItem("userID");
     let formattedDate = moment(item.created).format('MM/DD/YYYY');
     console.log('in generatenewsitem', item.id);
     return `
         <div class='news-item'>
         <h2>${item.title}</h2>
-        <span id=${item.id}  class= "delete-newsitem-button">X</span>
-        <a href="/edit-member-news.html?id=${item.id}" class= "edit-newsitem-button"><i class="far fa-edit"></i></a>
+        ${generateButtons(item, userID)}
         </header>
         <p>Published on: ${formattedDate}
         </p>
@@ -53,6 +66,9 @@ $(document).ready(function() {
       method: 'DELETE',
       dataType: 'json',
       contentType: 'application/json',
+      headers: {
+        "Authorization":`Bearer ${localStorage.getItem("token")}`
+      },
       success: (data) => {
         console.log(data)
         // NEWS ITEM SUCCESFULLY DELETED

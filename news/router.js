@@ -54,13 +54,14 @@ router.post('/', (req, res) => {
       return res.status(400).send({ message, status: 'fail' });
     }
   }
-
+  console.log(req.user)
   NewsItem
     .create({
       title: req.body.title,
       date: req.body.date,
       source: req.body.source,
-      summary: req.body.summary
+      summary: req.body.summary,
+      ownerID: req.user.userID
     })
     .then(newsitems => res.status(201).json(newsitems.serialize()))
     .catch(err => {

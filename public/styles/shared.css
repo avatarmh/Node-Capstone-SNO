@@ -34,8 +34,12 @@ nav ul li {
 }
 
 nav a:hover {
-    font-color: green;
+    color: green;
   }
+
+nav a.active {
+    color: blue;
+}
 
 img.logo {
     height: 20%;

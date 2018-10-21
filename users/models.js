@@ -63,7 +63,8 @@ UserSchema.methods.serialize = function () {
     position: this.position || '',
     deptUnit: this.deptUnit || '',
     researchFocus: this.researchFocus || '',
-    specificSNOInterest: this.specificSNOInterest || []
+    specificSNOInterest: this.specificSNOInterest || [],
+    userID: this._id
 
   };
 };
