@@ -6,6 +6,9 @@ $(document).ready(function() {
       method: 'GET',
       dataType: 'json',
       contentType: 'application/json',
+      headers: {
+        "Authorization":`Bearer ${localStorage.getItem("token")}`
+      },    
       success: (data) => {
         console.log(data);
          const results = generateMembersString(data);
