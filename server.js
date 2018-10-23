@@ -45,12 +45,14 @@ app.use(express.static('public'));
 passport.use(localStrategy);
 passport.use(jwtStrategy);
 
+app.use('/api/users/', usersRouter);
+
 app.use('/api/auth/', authRouter);
 
 const jwtAuth = passport.authenticate('jwt', { session: false });
 
 app.use('/api/news/', jwtAuth, newsRouter);
-app.use('/api/users/', jwtAuth, usersRouter);
+
 
 // A protected endpoint which needs a valid JWT to access it
 // *** note: this is just a route to show that endpoints are protected

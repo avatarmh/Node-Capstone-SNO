@@ -4,7 +4,6 @@ const { User } = require('./models');
 
 const router = express.Router();
 
-
 // Post to register a new user
 router.post('/', (req, res) => {
   console.log(req.body);
