@@ -38,7 +38,6 @@ h2 {font-size: 16px;
 
 .engaged-in ul {
     list-style: none;
-    list-style-position: outside;
     padding: 0;
     margin: 0;
     }
@@ -47,5 +46,7 @@ h2 {font-size: 16px;
     content: "\2022";
     font-size: large;
     vertical-align: middle;
+    /* list-style-position: outside; */
+    margin-left: -0.5em;
     color: rgb(21, 163, 21);
   }

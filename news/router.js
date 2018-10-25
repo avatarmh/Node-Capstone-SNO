@@ -33,6 +33,7 @@ router.get('/:id', (req, res) => {
     // this is a convenience method Mongoose provides for searching
     // by the object _id property
     .findById(req.params.id)
+    .sort({'date':1})
     .then(newsitems => res.json(newsitems.serialize()))
     .catch(err => {
       console.error(err);
