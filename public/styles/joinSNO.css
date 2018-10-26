@@ -100,14 +100,3 @@ button, input[type="button"], input[type="submit"] {
     }
     
 }
-
-@media only screen and (max-width: 425px) {
-    
-    
-    nav {
-      
-      font-size: 12px;
-      
-    }
-    
-}

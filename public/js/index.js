@@ -5,3 +5,4 @@ $(".logout").click((event) => {
   window.location.href = "/index.html"
   });
 
+  
