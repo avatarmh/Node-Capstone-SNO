@@ -29,9 +29,10 @@ $(document).ready(function() {
     return `
         <div class='member-info'>
       <h2>${member.firstName} ${member.lastName}</h2>
-       <p>Affiliation: ${member.affiliation}</p>
-       <p>Position: ${member.position}</p>
-       <p>Research focus: ${member.researchFocus}</p>
+       <p class='tight'>Affiliation: ${member.affiliation}</p>
+       <p class='tight'>Position: ${member.position}</p>
+       <p class='tight'>Research focus: ${member.researchFocus}</p>
+       <p></p>
       </div>`
 }
 
