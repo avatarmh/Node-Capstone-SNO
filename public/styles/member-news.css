@@ -42,10 +42,10 @@ p {
 }
 
 .add-newsitem-button {
-    position: absolute;
     font-size: 14px;
-    top: 118px;
-    right: 15px;
+    float: right;
+    margin-right: 3%;
+    margin-top: -27px;
     color: blue;
 }
 
