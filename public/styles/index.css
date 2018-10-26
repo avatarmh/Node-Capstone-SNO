@@ -21,7 +21,6 @@ h1 {
     margin-top: 1rem;
     margin-bottom: 0px;
     text-align: left;
-    color: blue;
 }
 
 h2 {font-size: 16px;
@@ -29,11 +28,21 @@ h2 {font-size: 16px;
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: left;
-    color: black;
 }
 
 .welcome {
     width: 95%;
+    margin: auto;
+}
+
+.welcome .lightbox {
+    background-image: url("/nano1024-e1400502699196.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    padding: 10px;
+    color: #fff;
+    height: 150px;
 }
 
 
