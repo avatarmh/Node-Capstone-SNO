@@ -11,9 +11,9 @@ main {
     margin-top: 80px;
 }
 
-.content {
-    width: 95%;
-}
+/* .content {
+    padding: 10px;
+} */
 
 h1 {
     font-size: 16px;
@@ -36,10 +36,12 @@ h2 {font-size: 16px;
     width: 95%;
 }
 
+
 .engaged-in ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-left: 0.7rem;
     }
 
 .engaged-in li:before {
@@ -50,3 +52,20 @@ h2 {font-size: 16px;
     margin-left: -0.5em;
     color: rgb(21, 163, 21);
   }
+
+
+footer {
+    padding: 10px;
+    font-size: 10px;
+    position:absolute;
+    bottom:0;
+    /* height:60px;   Height of the footer */
+ }
+
+h4 {
+    padding: 0px;
+    margin: 0px;
+}
+.copyright {
+    margin: 0px;
+}

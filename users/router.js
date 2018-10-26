@@ -1,6 +1,7 @@
 'use strict';
 const express = require('express');
 const { User } = require('./models');
+const passport = require('passport');
 
 const router = express.Router();
 
@@ -170,11 +171,13 @@ router.post('/', (req, res) => {
     });
 });
 
+const jwtAuth = passport.authenticate('jwt', { session: false });
+
 // Never expose all your users like below in a prod application
 // we're just doing this so we have a quick way to see
 // if we're creating users. keep in mind, you can also
 // verify this in the Mongo shell.
-router.get('/', (req, res) => {
+router.get('/', jwtAuth, (req, res) => {
   return User.find()
     .sort({'lastName':1})
     .then(users => res.json(users.map(user => user.serialize())))

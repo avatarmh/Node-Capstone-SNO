@@ -1,3 +1,8 @@
+const token = localStorage.getItem("token");
+if (!token) {
+  window.location.href = "/index.html"
+} 
+
 $(document).ready(function () {
   let searchParams = new URLSearchParams(window.location.search)
   let id = searchParams.get('id')

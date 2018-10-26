@@ -1,3 +1,8 @@
+const token = localStorage.getItem("token");
+if (!token) {
+  window.location.href = "/index.html"
+} 
+
 $(document).ready(function() {
   const url = "api/users/"
   console.log('in memberdirectory js')

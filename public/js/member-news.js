@@ -1,5 +1,9 @@
+const token = localStorage.getItem("token");
+if (!token) {
+  window.location.href = "/index.html"
+} 
 $(document).ready(function() {
-    const url = "api/news/"
+    const url = "api/news/";
     $.ajax({
         url,
         method: 'GET',
