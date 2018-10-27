@@ -16,11 +16,13 @@
 
 <body>
 
-    <header role="banner">
-        <a href="/index.html"><img class="logo" alt="SNOlogo" src="SNOlogo.png" /></a>
-         <nav role="navigation" class="header-navigation">
-           <ul>
-         <li>
+  <header role="banner">
+    <a href="/index.html">
+      <img class="logo" alt="SNOlogo" src="SNOlogo.png" />
+    </a>
+    <nav role="navigation" class="header-navigation">
+      <ul>
+        <li>
           <a href="/about.html">About</a>
         </li>
         <li>
@@ -31,6 +33,9 @@
         </li>
         <li>
           <a href="/member-directory.html">Directory</a>
+        </li>
+        <li id="logout" class="hide">
+          <a href="/" class="logout">Logout</a>
         </li>
       </ul>
     </nav>
@@ -43,17 +48,17 @@
     <div class="news-item">
       <form class="edit-form">
 
-          <label id="title-label" for="title">Title:</label>
-          <textarea aria-labelledby="title-label" id="title" name="title" title="title" class="title" required></textarea>
+        <label id="title-label" for="title">Title:</label>
+        <textarea aria-labelledby="title-label" id="title" name="title" title="title" class="title" required></textarea>
 
-          <label id="date-label" for="date">Publication date:</label>
-          <input aria-labelledby="date-label" id="date" type="text" name="date" title="date" class="date" required/>
+        <label id="date-label" for="date">Publication date:</label>
+        <input aria-labelledby="date-label" id="date" type="text" name="date" title="date" class="date" required/>
 
-          <label id="source-label" for="source">Source:</label>
-          <input aria-labelledby="source-label" id="source" type="text" name="source" title="source" class="source" required/>
+        <label id="source-label" for="source">Source:</label>
+        <input aria-labelledby="source-label" id="source" type="text" name="source" title="source" class="source" required/>
 
-          <label id="summary-label" for="summary">Summary:</label>
-          <textarea aria-labelledby="summary-label" id="summary" name="summary" title="summary" class="summary" required></textarea>
+        <label id="summary-label" for="summary">Summary:</label>
+        <textarea aria-labelledby="summary-label" id="summary" name="summary" title="summary" class="summary" required></textarea>
 
         <div class="page-buttons">
           <button type="submit">Save</button>
@@ -64,6 +69,7 @@
   <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 
+  <script src="/js/shared.js"></script>
   <script src="/js/edit-member-news.js"></script>
 </body>
 
