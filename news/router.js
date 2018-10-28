@@ -7,11 +7,27 @@ const router = express.Router();
 
 // GET requests to /posts => return 5 blogposts
 router.get('/', (req, res) => {
+// 
+  // const { searchTerm, id}
+  // if (searchTerm) {
+  //   const re = new RegExp(searchTerm, 'i');
+  //   filter.title = { $regex: re };
+  // }
+
+  // if (folderId) {
+  //   filter.folderId = folderId;
+  // }
+
+  // if (tagId) {
+  //   filter.tags = tagId;
+  // }
+  // 
   NewsItem
     .find()
+    .sort({'date':-1})
     // we're limiting because blogPosts db just in case 
     // it grows to many documents
-    .limit(5)
+    .limit(20)
     // success callback: for each blogPost we got back, we'll
     // call the `.serialize` instance method we've created in
     // models.js in order to only expose the data we want the API return.
@@ -33,7 +49,6 @@ router.get('/:id', (req, res) => {
     // this is a convenience method Mongoose provides for searching
     // by the object _id property
     .findById(req.params.id)
-    .sort({'date':1})
     .then(newsitems => res.json(newsitems.serialize()))
     .catch(err => {
       console.error(err);
