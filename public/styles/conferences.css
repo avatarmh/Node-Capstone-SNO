@@ -1,0 +1,17 @@
+header {
+    /* border: 1px solid grey; */
+    position: fixed;
+    background-color: white;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+main {
+    margin-top: 80px;
+}
+
+.content {
+    width: 95%;
+    min-height: 1vh;
+}
+

@@ -43,11 +43,17 @@ p {
 
 .add-newsitem-button {
     font-size: 14px;
+    font-weight: light; 
     float: right;
     margin-right: 3%;
     margin-top: -27px;
     color: blue;
 }
+
+.fa-plus:hover ~ #plus-text {
+    display: block;
+  }
+  
 
 @media only screen and (min-width: 720px) {
     form {

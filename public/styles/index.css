@@ -9,11 +9,12 @@ header {
 }
 main {
     margin-top: 80px;
+    
 }
 
-/* .content {
-    padding: 10px;
-} */
+body {
+    min-height: 100%
+}
 
 h1 {
     font-size: 16px;
