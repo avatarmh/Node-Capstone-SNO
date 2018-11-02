@@ -437,7 +437,7 @@ describe('/api/user', function () {
             expect(res.body.location).to.equal('username');
           });
       });
-      it.skip('Should create a new user', function () {
+      it('Should create a new user', function () {
         return chai
           .request(app)
           .post('/api/users')
@@ -445,19 +445,72 @@ describe('/api/user', function () {
             username,
             password,
             firstName,
-            lastName
-          })
+            middleInitial,
+            lastName,
+            membershipChoice,
+            memberType,
+            street1,
+            street2,
+            city,
+            stateProvDept,
+            country,
+            phone,
+            altEmail,
+            fax,
+            gender,
+            affiliation,
+            position,
+            deptUnit,
+            researchFocus,
+            specificSNOInterest
+      })
           .then(res => {
             expect(res).to.have.status(201);
             expect(res.body).to.be.an('object');
             expect(res.body).to.have.keys(
               'username',
               'firstName',
-              'lastName'
+              'middleInitial',
+              'lastName',
+              'membershipChoice',
+              'memberType',
+              'street1',
+              'street2',
+              'city',
+              'stateProvDept',
+              'country',
+              'phone',
+              'altEmail',
+              'fax',
+              'gender',
+              'affiliation',
+              'position',
+              'deptUnit',
+              'researchFocus',
+              'specificSNOInterest'
             );
+            console.log(res.body);
             expect(res.body.username).to.equal(username);
             expect(res.body.firstName).to.equal(firstName);
+            expect(res.body.middleInitial).to.equal(middleInitial);
             expect(res.body.lastName).to.equal(lastName);
+            expect(res.body.membershipChoice).to.equal(membershipChoice);
+            expect(res.body.memberType).to.equal(memberType);
+            expect(res.body.street1).to.equal(street1);
+            expect(res.body.street2).to.equal(street2);
+            expect(res.body.city).to.equal(city);
+            expect(res.body.stateProvDept).to.equal(stateProvDept);
+            expect(res.body.country).to.equal(country);
+            expect(res.body.phone).to.equal(phone);
+            expect(res.body.altEmail).to.equal(altEmail);
+            expect(res.body.fax).to.equal(fax);
+            expect(res.body.gender).to.equal(gender);
+            expect(res.body.affiliation).to.equal(affiliation);
+            expect(res.body.position).to.equal(position);
+            expect(res.body.deptUnit).to.equal(deptUnit);
+            expect(res.body.researchFocus).to.equal(researchFocus);
+            expect(res.body.specificSNOInterest).to.equal(specificSNOInterest);
+
             return User.findOne({
               username
             });
@@ -465,7 +518,24 @@ describe('/api/user', function () {
           .then(user => {
             expect(user).to.not.be.null;
             expect(user.firstName).to.equal(firstName);
+            expect(user.middleInitial).to.equal(middleInitial);
             expect(user.lastName).to.equal(lastName);
+            expect(user.membershipChoice).to.equal(membershipChoice);
+            expect(user.memberType).to.equal(memberType);
+            expect(user.street1).to.equal(street1);
+            expect(user.street2).to.equal(street2);
+            expect(user.city).to.equal(city);
+            expect(user.stateProvDept).to.equal(stateProvDept);
+            expect(user.country).to.equal(country);
+            expect(user.phone).to.equal(phone);
+            expect(user.altEmail).to.equal(altEmail);
+            expect(user.fax).to.equal(fax);
+            expect(user.gender).to.equal(gender);
+            expect(user.affiliation).to.equal(affiliation);
+            expect(user.position).to.equal(position);
+            expect(user.deptUnit).to.equal(deptUnit);
+            expect(user.researchFocus).to.equal(researchFocus);
+            expect(user.specificSNOInterest).to.equal(specificSNOInterest);
             return user.validatePassword(password);
           })
           .then(passwordIsCorrect => {

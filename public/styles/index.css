@@ -60,7 +60,7 @@ h2 {font-size: 16px;
     width: 95%  !important;
     height: auto ! important; 
 }
-.featured-label {
+.featured-event-label {
     position: absolute;
     top: -4px;
     left: -4px;
@@ -76,8 +76,20 @@ h2 {font-size: 16px;
     margin-bottom: 0.25em;
 }
 
-.video {
-
+.featured-news-label {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    z-index: 10;
+    border: 0 none;
+    color: white;
+    background-color: #5daee1;
+    /* display: inline-block; */
+    padding: 0.35em 0.5em;
+    font-family: "ff-dagny-web-pro",Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-weight: 700;
+    font-size: 1.143em;
+    margin-bottom: 0.25em;
 }
 
 /* .engaged-in ul {
@@ -99,6 +111,5 @@ h2 {font-size: 16px;
 @media only screen and (max-width: 425px) {
     .event-text, .event-image {
         float: left;
-        display: in-line;
     }
 }

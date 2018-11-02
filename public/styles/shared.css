@@ -60,6 +60,10 @@ img.logo {
     max-height: 60px;
 }
 
+main {
+    margin-top: 80px;
+}
+
 .content {
     padding: 10px;
     font-weight: normal;
