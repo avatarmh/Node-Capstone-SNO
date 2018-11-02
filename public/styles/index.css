@@ -22,7 +22,6 @@ h1 {
     margin-top: 1rem;
     margin-bottom: 0px;
     text-align: left;
-    text-shadow: 2px 2px blue;
 }
 
 h2 {font-size: 16px;
@@ -33,23 +32,55 @@ h2 {font-size: 16px;
     text-shadow: 2px 2px blue;
 }
 
-.welcome {
+.featured-events {
     width: 95%;
     margin: auto;
 }
+.events {
+    position: relative;
+}
 
-.welcome .lightbox {
-    background-image: url("/nano1024-e1400502699196.jpg");
-    background-size: cover;
+.event-image {
+    /* background-size: contain; */
     background-repeat: no-repeat;
     background-position-x: center;
     padding: 10px;
     color: #fff;
-    height: 150px;
+    height: 320px;
+    overflow: hidden;
 }
 
+.event-image img {
+    max-width: 100%;
+    height: 100%;
+}
 
-.engaged-in ul {
+.video {
+    align-self: center;
+    width: 95%  !important;
+    height: auto ! important; 
+}
+.featured-label {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    z-index: 10;
+    border: 0 none;
+    color: white;
+    background-color: #5daee1;
+    /* display: inline-block; */
+    padding: 0.35em 0.5em;
+    font-family: "ff-dagny-web-pro",Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-weight: 700;
+    font-size: 1.143em;
+    margin-bottom: 0.25em;
+}
+
+.video {
+
+}
+
+/* .engaged-in ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -60,8 +91,14 @@ h2 {font-size: 16px;
     content: "\2022";
     font-size: large;
     vertical-align: middle;
-    /* list-style-position: outside; */
+    /* list-style-position: outside;
     margin-left: -0.5em;
     color: rgb(21, 163, 21);
-  }
+  } */
 
+@media only screen and (max-width: 425px) {
+    .event-text, .event-image {
+        float: left;
+        display: in-line;
+    }
+}

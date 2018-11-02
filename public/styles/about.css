@@ -8,12 +8,12 @@ header {
 }
 main {
     margin-top: 80px;
+    min-height: 98%;    
 }
 
 .content {
     width: 95%;
 }
-
 h1 {
     font-size: 16px;
     font-weight: bold;
@@ -29,8 +29,39 @@ h2 {font-size: 16px;
     color: black;
 }
 
-form {
-    margin: 2rem 0;
+.welcome {
+    width: 95%;
+    margin: auto;
+}
+
+.welcome .nano-image {
+    background-image: url("/nano1024-e1400502699196.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    padding: 10px;
+    color: #fff;
+    height: 150px;
+}
+
+.welcome .nano-image h1, .welcome .nano-image h2 {
+    color: #fff;
+}
+
+.engaged-in ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 0.7rem;
+    }
+
+.engaged-in li:before {
+    content: "\2022";
+    font-size: large;
+    vertical-align: middle;
+    /* list-style-position: outside; */
+    margin-left: -0.5em;
+    color: rgb(21, 163, 21);
 }
 
 .mission {

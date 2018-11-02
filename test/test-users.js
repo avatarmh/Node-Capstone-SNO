@@ -368,7 +368,7 @@ describe('/api/user', function () {
           });
       });
 
-      it.skip('Should reject users with duplicate username', function () {
+      it('Should reject users with duplicate username', function () {
         // Create an initial user
         return User.create({
             username,
@@ -396,27 +396,27 @@ describe('/api/user', function () {
           .then(() =>
             // Try to create a second user with the same username
             chai.request(app).post('/api/users').send({
-              usernameB,
-              passwordB,
-              firstNameB,
-              middleInitialB,
-              lastNameB,
-              membershipChoiceB,
-              memberTypeB,
-              street1B,
-              street2B,
-              cityB,
-              stateProvDeptB,
-              countryB,
-              phoneB,
-              altEmailB,
-              faxB,
-              genderB,
-              affiliationB,
-              positionB,
-              deptUnitB,
-              researchFocusB,
-              specificSNOInterestB
+                username,
+                password,
+                firstName,
+                middleInitial,
+                lastName,
+                membershipChoice,
+                memberType,
+                street1,
+                street2,
+                city,
+                stateProvDept,
+                country,
+                phone,
+                altEmail,
+                fax,
+                gender,
+                affiliation,
+                position,
+                deptUnit,
+                researchFocus,
+                specificSNOInterest
             })
           )
           .then(() =>
@@ -437,7 +437,7 @@ describe('/api/user', function () {
             expect(res.body.location).to.equal('username');
           });
       });
-      it('Should create a new user', function () {
+      it.skip('Should create a new user', function () {
         return chai
           .request(app)
           .post('/api/users')
@@ -506,7 +506,7 @@ describe('/api/user', function () {
     });
 
     describe('GET', function () {
-      it('Should return an empty array initially', function () {
+      it.skip('Should return an empty array initially', function () {
         return chai.request(app).get('/api/users').then(res => {
           expect(res).to.have.status(200);
           expect(res.body).to.be.an('array');
@@ -519,14 +519,48 @@ describe('/api/user', function () {
             username,
             password,
             firstName,
-            lastName
-          },
+            middleInitial,
+            lastName,
+            membershipChoice,
+            memberType,
+            street1,
+            street2,
+            city,
+            stateProvDept,
+            country,
+            phone,
+            altEmail,
+            fax,
+            gender,
+            affiliation,
+            position,
+            deptUnit,
+            researchFocus,
+            specificSNOInterest
+           },
           {
-            username: usernameB,
-            password: passwordB,
-            firstName: firstNameB,
-            lastName: lastNameB
-          }
+            usernameB,
+            passwordB,
+            firstNameB,
+            middleInitialB,
+            lastNameB,
+            membershipChoiceB,
+            memberTypeB,
+            street1B,
+            street2B,
+            cityB,
+            stateProvDeptB,
+            countryB,
+            phoneB,
+            altEmailB,
+            faxB,
+            genderB,
+            affiliationB,
+            positionB,
+            deptUnitB,
+            researchFocusB,
+            specificSNOInterestB
+        }
         )
           .then(() => chai.request(app).get('/api/users'))
           .then(res => {

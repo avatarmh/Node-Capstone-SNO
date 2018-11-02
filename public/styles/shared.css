@@ -15,6 +15,13 @@ html {
 
 header {
     width: 100%;
+    /* border: 1px solid grey; */
+    position: fixed;
+    background-color: white;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .hide {
