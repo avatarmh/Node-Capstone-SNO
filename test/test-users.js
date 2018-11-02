@@ -469,6 +469,7 @@ describe('/api/user', function () {
             expect(res.body).to.be.an('object');
             expect(res.body).to.have.keys(
               'username',
+              'userID',
               'firstName',
               'middleInitial',
               'lastName',
@@ -509,7 +510,7 @@ describe('/api/user', function () {
             expect(res.body.position).to.equal(position);
             expect(res.body.deptUnit).to.equal(deptUnit);
             expect(res.body.researchFocus).to.equal(researchFocus);
-            expect(res.body.specificSNOInterest).to.equal(specificSNOInterest);
+            expect(res.body.specificSNOInterest).to.deep.equal(specificSNOInterest);
 
             return User.findOne({
               username
@@ -535,7 +536,7 @@ describe('/api/user', function () {
             expect(user.position).to.equal(position);
             expect(user.deptUnit).to.equal(deptUnit);
             expect(user.researchFocus).to.equal(researchFocus);
-            expect(user.specificSNOInterest).to.equal(specificSNOInterest);
+            expect(user.specificSNOInterest).to.deep.equal(specificSNOInterest);
             return user.validatePassword(password);
           })
           .then(passwordIsCorrect => {
