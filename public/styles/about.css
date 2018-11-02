@@ -18,7 +18,7 @@ h1 {
     font-size: 16px;
     font-weight: bold;
     margin-top: 1rem;
-    text-align: center;
+    text-align: left;
     color: blue;
 }
 
@@ -40,12 +40,13 @@ h2 {font-size: 16px;
     background-repeat: no-repeat;
     background-position-x: center;
     padding: 10px;
-    color: #fff;
     height: 150px;
 }
 
 .welcome .nano-image h1, .welcome .nano-image h2 {
     color: #fff;
+    text-shadow: 2px 2px black;
+
 }
 
 .engaged-in ul {
