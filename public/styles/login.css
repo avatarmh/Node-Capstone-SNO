@@ -26,10 +26,12 @@ input {
     float: right;
     color: blue;
     margin-top: 0;
+    font-size: 10px;
 }
 
 .terms, .not-yet-member {
     text-align: center;
+    font-size: 10px;
 }
 
 /* .terms-service-privacy {
@@ -56,12 +58,6 @@ button, input[type="button"] {
 }
 
 @media only screen and (max-width: 425px) {
-    
-    
-    nav {
-      
-      font-size: 12px;
-      
-    }
+
     
 }

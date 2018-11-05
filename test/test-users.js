@@ -543,7 +543,7 @@ describe('/api/user', function () {
             expect(passwordIsCorrect).to.be.true;
           });
       });
-      it.skip('Should trim firstName and lastName', function () {
+      it('Should trim firstName and lastName', function () {
         return chai
           .request(app)
           .post('/api/users')
@@ -551,15 +551,50 @@ describe('/api/user', function () {
             username,
             password,
             firstName: ` ${firstName} `,
-            lastName: ` ${lastName} `
+            middleInitial,
+            lastName: ` ${lastName} `,
+            membershipChoice,
+            memberType,
+            street1,
+            street2,
+            city,
+            stateProvDept,
+            country,
+            phone,
+            altEmail,
+            fax,
+            gender,
+            affiliation,
+            position,
+            deptUnit,
+            researchFocus,
+            specificSNOInterest            
           })
           .then(res => {
             expect(res).to.have.status(201);
             expect(res.body).to.be.an('object');
             expect(res.body).to.have.keys(
-              'username',
-              'firstName',
-              'lastName'
+                'username',
+                'userID',
+                'firstName',
+                'lastName',
+                'middleInitial',
+                'membershipChoice',
+                'memberType',
+                'street1',
+                'street2',
+                'city',
+                'stateProvDept',
+                'country',
+                'phone',
+                'altEmail',
+                'fax',
+                'gender',
+                'affiliation',
+                'position',
+                'deptUnit',
+                'researchFocus',
+                'specificSNOInterest'  
             );
             expect(res.body.username).to.equal(username);
             expect(res.body.firstName).to.equal(firstName);
@@ -577,11 +612,12 @@ describe('/api/user', function () {
     });
 
     describe('GET', function () {
-      it.skip('Should return an empty array initially', function () {
+      it('Should return an empty array initially', function () {
         return chai.request(app).get('/api/users').then(res => {
-          expect(res).to.have.status(200);
-          expect(res.body).to.be.an('array');
-          expect(res.body).to.have.length(0);
+            console.log(res.body);
+            expect(res).to.have.status(200);
+            expect(res.body).to.be.an('array');
+            expect(res.body).to.have.length(0);
         });
       });
       it.skip('Should return an array of users', function () {
@@ -610,43 +646,84 @@ describe('/api/user', function () {
             specificSNOInterest
            },
           {
-            usernameB,
-            passwordB,
-            firstNameB,
-            middleInitialB,
-            lastNameB,
-            membershipChoiceB,
-            memberTypeB,
-            street1B,
-            street2B,
-            cityB,
-            stateProvDeptB,
-            countryB,
-            phoneB,
-            altEmailB,
-            faxB,
-            genderB,
-            affiliationB,
-            positionB,
-            deptUnitB,
-            researchFocusB,
-            specificSNOInterestB
+            username: usernameB,
+            password: passwordB,
+            firstName: firstNameB,
+            middleInitial: middleInitialB,
+            lastName: lastNameB,
+            membershipChoice: membershipChoiceB,
+            memberType: memberTypeB,
+            street1: street1B,
+            street2: street2B,
+            city: cityB,
+            stateProvDept: stateProvDeptB,
+            country: countryB,
+            phone: phoneB,
+            altEmail: altEmailB,
+            fax: faxB,
+            gender: genderB,
+            affiliation: affiliationB,
+            position: positionB,
+            deptUnit: deptUnitB,
+            researchFocus: researchFocusB,
+            specificSNOInterest: specificSNOInterestB
         }
         )
-          .then(() => chai.request(app).get('/api/users'))
+          .then(() => chai.request(app).get('api/users'))
           .then(res => {
+              console.log(res.body[0]);
             expect(res).to.have.status(200);
             expect(res.body).to.be.an('array');
             expect(res.body).to.have.length(2);
             expect(res.body[0]).to.deep.equal({
-              username,
-              firstName,
-              lastName
+                username,
+                userID:res.user.userID,
+                firstName,
+                middleInitial,
+                lastName,
+                membershipChoice,
+                memberType,
+                street1,
+                street2,
+                city,
+                stateProvDept,
+                country,
+                phone,
+                altEmail,
+                fax,
+                gender,
+                affiliation,
+                position,
+                deptUnit,
+                researchFocus,
+                specificSNOInterest
+  
+
             });
             expect(res.body[1]).to.deep.equal({
-              username: usernameB,
-              firstName: firstNameB,
-              lastName: lastNameB
+                username: usernameB,
+                userID:res.user.userID,
+                firstName: firstNameB,
+                middleInitial: middleInitialB,
+                lastName: lastNameB,
+                membershipChoice: membershipChoiceB,
+                memberType: memberTypeB,
+                street1: street1B,
+                street2: street2B,
+                city: cityB,
+                stateProvDept: stateProvDeptB,
+                country: countryB,
+                phone: phoneB,
+                altEmail: altEmailB,
+                fax: faxB,
+                gender: genderB,
+                affiliation: affiliationB,
+                position: positionB,
+                deptUnit: deptUnitB,
+                researchFocus: researchFocusB,
+                specificSNOInterest: specificSNOInterestB
+  
+
             });
           });
       });

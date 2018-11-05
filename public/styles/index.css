@@ -32,10 +32,12 @@ h2 {font-size: 16px;
     text-shadow: 2px 2px blue;
 }
 
-.featured-events {
-    width: 95%;
-    margin: auto;
+.event-n-news-text {
+    /* float: left; */
+    /* width: 95%;
+    margin: auto; */
 }
+
 .events {
     position: relative;
 }
@@ -53,6 +55,10 @@ h2 {font-size: 16px;
 .event-image img {
     max-width: 100%;
     height: 100%;
+}
+
+.news {
+    position: relative;
 }
 
 .video {
@@ -92,24 +98,14 @@ h2 {font-size: 16px;
     margin-bottom: 0.25em;
 }
 
-/* .engaged-in ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-left: 0.7rem;
-    }
-
-.engaged-in li:before {
-    content: "\2022";
-    font-size: large;
-    vertical-align: middle;
-    /* list-style-position: outside;
-    margin-left: -0.5em;
-    color: rgb(21, 163, 21);
-  } */
+.nav-bar-footer {
+    color: #21a062;
+    /* display: inline-block; */
+}
 
 @media only screen and (max-width: 425px) {
     .event-text, .event-image {
-        float: left;
+        /* float: left; */
+        display: inline;
     }
 }
