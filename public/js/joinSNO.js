@@ -75,7 +75,6 @@ $(".sno-membership").submit((event) => {
 
   // optional gender input
   var gender = $("input[name=gender]:checked").val();
-  console.log(gender)
 
   // affiliation, position, department/BU, focus, otherFoci, interests
   var affiliation = $("input[name=affiliation]").val();
@@ -94,7 +93,6 @@ $(".sno-membership").submit((event) => {
   checked.each(function () {
     specificSNOInterest.push($(this).val());
   });
-  console.log(specificSNOInterest);
   const otherSNOInterest = $("input[name=other-sno-interest]").val();
   if (otherSNOInterest) {
     specificSNOInterest.push(otherSNOInterest);
@@ -130,7 +128,7 @@ $(".sno-membership").submit((event) => {
     researchFocus,
     specificSNOInterest
   };
-  
+  console.log(postalCode)
   $.ajax({
     url,
     method: 'POST',
