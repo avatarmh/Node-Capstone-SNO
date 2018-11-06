@@ -95,11 +95,12 @@ h4 {
 
 }
 
-@media only screen and (max-width: 425px) {
-    nav {
+@media only screen and (max-width: 576px) {
+    /* nav {
       
       font-size: 12px;
       
-    }
+    } */
+    
     
 }
