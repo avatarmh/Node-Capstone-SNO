@@ -58,7 +58,8 @@ h2 {font-size: 16px;
     align-self: center;
     height: auto ! important;
     margin-top: 2rem;
-    width: 95%;
+    padding: 10px;
+    width: 100%;
 }
 
 .featured-label {
@@ -89,9 +90,19 @@ h2 {font-size: 16px;
     /* display: inline-block; */
 }
 
-@media only screen and (max-width: 425px) {
-    .event-text, .event-image {
-        /* float: left; */
-        display: inline;
-    }
+.clear-float {
+    clear: both;
 }
+
+.content .events, .content .news, .content .videos {
+    float: left;
+    width: 33.3%;
+}
+
+@media only screen and (max-width: 425px) {
+    .content .events, .content .news, .content .videos {
+        float: none; 
+        width: 100%;
+    }
+
+} 
