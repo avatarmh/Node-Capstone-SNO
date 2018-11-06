@@ -1,0 +1,34 @@
+header {
+    /* border: 1px solid grey; */
+    position: fixed;
+    background-color: white;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+main {
+    margin-top: 80px;
+    min-height: 98%;    
+}
+
+.content {
+    width: 95%;
+}
+h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: left;
+    color: blue;
+}
+
+h2 {font-size: 16px;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: left;
+    color: black;
+}
+
+.email-address {
+    display: inline;
+}

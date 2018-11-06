@@ -26,6 +26,7 @@ const UserSchema = mongoose.Schema({
   street2: { type: String, default: '' },
   city: { type: String, required: true },
   stateProvDept: { type: String, required: true },
+  postalCode: { type: String, required: true },
   country: { type: String, required: true },
   // other info
   phone: {type: String, required: true},
@@ -54,6 +55,7 @@ UserSchema.methods.serialize = function () {
     street2: this.street2 || '',
     city: this.city || '',
     stateProvDept: this.stateProvDept || '',
+    postalCode: this.postalCode || '',
     country: this.country || '',
     phone: this.phone || '',
     altEmail: this.altEmail || '',

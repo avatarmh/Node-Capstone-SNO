@@ -79,7 +79,10 @@ main {
 .content {
     padding: 10px;
     font-weight: normal;
-}
+    min-height: 77vh;
+    width: 95%;
+    margin: auto;
+    }
 
 .asterisk {
     color: red;
@@ -104,6 +107,7 @@ h4 {
 }
 .copyright {
     margin: 0px;
+    font-size: 10px;
     color: #c5bfbf;
 
 }

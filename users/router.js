@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
   }
 
   const stringFields = ['username', 'password', 'firstName', 'middleInitial', 'lastName', 'membershipChoice', 'memberType', 
-  'street1', 'street2', 'city', 'stateProvDept', 'postalCode', 'country', 'phone', 'altEmail', 'fax', 'gender', 'affiliation', 'position', 'deptUnit', 'researchFocus'];
+  'street1', 'street2', 'city', 'stateProvDept', 'postalCode', 'postalCode', 'country', 'phone', 'altEmail', 'fax', 'gender', 'affiliation', 'position', 'deptUnit', 'researchFocus'];
   const nonStringField = stringFields.find(
     field => field in req.body && typeof req.body[field] !== 'string'
   );
