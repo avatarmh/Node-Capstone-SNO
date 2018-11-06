@@ -32,6 +32,17 @@ h2 {font-size: 16px;
     text-shadow: 2px 2px blue;
 }
 
+.brand {
+    padding: 0px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: blue;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: normal;
+}
+
 .events, .news, .videos {
     position: relative;
     display: block;
@@ -64,8 +75,8 @@ h2 {font-size: 16px;
 
 .featured-label {
     position: absolute;
-    top: -4px;
-    left: -4px;
+    /* top: -4px;
+    left: -4px; */
     z-index: 10;
     border: 0 none;
     color: white;
@@ -85,11 +96,6 @@ h2 {font-size: 16px;
 }
 
 
-.nav-bar-footer {
-    color: #21a062;
-    /* display: inline-block; */
-}
-
 .clear-float {
     clear: both;
 }
@@ -103,6 +109,11 @@ h2 {font-size: 16px;
     .content .events, .content .news, .content .videos {
         float: none; 
         width: 100%;
+    }
+    .featured-label {
+        top: -4px;
+        left: -4px;
+    
     }
 
 } 
