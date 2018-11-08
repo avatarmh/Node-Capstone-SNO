@@ -22,13 +22,12 @@ h1 {
     color: blue;
 }
 
-h2 {font-size: 16px;
+h2, .email-address {
+    font-size: 16px;
     font-weight: bold;
     margin-top: 1rem;
     text-align: left;
     color: black;
 }
 
-.email-address {
-    display: inline;
-}
+

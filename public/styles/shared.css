@@ -92,6 +92,7 @@ main {
 
 footer {
     padding: 10px;
+    padding-top: 5px;
     font-size: 10px;
     text-shadow: 2px 2px black;
     position: relative;

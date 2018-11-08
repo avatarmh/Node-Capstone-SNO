@@ -35,7 +35,7 @@ $(document).ready(function() {
 
   function generateNewsItem(item) {
     const userID = localStorage.getItem("userID");
-    let formattedDate = moment(item.created).format('MM/DD/YYYY');
+    let formattedDate = moment(item.date).format('MM/DD/YYYY');
     console.log('in generatenewsitem', item.id);
     return `
         <div class='news-item'>

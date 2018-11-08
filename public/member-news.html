@@ -16,10 +16,12 @@
 
 <body>
 
-    <header role="banner">
-        <a href="/index.html"><img class="logo" alt="SNOlogo" src="SNOlogo.png" /></a>
-         <nav role="navigation" class="header-navigation">
-           <ul>
+  <header role="banner">
+    <a href="/index.html">
+      <img class="logo" alt="SNOlogo" src="SNOlogo.png" />
+    </a>
+    <nav role="navigation" class="header-navigation">
+      <ul>
         <li>
           <a href="/about.html">About</a>
         </li>
@@ -33,57 +35,61 @@
           <a href="/member-directory.html">Directory</a>
         </li>
         <li id="logout" class="hide">
-            <a href="/" class="logout">Logout</a>
-          </li>  
+          <a href="/" class="logout">Logout</a>
+        </li>
       </ul>
     </nav>
   </header>
 
   <main role="main">
-    <h1 class="news-source">NANOTECH NEWS</h1>
-    <a href="/edit-member-news.html" class= "add-newsitem-button"><i class="fas fa-plus"></i></a>
+    <div class="content">
+      <h1 class="news-source">NANOTECH NEWS</h1>
+      <a href="/edit-member-news.html" class="add-newsitem-button">
+        <i class="fas fa-plus"></i>
+      </a>
 
-    <!-- <a href="/edit-member-news.html?id=${item.id}" class= "edit-newsitem-button"><i class="far fa-edit"></i></a> -->
+      <!-- <a href="/edit-member-news.html?id=${item.id}" class= "edit-newsitem-button"><i class="far fa-edit"></i></a> -->
 
-    <div class="news">
-    <!-- news items -->
+      <div class="news">
+        <!-- news items -->
+      </div>
     </div>
   </main>
 
   <footer role="contentinfo">
-      <nav role="navigation" class="nav-bar-footer">
-        <ul>
-          <li>
-            <a href="/about.html">About</a>
-          </li>
-          <li>
-            <!-- <a href="/conferences.html">Conferences</a>
+    <nav role="navigation" class="nav-bar-footer">
+      <ul>
+        <li>
+          <a href="/about.html">About</a>
+        </li>
+        <li>
+          <!-- <a href="/conferences.html">Conferences</a>
           </li> -->
-            <!-- <li id="joinSNO" class="hide">
+          <!-- <li id="joinSNO" class="hide">
             <a href="/joinSNO.html">Join SNO</a>
           </li> -->
-            <li id="contacts">
-              <a href="/contacts.html">Contacts</a>
-            </li>
-            <li id="privacy">
-              <a href="/privacy.html">Terms of Service and Privacy</a>
-            </li>
-            <!-- <li id="login" class="hide">
+          <li id="contacts">
+            <a href="/contacts.html">Contacts</a>
+          </li>
+          <li id="privacy">
+            <a href="/privacy.html">Security and Privacy</a>
+          </li>
+          <!-- <li id="login" class="hide">
             <a href="/login.html">Login</a>
           </li> -->
-            <!-- <li id="logout" class="hide">
+          <!-- <li id="logout" class="hide">
             <a href="/" class="logout">Logout</a>
           </li> -->
-        </ul>
-      </nav>
-      <div class="update-info">
-        <h4>Site Updated Oct. 2018</h4>
-        <p class="copyright">© 2018. Sustainable Nanotechnology Organization. All rights reserved. Site designed by MHITech Systems@Thinkful
-        </p>
-  
-      </div>
-    </footer>
-  
+      </ul>
+    </nav>
+    <div class="update-info">
+      <h4>Site Updated Oct. 2018</h4>
+      <p class="copyright">© 2018. Sustainable Nanotechnology Organization. All rights reserved. Site designed by MHITech Systems@Thinkful
+      </p>
+
+    </div>
+  </footer>
+
   <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 
