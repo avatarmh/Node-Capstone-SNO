@@ -19,7 +19,7 @@ body {
 h1 {
     font-size: 16px;
     font-weight: bold;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 0px;
     text-align: left;
 }
@@ -36,8 +36,9 @@ h2 {font-size: 16px;
     padding: 0px;
     text-align: center;
     margin-top: 0px;
-    margin-bottom: 0px;
-    color: blue;
+    margin-bottom: 40px;
+    color: #02b362;
+    font-family: 'Roboto', sans-serif;
     font-style: italic;
     font-size: 14px;
     font-weight: normal;
@@ -65,18 +66,10 @@ h2 {font-size: 16px;
     display: block;
 }
 
-.embedded-video {
-    align-self: center;
-    height: auto ! important;
-    margin-top: 2rem;
-    padding: 10px;
-    width: 100%;
-}
-
 .featured-label {
     position: absolute;
-    /* top: -4px;
-    left: -4px; */
+    top: -18px;
+    left: -3px;
     z-index: 10;
     border: 0 none;
     color: white;
@@ -89,31 +82,43 @@ h2 {font-size: 16px;
     margin-bottom: 0.25em;
 }
 
-.event-news-video-text {
-    /* float: left; */
+.event-news-video-text, .event-news-image, .embedded-video {
     width: 95%;
     margin: auto;
+    padding-bottom: 10px;
+}
+.event-news-image, iframe {
+    padding:1px;
+    border:1px solid #021a40;
 }
 
-
-.clear-float {
-    clear: both;
-}
 
 .content .events, .content .news, .content .videos {
-    float: left;
-    width: 33.3%;
+    float: none; 
+    width: 100%;
 }
 
-@media only screen and (max-width: 425px) {
+
+
+@media only screen and (min-width: 576px) {
     .content .events, .content .news, .content .videos {
-        float: none; 
-        width: 100%;
+        float: left;
+        width: 33.3%;
     }
+
+    .event-news-video-text, .event-news-image, .embedded-video {
+        width: 93%;
+        margin: auto;
+    }
+
     .featured-label {
-        top: -4px;
-        left: -4px;
+        top: -18px;
+        left: 3px;
     
+    }
+
+    .clear-float {
+        clear: both;
     }
 
 } 
