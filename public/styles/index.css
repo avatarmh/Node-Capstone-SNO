@@ -37,11 +37,12 @@ h2 {font-size: 16px;
     text-align: center;
     margin-top: 0px;
     margin-bottom: 40px;
-    color: #02b362;
+    color: #032198;
+    /* text-shadow: 0.5px 0.5px black; */
     font-family: 'Roboto', sans-serif;
     font-style: italic;
     font-size: 14px;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .events, .news, .videos {
@@ -51,11 +52,9 @@ h2 {font-size: 16px;
 
 
 .event-news-image {
-    /* background-size: contain; */
     background-repeat: no-repeat;
     background-position-x: center;
     padding: 10px;
-   /* color: #fff; */
     margin-top: 2rem; 
     overflow: hidden;
 }
