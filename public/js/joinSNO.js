@@ -128,7 +128,6 @@ $(".sno-membership").submit((event) => {
     researchFocus,
     specificSNOInterest
   };
-  console.log(postalCode)
   $.ajax({
     url,
     method: 'POST',
@@ -140,6 +139,7 @@ $(".sno-membership").submit((event) => {
     },
     error: (error) => {
       console.log(error);
+      alert(error.responseJSON.message)
     }
   });
 

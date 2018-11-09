@@ -23,7 +23,7 @@ form {
     margin: 2rem 0;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="email"] {
     display: block;
     border: 1px solid black;
     width: 100%;
