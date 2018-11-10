@@ -2,7 +2,7 @@ form {
     margin: 2rem 0;
 }
 
-form input[type="text"] {
+form input[type="email"] {
     /* display: block; */
     border: 1px solid black;
     width: 100%;
@@ -38,26 +38,16 @@ input {
     color: blue;
 } */
 
-button, input[type="button"] {
-    margin: 2rem 0.5rem 0 0;
-    border-radius: 0px;
-    border: 1px solid black;
-}
-
 .submit {
     display: block;
     text-align: center;
 }
-
+/* 
 @media only screen and (min-width: 720px) {
     form {
         width: 50%;
         margin: auto
     }
     
-}
+} */
 
-@media only screen and (max-width: 425px) {
-
-    
-}

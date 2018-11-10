@@ -22,6 +22,7 @@ $(".login").submit((event) => {
     },
     error: (error) => {
       console.log(error);
+      alert("Unauthorized");
     }
   });
 
