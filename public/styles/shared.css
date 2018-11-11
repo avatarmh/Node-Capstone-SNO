@@ -80,7 +80,7 @@ main {
 .content {
     padding: 10px;
     font-weight: normal;
-    min-height: 72vh;
+    min-height: 77vh;
     width: 95%;
     margin: auto;
     }
@@ -140,7 +140,7 @@ button, input[type="button"] {
 
 @media only screen and (min-width: 576px) {
  
-    nav.nav-bar {
+    nav.header-nav {
         font-size: 12px !important;
     }
 } 
