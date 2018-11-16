@@ -38,29 +38,6 @@ describe("/api/user", function() {
   const specificSNOInterest = ["exampleSNOInt1", "exampleSNOInt2"];
   const postalCode = "10011";
 
-  const usernameB = "exampleUserB";
-  const passwordB = "examplePassB";
-  const firstNameB = "ExampleB";
-  const middleInitialB = "B";
-  const lastNameB = "UserB";
-  const membershipChoiceB = "memberChoiceB";
-  const memberTypeB = "examplememberTypeB";
-  const street1B = "exampleStreet1B";
-  const street2B = "exampleStreet2B";
-  const cityB = "exampleCityB";
-  const stateProvDeptB = "exampleStateB";
-  const countryB = "exampleCountryB";
-  const phoneB = "examplePhoneB";
-  const altEmailB = "exampleAltEmailB";
-  const faxB = "exampleFaxB";
-  const genderB = "exampleGenderB";
-  const affiliationB = "exampleAffiliationB";
-  const positionB = "examplePositionB";
-  const deptUnitB = "exampleDeptUnitB";
-  const researchFocusB = "exampleResearchFocusB";
-  const specificSNOInterestB = ["exampleSNOInt1B"];
-  const postalCodeB = "94114";
-
   before(function() {
     return runServer(TEST_DATABASE_URL);
   });
@@ -69,11 +46,11 @@ describe("/api/user", function() {
     return closeServer();
   });
 
-  beforeEach(function() {
+  beforeEach(function() {});
+
+  afterEach(function() {
     return User.deleteMany({});
   });
-
-  afterEach(function() {});
 
   describe("/api/users", function() {
     describe("POST", function() {
@@ -600,126 +577,6 @@ describe("/api/user", function() {
             expect(user.lastName).to.equal(lastName);
           });
       });
-    });
-
-    describe("GET", function() {
-      // it("Should return an empty array initially", function() {
-      //   return chai
-      //     .request(app)
-      //     .get("/api/users")
-      //     .then(res => {
-      //       console.log(res.body);
-      //       expect(res).to.have.status(200);
-      //       expect(res.body).to.be.an("array");
-      //       expect(res.body).to.have.length(0);
-      //     });
-      // });
-      // it("Should return an array of users", function() {
-      //   return User.create(
-      //     {
-      //       username,
-      //       password,
-      //       firstName,
-      //       middleInitial,
-      //       lastName,
-      //       membershipChoice,
-      //       memberType,
-      //       street1,
-      //       street2,
-      //       city,
-      //       stateProvDept,
-      //       country,
-      //       phone,
-      //       altEmail,
-      //       fax,
-      //       gender,
-      //       affiliation,
-      //       position,
-      //       deptUnit,
-      //       researchFocus,
-      //       specificSNOInterest,
-      //       postalCode
-      //     },
-      //     {
-      //       username: usernameB,
-      //       password: passwordB,
-      //       firstName: firstNameB,
-      //       middleInitial: middleInitialB,
-      //       lastName: lastNameB,
-      //       membershipChoice: membershipChoiceB,
-      //       memberType: memberTypeB,
-      //       street1: street1B,
-      //       street2: street2B,
-      //       city: cityB,
-      //       stateProvDept: stateProvDeptB,
-      //       country: countryB,
-      //       phone: phoneB,
-      //       altEmail: altEmailB,
-      //       fax: faxB,
-      //       gender: genderB,
-      //       affiliation: affiliationB,
-      //       position: positionB,
-      //       deptUnit: deptUnitB,
-      //       researchFocus: researchFocusB,
-      //       specificSNOInterest: specificSNOInterestB,
-      //       postalCode: postalCodeB
-      //     }
-      //   )
-      //     .then(() => chai.request(app).get("api/users"))
-      //     .then(res => {
-      //       expect(res).to.have.status(200);
-      //       expect(res.body).to.be.an("array");
-      //       expect(res.body).to.have.length(2);
-      //       expect(res.body[0]).to.deep.equal({
-      //         username,
-      //         userID: res.user.userID,
-      //         firstName,
-      //         middleInitial,
-      //         lastName,
-      //         membershipChoice,
-      //         memberType,
-      //         street1,
-      //         street2,
-      //         city,
-      //         stateProvDept,
-      //         country,
-      //         phone,
-      //         altEmail,
-      //         fax,
-      //         gender,
-      //         affiliation,
-      //         position,
-      //         deptUnit,
-      //         researchFocus,
-      //         specificSNOInterest,
-      //         postalCode
-      //       });
-      //       expect(res.body[1]).to.deep.equal({
-      //         username: usernameB,
-      //         userID: res.user.userID,
-      //         firstName: firstNameB,
-      //         middleInitial: middleInitialB,
-      //         lastName: lastNameB,
-      //         membershipChoice: membershipChoiceB,
-      //         memberType: memberTypeB,
-      //         street1: street1B,
-      //         street2: street2B,
-      //         city: cityB,
-      //         stateProvDept: stateProvDeptB,
-      //         country: countryB,
-      //         phone: phoneB,
-      //         altEmail: altEmailB,
-      //         fax: faxB,
-      //         gender: genderB,
-      //         affiliation: affiliationB,
-      //         position: positionB,
-      //         deptUnit: deptUnitB,
-      //         researchFocus: researchFocusB,
-      //         specificSNOInterest: specificSNOInterestB,
-      //         postalCode: postalCodeB
-      //       });
-      //     });
-      // });
     });
   });
 });
