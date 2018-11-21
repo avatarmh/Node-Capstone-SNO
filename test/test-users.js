@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-const chai = require('chai');
-const chaiHttp = require('chai-http');
+const chai = require("chai");
+const chaiHttp = require("chai-http");
 
-const { app, runServer, closeServer } = require('../server');
-const { User } = require('../users');
-const { TEST_DATABASE_URL } = require('../config');
+const { app, runServer, closeServer } = require("../server");
+const { User } = require("../users");
+const { TEST_DATABASE_URL } = require("../config");
 
 const expect = chai.expect;
 
@@ -14,80 +14,56 @@ const expect = chai.expect;
 
 chai.use(chaiHttp);
 
-describe('/api/user', function () {
-  const username = 'exampleUser';
-  const password = '01234567890clear';
-  const firstName = 'exampleFName';
-  const middleInitial = 'E';
-  const lastName = 'exampleLName';
-  const membershipChoice = 'memberChoice';
-  const memberType = 'examplememberType';
-  const street1 = 'exampleStreet1';
-  const street2 = 'exampleStreet2';
-  const city = 'exampleCity';
-  const stateProvDept = 'exampleState';
-  const country = 'exampleCountry';
-  const phone = 'examplePhone';
-  const altEmail = 'exampleAltEmail';
-  const fax = 'exampleFax';
-  const gender = 'exampleGender';
-  const affiliation = 'exampleAffiliation';
-  const position = 'examplePosition';
-  const deptUnit = 'exampleDeptUnit';
-  const researchFocus = 'exampleResearchFocus';
-  const specificSNOInterest = ['exampleSNOInt1','exampleSNOInt2'];
+describe("/api/user", function() {
+  const username = "exampleUser";
+  const password = "01234567890clear";
+  const firstName = "exampleFName";
+  const middleInitial = "E";
+  const lastName = "exampleLName";
+  const membershipChoice = "memberChoice";
+  const memberType = "examplememberType";
+  const street1 = "exampleStreet1";
+  const street2 = "exampleStreet2";
+  const city = "exampleCity";
+  const stateProvDept = "exampleState";
+  const country = "exampleCountry";
+  const phone = "examplePhone";
+  const altEmail = "exampleAltEmail";
+  const fax = "exampleFax";
+  const gender = "exampleGender";
+  const affiliation = "exampleAffiliation";
+  const position = "examplePosition";
+  const deptUnit = "exampleDeptUnit";
+  const researchFocus = "exampleResearchFocus";
+  const specificSNOInterest = ["exampleSNOInt1", "exampleSNOInt2"];
+  const postalCode = "10011";
 
-  const usernameB = 'exampleUserB';
-  const passwordB = 'examplePassB';
-  const firstNameB = 'ExampleB';
-  const middleInitialB = 'B';
-  const lastNameB = 'UserB';
-  const membershipChoiceB = 'memberChoiceB';
-  const memberTypeB = 'examplememberTypeB';
-  const street1B = 'exampleStreet1B';
-  const street2B = 'exampleStreet2B';
-  const cityB = 'exampleCityB';
-  const stateProvDeptB = 'exampleStateB';
-  const countryB = 'exampleCountryB';
-  const phoneB = 'examplePhoneB';
-  const altEmailB= 'exampleAltEmailB';
-  const faxB = 'exampleFaxB';
-  const genderB = 'exampleGenderB';
-  const affiliationB = 'exampleAffiliationB';
-  const positionB = 'examplePositionB';
-  const deptUnitB = 'exampleDeptUnitB';
-  const researchFocusB = 'exampleResearchFocusB';
-  const specificSNOInterestB = ['exampleSNOInt1B'];
-
-
-  before(function () {
+  before(function() {
     return runServer(TEST_DATABASE_URL);
   });
 
-  after(function () {
+  after(function() {
     return closeServer();
   });
 
-  beforeEach(function () { });
+  beforeEach(function() {});
 
-  afterEach(function () {
-    return User.remove({});
+  afterEach(function() {
+    return User.deleteMany({});
   });
 
-  describe('/api/users', function () {
-    describe('POST', function () {
-      it('Should reject users with missing username', function () {
+  describe("/api/users", function() {
+    describe("POST", function() {
+      it("Should reject users with missing username", function() {
         return chai
           .request(app)
-          .post('/api/users')
+          .post("/api/users")
           .send({
             password,
             firstName,
             lastName
           })
-          .then(() =>
-            expect.fail(null, null, 'Request should not succeed')
-          )
+          .then(() => expect.fail(null, null, "Request should not succeed"))
           .catch(err => {
             if (err instanceof chai.AssertionError) {
               throw err;
@@ -95,23 +71,21 @@ describe('/api/user', function () {
 
             const res = err.response;
             expect(res).to.have.status(422);
-            expect(res.body.reason).to.equal('ValidationError');
-            expect(res.body.message).to.equal('Missing field');
-            expect(res.body.location).to.equal('username');
+            expect(res.body.reason).to.equal("ValidationError");
+            expect(res.body.message).to.equal("Missing field");
+            expect(res.body.location).to.equal("username");
           });
       });
-      it('Should reject users with missing password', function () {
+      it("Should reject users with missing password", function() {
         return chai
           .request(app)
-          .post('/api/users')
+          .post("/api/users")
           .send({
             username,
             firstName,
             lastName
           })
-          .then(() =>
-            expect.fail(null, null, 'Request should not succeed')
-          )
+          .then(() => expect.fail(null, null, "Request should not succeed"))
           .catch(err => {
             if (err instanceof chai.AssertionError) {
               throw err;
@@ -119,24 +93,22 @@ describe('/api/user', function () {
 
             const res = err.response;
             expect(res).to.have.status(422);
-            expect(res.body.reason).to.equal('ValidationError');
-            expect(res.body.message).to.equal('Missing field');
-            expect(res.body.location).to.equal('password');
+            expect(res.body.reason).to.equal("ValidationError");
+            expect(res.body.message).to.equal("Missing field");
+            expect(res.body.location).to.equal("password");
           });
       });
-      it('Should reject users with non-string username', function () {
+      it("Should reject users with non-string username", function() {
         return chai
           .request(app)
-          .post('/api/users')
+          .post("/api/users")
           .send({
             username: 1234,
             password,
             firstName,
             lastName
           })
-          .then(() =>
-            expect.fail(null, null, 'Request should not succeed')
-          )
+          .then(() => expect.fail(null, null, "Request should not succeed"))
           .catch(err => {
             if (err instanceof chai.AssertionError) {
               throw err;
@@ -144,26 +116,24 @@ describe('/api/user', function () {
 
             const res = err.response;
             expect(res).to.have.status(422);
-            expect(res.body.reason).to.equal('ValidationError');
+            expect(res.body.reason).to.equal("ValidationError");
             expect(res.body.message).to.equal(
-              'Incorrect field type: expected string'
+              "Incorrect field type: expected string"
             );
-            expect(res.body.location).to.equal('username');
+            expect(res.body.location).to.equal("username");
           });
       });
-      it('Should reject users with non-string password', function () {
+      it("Should reject users with non-string password", function() {
         return chai
           .request(app)
-          .post('/api/users')
+          .post("/api/users")
           .send({
             username,
             password: 1234,
             firstName,
             lastName
           })
-          .then(() =>
-            expect.fail(null, null, 'Request should not succeed')
-          )
+          .then(() => expect.fail(null, null, "Request should not succeed"))
           .catch(err => {
             if (err instanceof chai.AssertionError) {
               throw err;
@@ -171,26 +141,24 @@ describe('/api/user', function () {
 
             const res = err.response;
             expect(res).to.have.status(422);
-            expect(res.body.reason).to.equal('ValidationError');
+            expect(res.body.reason).to.equal("ValidationError");
             expect(res.body.message).to.equal(
-              'Incorrect field type: expected string'
+              "Incorrect field type: expected string"
             );
-            expect(res.body.location).to.equal('password');
+            expect(res.body.location).to.equal("password");
           });
       });
-      it('Should reject users with non-string first name', function () {
+      it("Should reject users with non-string first name", function() {
         return chai
           .request(app)
-          .post('/api/users')
+          .post("/api/users")
           .send({
             username,
             password,
             firstName: 1234,
             lastName
           })
-          .then(() =>
-            expect.fail(null, null, 'Request should not succeed')
-          )
+          .then(() => expect.fail(null, null, "Request should not succeed"))
           .catch(err => {
             if (err instanceof chai.AssertionError) {
               throw err;
@@ -198,26 +166,24 @@ describe('/api/user', function () {
 
             const res = err.response;
             expect(res).to.have.status(422);
-            expect(res.body.reason).to.equal('ValidationError');
+            expect(res.body.reason).to.equal("ValidationError");
             expect(res.body.message).to.equal(
-              'Incorrect field type: expected string'
+              "Incorrect field type: expected string"
             );
-            expect(res.body.location).to.equal('firstName');
+            expect(res.body.location).to.equal("firstName");
           });
       });
-      it('Should reject users with non-string last name', function () {
+      it("Should reject users with non-string last name", function() {
         return chai
           .request(app)
-          .post('/api/users')
+          .post("/api/users")
           .send({
             username,
             password,
             firstName,
             lastName: 1234
           })
-          .then(() =>
-            expect.fail(null, null, 'Request should not succeed')
-          )
+          .then(() => expect.fail(null, null, "Request should not succeed"))
           .catch(err => {
             if (err instanceof chai.AssertionError) {
               throw err;
@@ -225,26 +191,24 @@ describe('/api/user', function () {
 
             const res = err.response;
             expect(res).to.have.status(422);
-            expect(res.body.reason).to.equal('ValidationError');
+            expect(res.body.reason).to.equal("ValidationError");
             expect(res.body.message).to.equal(
-              'Incorrect field type: expected string'
+              "Incorrect field type: expected string"
             );
-            expect(res.body.location).to.equal('lastName');
+            expect(res.body.location).to.equal("lastName");
           });
       });
-      it('Should reject users with non-trimmed username', function () {
+      it("Should reject users with non-trimmed username", function() {
         return chai
           .request(app)
-          .post('/api/users')
+          .post("/api/users")
           .send({
             username: ` ${username} `,
             password,
             firstName,
             lastName
           })
-          .then(() =>
-            expect.fail(null, null, 'Request should not succeed')
-          )
+          .then(() => expect.fail(null, null, "Request should not succeed"))
           .catch(err => {
             if (err instanceof chai.AssertionError) {
               throw err;
@@ -252,26 +216,24 @@ describe('/api/user', function () {
 
             const res = err.response;
             expect(res).to.have.status(422);
-            expect(res.body.reason).to.equal('ValidationError');
+            expect(res.body.reason).to.equal("ValidationError");
             expect(res.body.message).to.equal(
-              'Cannot start or end with whitespace'
+              "Cannot start or end with whitespace"
             );
-            expect(res.body.location).to.equal('username');
+            expect(res.body.location).to.equal("username");
           });
       });
-      it('Should reject users with non-trimmed password', function () {
+      it("Should reject users with non-trimmed password", function() {
         return chai
           .request(app)
-          .post('/api/users')
+          .post("/api/users")
           .send({
             username,
             password: ` ${password} `,
             firstName,
             lastName
           })
-          .then(() =>
-            expect.fail(null, null, 'Request should not succeed')
-          )
+          .then(() => expect.fail(null, null, "Request should not succeed"))
           .catch(err => {
             if (err instanceof chai.AssertionError) {
               throw err;
@@ -279,26 +241,24 @@ describe('/api/user', function () {
 
             const res = err.response;
             expect(res).to.have.status(422);
-            expect(res.body.reason).to.equal('ValidationError');
+            expect(res.body.reason).to.equal("ValidationError");
             expect(res.body.message).to.equal(
-              'Cannot start or end with whitespace'
+              "Cannot start or end with whitespace"
             );
-            expect(res.body.location).to.equal('password');
+            expect(res.body.location).to.equal("password");
           });
       });
-      it('Should reject users with empty username', function () {
+      it("Should reject users with empty username", function() {
         return chai
           .request(app)
-          .post('/api/users')
+          .post("/api/users")
           .send({
-            username: '',
+            username: "",
             password,
             firstName,
             lastName
           })
-          .then(() =>
-            expect.fail(null, null, 'Request should not succeed')
-          )
+          .then(() => expect.fail(null, null, "Request should not succeed"))
           .catch(err => {
             if (err instanceof chai.AssertionError) {
               throw err;
@@ -306,26 +266,24 @@ describe('/api/user', function () {
 
             const res = err.response;
             expect(res).to.have.status(422);
-            expect(res.body.reason).to.equal('ValidationError');
+            expect(res.body.reason).to.equal("ValidationError");
             expect(res.body.message).to.equal(
-              'Must be at least 1 characters long'
+              "Must be at least 1 characters long"
             );
-            expect(res.body.location).to.equal('username');
+            expect(res.body.location).to.equal("username");
           });
       });
-      it('Should reject users with password less than ten characters', function () {
+      it("Should reject users with password less than ten characters", function() {
         return chai
           .request(app)
-          .post('/api/users')
+          .post("/api/users")
           .send({
             username,
-            password: '123456789',
+            password: "123456789",
             firstName,
             lastName
           })
-          .then(() =>
-            expect.fail(null, null, 'Request should not succeed')
-          )
+          .then(() => expect.fail(null, null, "Request should not succeed"))
           .catch(err => {
             if (err instanceof chai.AssertionError) {
               throw err;
@@ -333,26 +291,24 @@ describe('/api/user', function () {
 
             const res = err.response;
             expect(res).to.have.status(422);
-            expect(res.body.reason).to.equal('ValidationError');
+            expect(res.body.reason).to.equal("ValidationError");
             expect(res.body.message).to.equal(
-              'Must be at least 10 characters long'
+              "Must be at least 10 characters long"
             );
-            expect(res.body.location).to.equal('password');
+            expect(res.body.location).to.equal("password");
           });
       });
-      it('Should reject users with password greater than 72 characters', function () {
+      it("Should reject users with password greater than 72 characters", function() {
         return chai
           .request(app)
-          .post('/api/users')
+          .post("/api/users")
           .send({
             username,
-            password: new Array(73).fill('a').join(''),
+            password: new Array(73).fill("a").join(""),
             firstName,
             lastName
           })
-          .then(() =>
-            expect.fail(null, null, 'Request should not succeed')
-          )
+          .then(() => expect.fail(null, null, "Request should not succeed"))
           .catch(err => {
             if (err instanceof chai.AssertionError) {
               throw err;
@@ -360,42 +316,46 @@ describe('/api/user', function () {
 
             const res = err.response;
             expect(res).to.have.status(422);
-            expect(res.body.reason).to.equal('ValidationError');
+            expect(res.body.reason).to.equal("ValidationError");
             expect(res.body.message).to.equal(
-              'Must be at most 72 characters long'
+              "Must be at most 72 characters long"
             );
-            expect(res.body.location).to.equal('password');
+            expect(res.body.location).to.equal("password");
           });
       });
 
-      it('Should reject users with duplicate username', function () {
+      it("Should reject users with duplicate username", function() {
         // Create an initial user
         return User.create({
-            username,
-            password,
-            firstName,
-            middleInitial,
-            lastName,
-            membershipChoice,
-            memberType,
-            street1,
-            street2,
-            city,
-            stateProvDept,
-            country,
-            phone,
-            altEmail,
-            fax,
-            gender,
-            affiliation,
-            position,
-            deptUnit,
-            researchFocus,
-            specificSNOInterest
+          username,
+          password,
+          firstName,
+          middleInitial,
+          lastName,
+          membershipChoice,
+          memberType,
+          street1,
+          street2,
+          city,
+          stateProvDept,
+          country,
+          phone,
+          altEmail,
+          fax,
+          gender,
+          affiliation,
+          position,
+          deptUnit,
+          researchFocus,
+          specificSNOInterest,
+          postalCode
         })
           .then(() =>
             // Try to create a second user with the same username
-            chai.request(app).post('/api/users').send({
+            chai
+              .request(app)
+              .post("/api/users")
+              .send({
                 username,
                 password,
                 firstName,
@@ -416,31 +376,28 @@ describe('/api/user', function () {
                 position,
                 deptUnit,
                 researchFocus,
-                specificSNOInterest
-            })
+                specificSNOInterest,
+                postalCode
+              })
           )
-          .then(() =>
-            expect.fail(null, null, 'Request should not succeed')
-          )
+          .then(() => expect.fail(null, null, "Request should not succeed"))
           .catch(err => {
             if (err instanceof chai.AssertionError) {
               throw err;
             }
 
             const res = err.response;
-            console.log(res);
+
             expect(res).to.have.status(422);
-            expect(res.body.reason).to.equal('ValidationError');
-            expect(res.body.message).to.equal(
-              'Username already taken'
-            );
-            expect(res.body.location).to.equal('username');
+            expect(res.body.reason).to.equal("ValidationError");
+            expect(res.body.message).to.equal("Username already taken");
+            expect(res.body.location).to.equal("username");
           });
       });
-      it('Should create a new user', function () {
+      it("Should create a new user", function() {
         return chai
           .request(app)
-          .post('/api/users')
+          .post("/api/users")
           .send({
             username,
             password,
@@ -462,35 +419,37 @@ describe('/api/user', function () {
             position,
             deptUnit,
             researchFocus,
-            specificSNOInterest
-      })
+            specificSNOInterest,
+            postalCode
+          })
           .then(res => {
             expect(res).to.have.status(201);
-            expect(res.body).to.be.an('object');
+            expect(res.body).to.be.an("object");
             expect(res.body).to.have.keys(
-              'username',
-              'userID',
-              'firstName',
-              'middleInitial',
-              'lastName',
-              'membershipChoice',
-              'memberType',
-              'street1',
-              'street2',
-              'city',
-              'stateProvDept',
-              'country',
-              'phone',
-              'altEmail',
-              'fax',
-              'gender',
-              'affiliation',
-              'position',
-              'deptUnit',
-              'researchFocus',
-              'specificSNOInterest'
+              "username",
+              "userID",
+              "firstName",
+              "middleInitial",
+              "lastName",
+              "membershipChoice",
+              "memberType",
+              "street1",
+              "street2",
+              "city",
+              "stateProvDept",
+              "country",
+              "phone",
+              "altEmail",
+              "fax",
+              "gender",
+              "affiliation",
+              "position",
+              "deptUnit",
+              "researchFocus",
+              "specificSNOInterest",
+              "postalCode"
             );
-            console.log(res.body);
+
             expect(res.body.username).to.equal(username);
             expect(res.body.firstName).to.equal(firstName);
             expect(res.body.middleInitial).to.equal(middleInitial);
@@ -510,7 +469,12 @@ describe('/api/user', function () {
             expect(res.body.position).to.equal(position);
             expect(res.body.deptUnit).to.equal(deptUnit);
             expect(res.body.researchFocus).to.equal(researchFocus);
-            expect(res.body.specificSNOInterest).to.deep.equal(specificSNOInterest);
+
+            expect(res.body.postalCode).to.equal(postalCode);
+
+            expect(res.body.specificSNOInterest).to.deep.equal(
+              specificSNOInterest
+            );
 
             return User.findOne({
               username
@@ -536,6 +500,8 @@ describe('/api/user', function () {
             expect(user.position).to.equal(position);
             expect(user.deptUnit).to.equal(deptUnit);
             expect(user.researchFocus).to.equal(researchFocus);
+            expect(user.postalCode).to.equal(postalCode);
+
             expect(user.specificSNOInterest).to.deep.equal(specificSNOInterest);
             return user.validatePassword(password);
           })
@@ -543,10 +509,10 @@ describe('/api/user', function () {
             expect(passwordIsCorrect).to.be.true;
           });
       });
-      it('Should trim firstName and lastName', function () {
+      it("Should trim firstName and lastName", function() {
         return chai
           .request(app)
-          .post('/api/users')
+          .post("/api/users")
           .send({
             username,
             password,
@@ -568,33 +534,35 @@ describe('/api/user', function () {
             position,
             deptUnit,
             researchFocus,
-            specificSNOInterest            
+            specificSNOInterest,
+            postalCode
           })
           .then(res => {
             expect(res).to.have.status(201);
-            expect(res.body).to.be.an('object');
+            expect(res.body).to.be.an("object");
             expect(res.body).to.have.keys(
-                'username',
-                'userID',
-                'firstName',
-                'lastName',
-                'middleInitial',
-                'membershipChoice',
-                'memberType',
-                'street1',
-                'street2',
-                'city',
-                'stateProvDept',
-                'country',
-                'phone',
-                'altEmail',
-                'fax',
-                'gender',
-                'affiliation',
-                'position',
-                'deptUnit',
-                'researchFocus',
-                'specificSNOInterest'  
+              "username",
+              "userID",
+              "firstName",
+              "lastName",
+              "middleInitial",
+              "membershipChoice",
+              "memberType",
+              "street1",
+              "street2",
+              "city",
+              "stateProvDept",
+              "country",
+              "phone",
+              "altEmail",
+              "fax",
+              "gender",
+              "affiliation",
+              "position",
+              "deptUnit",
+              "researchFocus",
+              "specificSNOInterest",
+              "postalCode"
             );
             expect(res.body.username).to.equal(username);
             expect(res.body.firstName).to.equal(firstName);
@@ -607,124 +575,6 @@ describe('/api/user', function () {
             expect(user).to.not.be.null;
             expect(user.firstName).to.equal(firstName);
             expect(user.lastName).to.equal(lastName);
-          });
-      });
-    });
-
-    describe('GET', function () {
-      it('Should return an empty array initially', function () {
-        return chai.request(app).get('/api/users').then(res => {
-            console.log(res.body);
-            expect(res).to.have.status(200);
-            expect(res.body).to.be.an('array');
-            expect(res.body).to.have.length(0);
-        });
-      });
-      it.skip('Should return an array of users', function () {
-        return User.create(
-          {
-            username,
-            password,
-            firstName,
-            middleInitial,
-            lastName,
-            membershipChoice,
-            memberType,
-            street1,
-            street2,
-            city,
-            stateProvDept,
-            country,
-            phone,
-            altEmail,
-            fax,
-            gender,
-            affiliation,
-            position,
-            deptUnit,
-            researchFocus,
-            specificSNOInterest
-           },
-          {
-            username: usernameB,
-            password: passwordB,
-            firstName: firstNameB,
-            middleInitial: middleInitialB,
-            lastName: lastNameB,
-            membershipChoice: membershipChoiceB,
-            memberType: memberTypeB,
-            street1: street1B,
-            street2: street2B,
-            city: cityB,
-            stateProvDept: stateProvDeptB,
-            country: countryB,
-            phone: phoneB,
-            altEmail: altEmailB,
-            fax: faxB,
-            gender: genderB,
-            affiliation: affiliationB,
-            position: positionB,
-            deptUnit: deptUnitB,
-            researchFocus: researchFocusB,
-            specificSNOInterest: specificSNOInterestB
-        }
-        )
-          .then(() => chai.request(app).get('api/users'))
-          .then(res => {
-              console.log(res.body[0]);
-            expect(res).to.have.status(200);
-            expect(res.body).to.be.an('array');
-            expect(res.body).to.have.length(2);
-            expect(res.body[0]).to.deep.equal({
-                username,
-                userID:res.user.userID,
-                firstName,
-                middleInitial,
-                lastName,
-                membershipChoice,
-                memberType,
-                street1,
-                street2,
-                city,
-                stateProvDept,
-                country,
-                phone,
-                altEmail,
-                fax,
-                gender,
-                affiliation,
-                position,
-                deptUnit,
-                researchFocus,
-                specificSNOInterest
-  
-
-            });
-            expect(res.body[1]).to.deep.equal({
-                username: usernameB,
-                userID:res.user.userID,
-                firstName: firstNameB,
-                middleInitial: middleInitialB,
-                lastName: lastNameB,
-                membershipChoice: membershipChoiceB,
-                memberType: memberTypeB,
-                street1: street1B,
-                street2: street2B,
-                city: cityB,
-                stateProvDept: stateProvDeptB,
-                country: countryB,
-                phone: phoneB,
-                altEmail: altEmailB,
-                fax: faxB,
-                gender: genderB,
-                affiliation: affiliationB,
-                position: positionB,
-                deptUnit: deptUnitB,
-                researchFocus: researchFocusB,
-                specificSNOInterest: specificSNOInterestB
-  
-
-            });
           });
       });
     });
