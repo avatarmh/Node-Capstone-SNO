@@ -29,7 +29,7 @@ header {
 
 nav {
     text-align: center;
-    font-size: 10px !important;
+    font-size: 10px;
     padding-right: 0px;
     margin-right: 10px;
     margin-top: 34px;
@@ -80,7 +80,7 @@ main {
 .content {
     padding: 10px;
     font-weight: normal;
-    min-height: 77vh;
+    min-height: 500px;
     width: 95%;
     margin: auto;
     }
@@ -140,7 +140,7 @@ button, input[type="button"] {
 
 @media only screen and (min-width: 576px) {
  
-    nav.header-nav {
+    .header-navigation {
         font-size: 12px !important;
     }
 } 

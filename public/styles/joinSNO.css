@@ -36,9 +36,15 @@ input {
 }
 
 
+.radio-member-type {
+    margin-top: 3rem;
+}
+
 .radio-group {
     padding: 0;
+
 }
+
 
 .radio-group li {
     list-style: none;

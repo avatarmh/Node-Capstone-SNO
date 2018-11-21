@@ -1,3 +1,15 @@
+header {
+    /* border: 1px solid grey; */
+    position: fixed;
+    background-color: white;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+main {
+    margin-top: 80px;
+}
+
 form {
     margin: 2rem 0;
 }
@@ -42,12 +54,4 @@ input {
     display: block;
     text-align: center;
 }
-/* 
-@media only screen and (min-width: 720px) {
-    form {
-        width: 50%;
-        margin: auto
-    }
-    
-} */
 
