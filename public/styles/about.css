@@ -29,12 +29,7 @@ h2 {font-size: 16px;
     color: black;
 }
 
-.welcome {
-    width: 95%;
-    margin: auto;
-}
-
-.welcome .nano-image {
+.nano-image {
     background-image: url("/images/nano1024-e1400502699196.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -43,7 +38,7 @@ h2 {font-size: 16px;
     height: 150px;
 }
 
-.welcome .nano-image h1, .welcome .nano-image h2 {
+.nano-image h1, .nano-image h2 {
     color: #fff;
     text-shadow: 2px 2px black;
 
@@ -56,11 +51,14 @@ h2 {font-size: 16px;
     margin-left: 0.7rem;
     }
 
-.engaged-in li:before {
+
+li {
+    list-style-type: none;
+}    
+.engaged-in li:before, .fields-of-study li:before {
     content: "\2022";
     font-size: large;
     vertical-align: middle;
-    /* list-style-position: outside; */
     margin-left: -0.5em;
     color: rgb(21, 163, 21);
 }
@@ -72,16 +70,3 @@ h2 {font-size: 16px;
 .mission-goals ol {
     padding-left: 5%;
 }
-
-.fields-of-study ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    }
-
-.fields-of-study li:before {
-    content: "\2022";
-    font-size: large;
-    vertical-align: middle;
-    color: rgb(21, 163, 21);
-  }
