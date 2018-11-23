@@ -29,27 +29,20 @@ h2 {font-size: 16px;
     color: black;
 }
 
-.welcome {
+.info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 0.7rem;
+    }
+
+
+/* .welcome {
     width: 95%;
     margin: auto;
-}
+} */
 
-.welcome .nano-image {
-    background-image: url("/images/nano1024-e1400502699196.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    padding: 10px;
-    height: 150px;
-}
-
-.welcome .nano-image h1, .welcome .nano-image h2 {
-    color: #fff;
-    text-shadow: 2px 2px black;
-
-}
-
-.engaged-in ul {
+/* ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -60,7 +53,7 @@ h2 {font-size: 16px;
     content: "\2022";
     font-size: large;
     vertical-align: middle;
-    /* list-style-position: outside; */
+    /* list-style-position: outside; 
     margin-left: -0.5em;
     color: rgb(21, 163, 21);
 }
@@ -77,11 +70,4 @@ h2 {font-size: 16px;
     list-style: none;
     padding: 0;
     margin: 0;
-    }
-
-.fields-of-study li:before {
-    content: "\2022";
-    font-size: large;
-    vertical-align: middle;
-    color: rgb(21, 163, 21);
-  }
+    } */
