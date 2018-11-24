@@ -1,6 +1,5 @@
 header {
-    /* border: 1px solid grey; */
-    position: fixed;
+     position: fixed;
     background-color: white;
     top: 0;
     right: 0;
@@ -15,13 +14,11 @@ form {
 }
 
 form input[type="email"] {
-    /* display: block; */
     border: 1px solid black;
     width: 100%;
 }
 
 form input[type="password"] {
-    /* display: block; */
     border: 1px solid black;
     width: 100%;
 }
@@ -45,10 +42,6 @@ input {
     text-align: center;
     font-size: 10px;
 }
-
-/* .terms-service-privacy {
-    color: blue;
-} */
 
 .submit {
     display: block;

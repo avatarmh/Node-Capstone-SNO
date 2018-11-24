@@ -8,7 +8,77 @@ header {
 }
 main {
     margin-top: 80px;
+    /* min-height: 98%;     */
+}
+
+.content {
+    width: 95%;
+}
+h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: left;
+    color: blue;
+}
+
+h2 {font-size: 12px;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: left;
+    color: black;
+}
+
+.event-news-image {
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 200px;
+    padding: 0 10px 10px 0;
+    overflow: hidden
+}
+
+.nano-image h1, .nano-image h2 {
+    color: #fff;
+    text-shadow: 2px 2px black;
+
+}
+
+.info-acquired-use {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 0.7rem;
+    }
+
+
+ .sessions {
+    padding-left: 15px
+ }
+
+ .sessions li {
+    color: rgb(21, 163, 21);
+ }
+
+ .sessions li * {
+     color: initial
+ }
+
+ .event-news-image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
+@media only screen and (min-width: 576px) {
+    /*.content .events, .content .news, .content .videos {
+    float: left;
+    width: 50%;
+    }*/
 
+    .event-news-image {
+        width: 50%;
+        float: left;
+    }
+
+}

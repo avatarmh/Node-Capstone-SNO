@@ -71,6 +71,7 @@ nav.nav-bar-footer li a {
 img.logo {
     height: 20%;
     max-height: 60px;
+    margin: 0 15px;
 }
 
 main {
