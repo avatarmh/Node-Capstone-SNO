@@ -11,7 +11,7 @@ const newsItemSchema = mongoose.Schema({
     ownerID: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }
 });
 
-newsItemSchema.methods.serialize = function() {
+newsItemSchema.methods.serialize = function () {
     return {
         id: this._id,
         title: this.title,
@@ -20,7 +20,7 @@ newsItemSchema.methods.serialize = function() {
         summary: this.summary,
         created: this.created,
         ownerID: this.ownerID
-      };
+    };
 };
 
 

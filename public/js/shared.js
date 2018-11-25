@@ -1,3 +1,5 @@
+'use strict';
+
 $(document).ready(function () {
     const token = localStorage.getItem("token");
     const joinSNO = $("#joinSNO");

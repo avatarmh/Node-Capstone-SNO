@@ -42,30 +42,72 @@
   </header>
 
   <main role="main">
-    <h1 class="news-source">NANOTECH NEWS</h1>
-    <h2 class="subtitle"></h2>
+    <div class="content">
+      <h1 class="news-source">NANOTECH NEWS</h1>
+      <h2 class="subtitle"></h2>
 
-    <div class="news-item">
-      <form class="edit-form">
+      <div class="news-item">
+        <form class="edit-form">
 
-        <label id="title-label" for="title">Title:</label>
-        <textarea aria-labelledby="title-label" id="title" name="title" title="title" class="title" required></textarea>
+          <label id="title-label" for="title">Title:</label>
+          <textarea aria-labelledby="title-label" id="title" name="title" title="title" class="title" required></textarea>
 
-        <label id="date-label" for="date">Publication date:</label>
-        <input aria-labelledby="date-label" id="date" type="text" name="date" title="date" class="date" required/>
+          <label id="date-label" for="date">Publication date:</label>
+          <input aria-labelledby="date-label" id="date" type="text" name="date" title="date" class="date" required />
 
-        <label id="source-label" for="source">Source:</label>
-        <input aria-labelledby="source-label" id="source" type="text" name="source" title="source" class="source" required/>
+          <label id="source-label" for="source">Source:</label>
+          <input aria-labelledby="source-label" id="source" type="text" name="source" title="source" class="source"
+            required />
 
-        <label id="summary-label" for="summary">Summary:</label>
-        <textarea aria-labelledby="summary-label" id="summary" name="summary" title="summary" class="summary" required></textarea>
+          <label id="summary-label" for="summary">Summary:</label>
+          <textarea aria-labelledby="summary-label" id="summary" name="summary" title="summary" class="summary"
+            required></textarea>
 
-        <div class="page-buttons">
-          <button type="submit">Save</button>
-        </div>
-      </form>
+          <div class="page-buttons">
+            <button type="submit">Save</button>
+          </div>
+        </form>
+      </div>
     </div>
   </main>
+
+  <footer role="contentinfo">
+    <nav role="navigation" class="nav-bar-footer">
+      <ul>
+        <li>
+          <a href="/about.html">About</a>
+        </li>
+        <li>
+          <!-- <a href="/conferences.html">Conferences</a>
+          </li> -->
+          <!-- <li id="joinSNO" class="hide">
+            <a href="/joinSNO.html">Join SNO</a>
+          </li> -->
+        <li id="contacts">
+          <a href="/contacts.html">Contacts</a>
+        </li>
+        <li id="privacy">
+          <a href="/privacy.html">Security and Privacy</a>
+        </li>
+        <!-- <li id="login" class="hide">
+            <a href="/login.html">Login</a>
+          </li> -->
+        <!-- <li id="logout" class="hide">
+            <a href="/" class="logout">Logout</a>
+          </li> -->
+      </ul>
+    </nav>
+    <div class="update-info">
+      <h3>Site Updated Nov. 2018</h3>
+      <p class="copyright">© 2018. All rights reserved. Sustainable Nanotechnology Organization and redesign and
+        implemented by M. Heller,
+        <span>email: </span>
+        <a href="mailto:heller@mhitech.com" class="email-address">heller@mhitech.com</a>
+      </p>
+
+    </div>
+  </footer>
+
   <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 

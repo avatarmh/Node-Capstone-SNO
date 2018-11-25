@@ -134,6 +134,7 @@ router.post("/", (req, res) => {
     researchFocus = "",
     specificSNOInterest = []
   } = req.body;
+  
   // Username and password come in pre-trimmed, otherwise we throw an error
   // before this
 

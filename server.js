@@ -7,13 +7,12 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const passport = require('passport');
 
-// Here we use destructuring assignment with renaming so the two variables
-// called router (from ./users and ./auth) have different names
-// For example:
-// const actorSurnames = { james: "Stewart", robert: "De Niro" };
-// const { james: jimmy, robert: bobby } = actorSurnames;
-// console.log(jimmy); // Stewart - the variable name is jimmy, not james
-// console.log(bobby); // De Niro - the variable name is bobby, not robert
+// Note: use destructuring assignment with renaming so the two variables
+// called router (from ./users and ./auth) have different names, e.g.,
+//    const actorSurnames = { james: "Stewart", robert: "De Niro" };
+//    const { james: jimmy, robert: bobby } = actorSurnames;
+//    console.log(jimmy); // Stewart - the variable name is jimmy, not james
+//    console.log(bobby); // De Niro - the variable name is bobby, not robert
 const { router: usersRouter } = require('./users');
 const { router: authRouter, localStrategy, jwtStrategy } = require('./auth');
 const { router: newsRouter } = require('./news');
@@ -55,7 +54,7 @@ app.use('/api/news/', jwtAuth, newsRouter);
 
 
 // A protected endpoint which needs a valid JWT to access it
-// *** note: this is just a route to show that endpoints are protected
+// *** note: this is reminder for developer of a route to show that endpoints are protected
 app.get('/api/protected', jwtAuth, (req, res) => {
   return res.json({
     data: 'rosebud'

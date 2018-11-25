@@ -1,27 +1,11 @@
 'use strict';
 const express = require('express');
-//const bodyParser = require('body-parser');
 const { NewsItem } = require('./models');
 const router = express.Router();
-//const jsonParser = bodyParser.json();
 
-// GET requests to /posts => return 5 blogposts
+// GET requests
 router.get('/', (req, res) => {
-// 
-  // const { searchTerm, id}
-  // if (searchTerm) {
-  //   const re = new RegExp(searchTerm, 'i');
-  //   filter.title = { $regex: re };
-  // }
 
-  // if (folderId) {
-  //   filter.folderId = folderId;
-  // }
-
-  // if (tagId) {
-  //   filter.tags = tagId;
-  // }
-  // 
   NewsItem
     .find()
     .sort({'date':-1})

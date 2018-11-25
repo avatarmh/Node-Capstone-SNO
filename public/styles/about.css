@@ -1,5 +1,4 @@
 header {
-    /* border: 1px solid grey; */
     position: fixed;
     background-color: white;
     top: 0;
@@ -8,7 +7,6 @@ header {
 }
 main {
     margin-top: 80px;
-    /* min-height: 98%;     */
 }
 
 .content {

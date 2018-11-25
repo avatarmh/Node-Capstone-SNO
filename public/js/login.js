@@ -1,3 +1,5 @@
+'use strict';
+
 // set up ajax request
 $(".login").submit((event) => {
   event.preventDefault()

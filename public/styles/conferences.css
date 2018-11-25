@@ -22,11 +22,16 @@ h1 {
     color: blue;
 }
 
-h2 {font-size: 12px;
+h2 {font-size: 14px;
     font-weight: bold;
     margin-top: 1rem;
     text-align: left;
     color: black;
+}
+
+h4 {
+    font-weight: bold;
+    margin: 0 3px 0 0;
 }
 
 .event-news-image {
@@ -57,11 +62,13 @@ h2 {font-size: 12px;
 
  .sessions li {
     color: rgb(21, 163, 21);
+    margin: 0 0 8px 0;
  }
 
  .sessions li * {
      color: initial
  }
+
 
  .event-news-image img {
     width: 100%;
@@ -71,11 +78,7 @@ h2 {font-size: 12px;
 
 
 @media only screen and (min-width: 576px) {
-    /*.content .events, .content .news, .content .videos {
-    float: left;
-    width: 50%;
-    }*/
-
+ 
     .event-news-image {
         width: 50%;
         float: left;

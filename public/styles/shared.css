@@ -81,7 +81,7 @@ main {
 .content {
     padding: 10px;
     font-weight: normal;
-    min-height: 500px;
+    min-height: 110vh;
     width: 95%;
     margin: auto;
     }
@@ -123,12 +123,13 @@ button, input[type="button"] {
     border-radius: 2px;
     background: #e2e5f8;
     padding: 2px 7px 1px;
-    box-sizing: content-box;git
+    box-sizing: content-box;
 }
 
 .page-buttons {
     text-align: center;
  }
+
 .copyright {
     margin: 0px;
     font-size: 10px;
