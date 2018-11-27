@@ -1,4 +1,4 @@
-(Demo @ https://susnano.heroku.com
+(Demo @ susnano.heroku.com (open in new tab)
 
 ## Thinkful Node Capstone
 
