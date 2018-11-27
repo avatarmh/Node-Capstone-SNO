@@ -1,23 +1,5 @@
-For demo, copy 
-
-Click here for live demo: susnano.heroku.com
-
-Click here for live demo: susnano.heroku.com/
-
-[susnano.heroku.com/](susnano.heroku.com/)
-
-[susnano.heroku.com](susnano.heroku.com)
-
-[http://susnano.heroku.com](http://susnano.heroku.com)
-
-[http://susnano.heroku.com/](http://susnano.heroku.com/)
-
-[https://susnano.heroku.com](https://susnano.heroku.com)
-
-[https://susnano.heroku.com/](https://susnano.heroku.com/)
-
-
-####(Recommended: open in new tab and might take several attempts for reasons unbeknownst to me)
+For demo, copy and paste [susnano.heroku.com](susnano.heroku.com) into a new tab and hit enter (see footnote for reason)
+(Recommended: be patient because it may take some time and a few attempts for reasons unbeknownst to me)
 
 ## Thinkful Node Capstone
 
@@ -165,3 +147,21 @@ A member can add a news article, modify it and delete, but can only view news it
 </li>
 
 </ul>
+
+Note: I was unable to get a hyperlink in the README.md file in GitHub to invoke the demo URL (in any format below) while in GitHub and found documentation explaining that an <a ref="link"> to another tab does not work.
+
+Click here for live demo: susnano.heroku.com
+
+Click here for live demo: susnano.heroku.com/
+
+[susnano.heroku.com/](susnano.heroku.com/)
+
+[susnano.heroku.com](susnano.heroku.com)
+
+[http://susnano.heroku.com](http://susnano.heroku.com)
+
+[http://susnano.heroku.com/](http://susnano.heroku.com/)
+
+[https://susnano.heroku.com](https://susnano.heroku.com)
+
+[https://susnano.heroku.com/](https://susnano.heroku.com/)
