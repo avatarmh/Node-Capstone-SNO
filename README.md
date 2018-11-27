@@ -10,6 +10,8 @@ Click here for live demo: susnano.heroku.com/
 
 [Click here for live demo] (susnano.heroku.com)
 
+Click here for live demo] (http://susnano.heroku.com/)
+
 [Click here for live demo] (https://susnano.heroku.com/)
 
 
