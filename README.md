@@ -4,15 +4,17 @@ Click here for live demo: susnano.heroku.com
 
 Click here for live demo: susnano.heroku.com/
 
-[Click here for live demo](susnano.heroku.com/)
+[susnano.heroku.com/](susnano.heroku.com/)
 
-[Click here for live demo](susnano.heroku.com)
+[susnano.heroku.com](susnano.heroku.com)
 
-[Click here for live demo](http://susnano.heroku.com/)
+[http://susnano.heroku.com](http://susnano.heroku.com)
 
-[Click here for live demo](http://susnano.heroku.com)
+[http://susnano.heroku.com/](http://susnano.heroku.com/)
 
-[Click here for live demo] (https://susnano.heroku.com/)
+[https://susnano.heroku.com](https://susnano.heroku.com)
+
+[https://susnano.heroku.com/](https://susnano.heroku.com/)
 
 
 ####(Recommended: open in new tab and might take several attempts for reasons unbeknownst to me)
