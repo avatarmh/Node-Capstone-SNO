@@ -1,4 +1,4 @@
-(Demo @ susnano.heroku.com)
+(Demo @ https://susnano.heroku.com
 
 ## Thinkful Node Capstone
 
@@ -132,17 +132,17 @@ email: dr.barb@ix.netcom.com, password: 1234567890
 A user can navigate from one page to another. State of the art webpages seem to no longer use CANCEL, so the nav-bar and back button were deemed sufficient by the developer and her mentor.
 </li>
 <li>
-A user can register a new user by clicking on join sno in the navigation menu.
+A user can register as new member by clicking on join sno in the navigation menu.
 </li>
 <li>
-A user can log in clicking on login in the navigation menu.
+A member can log in clicking on login in the navigation menu.
 </li>
 <li>
-A user can log off clicking on logoff in the navigation menu.
+A member can log off clicking on logoff in the navigation menu.
 </li>
 
 <li>
-A user can add a news article, modify it and delete, but can only view news items s/he did not create.
+A member can add a news article, modify it and delete, but can only view news items s/he did not create.
 </li>
 
 </ul>
