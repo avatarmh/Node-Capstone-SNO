@@ -1,5 +1,6 @@
 For demo, copy and paste [susnano.heroku.com](susnano.heroku.com) into a new tab and hit enter (see footnote for reason)
-(Recommended: be patient because it may take some time and a few attempts for reasons unbeknownst to me)
+
+####(Recommended: be patient because it may take some time and a few attempts for reasons unbeknownst to me)
 
 ## Thinkful Node Capstone
 
