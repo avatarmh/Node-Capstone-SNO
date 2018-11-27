@@ -1,4 +1,4 @@
-See demo [here](https://susnano.herokuapp.com
+See [Demo](https://susnano.herokuapp.com)
 ________________________________________________________________________
 
 ## Thinkful Node Capstone
