@@ -1,5 +1,8 @@
+[Click here for live demo] (susnano.heroku.com/)
+[Click here for live demo] (susnano.heroku.com)
 [Click here for live demo] (https://susnano.heroku.com/)
-(Recommended: open in new tab and might take several attempts for reasons unbeknownst to me)
+
+####(Recommended: open in new tab and might take several attempts for reasons unbeknownst to me)
 
 ## Thinkful Node Capstone
 
