@@ -1,4 +1,5 @@
-(Demo @ susnano.herokuapp.com (open in new tab and my take several tries for reasons unbeknownst to me)
+Run Demo @ [susnano.heroku.com](susnano.heroku.com)
+(Recommended: open in new tab and might take several attempts for reasons unbeknownst to me)
 
 ## Thinkful Node Capstone
 
