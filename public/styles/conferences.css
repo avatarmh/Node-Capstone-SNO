@@ -1,5 +1,4 @@
 header {
-    /* border: 1px solid grey; */
     position: fixed;
     background-color: white;
     top: 0;
@@ -8,18 +7,18 @@ header {
 }
 main {
     margin-top: 80px;
-    /* min-height: 98%;     */
 }
 
 .content {
     width: 95%;
 }
+
 h1 {
     font-size: 16px;
     font-weight: bold;
     margin-top: 1rem;
     text-align: left;
-    color: blue;
+    color:rgb(3, 145, 83);
 }
 
 h2 {font-size: 14px;

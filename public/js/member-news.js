@@ -15,13 +15,10 @@ $(document).ready(function() {
           "Authorization":`Bearer ${localStorage.getItem("token")}`
         },
         success: (data) => {
-            console.log(data);
-            const results = generateNewsItemsString(data.newsitems);
-            console.log('resssssss',)
+             const results = generateNewsItemsString(data.newsitems);
             $('.news').html(results);
         },
         error: (error) => {
-          console.log(error);
         }
       });
 
@@ -38,7 +35,6 @@ $(document).ready(function() {
   function generateNewsItem(item) {
     const userID = localStorage.getItem("userID");
     let formattedDate = moment(item.date).format('MM/DD/YYYY');
-    console.log('in generatenewsitem', item.id);
     return `
         <div class='news-item'>
         <h2>${item.title}</h2>

@@ -17,7 +17,7 @@ h1 {
     font-weight: bold;
     margin-top: 1rem;
     text-align: left;
-    color: blue;
+    color: #00A65E;
 }
 
 h2 {font-size: 16px;
@@ -58,7 +58,7 @@ li {
     font-size: large;
     vertical-align: middle;
     margin-left: -0.5em;
-    color: rgb(21, 163, 21);
+    color: #00A65E;
 }
 
 .mission {

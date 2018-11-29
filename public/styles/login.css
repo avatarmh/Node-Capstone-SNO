@@ -33,7 +33,7 @@ input {
 
 .new-password {
     float: right;
-    color: blue;
+    color: #00A65E;
     margin-top: 0;
     font-size: 10px;
 }
@@ -48,3 +48,9 @@ input {
     text-align: center;
 }
 
+@media only screen and (min-width: 720px) {
+    form {
+        width: 50%;
+        margin: auto;
+    }
+}

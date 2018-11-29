@@ -29,7 +29,7 @@ header {
 
 nav {
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
     padding-right: 0px;
     margin-right: 10px;
     margin-top: 34px;
@@ -143,6 +143,6 @@ button, input[type="button"] {
 @media only screen and (min-width: 576px) {
  
     .header-navigation {
-        font-size: 12px !important;
+        font-size: 14px !important;
     }
 } 

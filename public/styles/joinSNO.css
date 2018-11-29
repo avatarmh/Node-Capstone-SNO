@@ -10,7 +10,7 @@ main {
 }
 
 .membership-period-header {
-  color: blue;
+  color: #00A65E;
   font-size: 14px;
 }
 
@@ -28,7 +28,7 @@ input[type="email"] {
 
 .form-header {
   margin-top: 3rem;
-  color: blue;
+  color:#00A65E;
 }
 
 input {

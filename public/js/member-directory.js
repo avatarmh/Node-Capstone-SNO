@@ -7,7 +7,6 @@ if (!token) {
 
 $(document).ready(function() {
   const url = "api/users/"
-  console.log('in memberdirectory js')
   $.ajax({
       url,
       method: 'GET',
@@ -17,8 +16,7 @@ $(document).ready(function() {
         "Authorization":`Bearer ${localStorage.getItem("token")}`
       },    
       success: (data) => {
-        console.log(data);
-         const results = generateMembersString(data);
+        const results = generateMembersString(data);
         $('.members').html(results);
       },
       error: (error) => {
