@@ -7,6 +7,7 @@ $(document).ready(function () {
     const directory = $("#directory");
     const login = $("#login");
     const logout = $("#logout");
+    const demo = $("#demo")
     if (token) {
         news.removeClass("hide")
         directory.removeClass("hide")
@@ -14,6 +15,7 @@ $(document).ready(function () {
     } else {
         joinSNO.removeClass("hide");
         login.removeClass("hide");
+        demo.removeClass("hide");
     }
 })
 
