@@ -1,11 +1,29 @@
 See [Demo](https://susnano.herokuapp.com)
+
+4 Things to know before running the <u>demo</u>:
+<ul>
+<li>
+<u>Start demo</u> from navigation bar on logical pages
+</li>
+<li>
+<u>Demo user is automatically logged in</u> and two News items (records) owned by the user are written to the database
+</li>
+<li>
+<u> Test CRUD</u> on the NanoTech News page: all users can add a news item (Create/Post) using "+", read (Read/Get) all records, modify (Update/Put) and delete (Delete/Delete) any News Item he or she owns (Get by ID).
+</li>
+<li>
+This <u>project demonstrates real design solutions to an existing website</u> that lacked a back-end and was not designed with mobile first, responsiveness, a11y and the notion of content-driven in mind.
+</li>
+</ul>
+
+Complete report follows.
 ________________________________________________________________________
 
 ## Thinkful Node Capstone
 
 # Analysis and Redesign of an Existing Website for Responsive, Content-driven, Mobile-first Full-stack with Back-end Added, A11y and Privacy Compliance
 
-Miriam Heller, Thinkful Flex Student
+Miriam Heller, Thinkful Full-Stack Web Development Student
 
 resubmitted November 24, 2018
 

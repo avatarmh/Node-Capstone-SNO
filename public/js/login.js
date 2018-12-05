@@ -11,6 +11,7 @@ $(document).ready(function() {
     password.val('1234567890')
     username.attr('disabled', true)
     password.attr('disabled', true)
+    
   }
 
   // set up ajax request

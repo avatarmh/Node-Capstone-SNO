@@ -5,6 +5,8 @@ const jwt = require('jsonwebtoken');
 
 const config = require('../config');
 const router = express.Router();
+const records = require('./records')
+const { NewsItem } = require('../news/models');
 
 const createAuthToken = function (user) {
   return jwt.sign({ user }, config.JWT_SECRET, {
@@ -16,9 +18,22 @@ const createAuthToken = function (user) {
 
 const localAuth = passport.authenticate('local', { session: false });
 // The user provides a username and password to login
-router.post('/login', localAuth, (req, res) => {
+router.post('/login', localAuth, (req, res, next) => {
+  
+  // now create two new records
+  console.log('user', req.user)
   const authToken = createAuthToken(req.user.serialize());
-  res.json({ authToken, userID: req.user._id });
+  if (req.user.username !== 'demo@thinkful.com') {
+    return res.json({ authToken, userID: req.user._id });
+  }
+
+  NewsItem.deleteMany({ ownerID: req.user._id })
+  .then(() => {
+    NewsItem.insertMany(records).then(docs => {
+      res.json({ authToken, userID: req.user._id });
+    }).catch(next)
+  }).catch(next)
+
 });
 
 const jwtAuth = passport.authenticate('jwt', { session: false });
