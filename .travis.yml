@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: TVgApF2yMu/ExrvUC1ATKDdI04QlVnfFWdcw/+qQsYvHUbisYSil/q2bZMDhXSe8y9mkHNqANpOmJEi2Do7rBBx+7gIx6e4MyKjz6lIpj+tmXfk2eSTTmkLq811E7w58liQ/daCoAuo5HHMnmYTD7BmHCZvR+Q7eFO0FLMM0S7Dgoq7OfEWwlNEDEPH8S5x+uDF71jyohhq1/9cRvIXPEtnLssaZy0Qn+gtve5NbLdFHDgFEmCDPjErxgJMhNdgHSBcAvIoDRNIUnfobLrE/bqOfG3ZNlrmNZ+0lyB1m0wdZFvd0Y7TJR/E384cQ0RpgF28ba6iEBaonuxBo9MYXd3sRt7JVIHGR8k65B7NbnebMxPIOjP9l+7h7SQER1Cc7MDq46okrIAG0aXd8sUQnTpPrqEZLVFye/IxTbf8J76AG1o35+U5huDZ7NHDqZnMdHUqtz9peApK9yyY+h6CAlgZAhMdBblHFNbSk17yxQG09x/JNJKQdWrKmAeE3ZLjGjFtvOzEygvKuraayPwoQ82zflFaTsQlP5NOuYHnXYNHhIZ5ucFPb4fZw/SHjJC8m30TtveZ1nfH3oTXKbWKiosIHug7Y6mKJqjlQ3xfkFaRHopUqfbL97ZRbFWy4tdH+yd6dQ9S7IS7sNOMDFBtaTF62rfC3s3DuTk56ImMjDYo=
+  app: susnano
+  on:
+    repo: avatarmh/Node-Capstone-SNO
