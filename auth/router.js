@@ -24,18 +24,15 @@ router.post('/login', localAuth, (req, res, next) => {
   console.log('user', req.user)
   const authToken = createAuthToken(req.user.serialize());
 
-  NewsItem.deleteMany({ ownerID: "5bfdc1d20227b938b4ac8f69" })
-  .then(()=> {
-    if (req.user.username == 'demo@thinkful.com') {
-      NewsItem.insertMany(records).then(docs => {
-        res.json({ authToken, userID: req.user._id });
-      }).catch(next);
-    }
-    else {
+  if (req.user.username !== 'demo@thinkful.com') {
+      return res.json({ authToken, userID: req.user._id })
+  }
+  
+  NewsItem.deleteMany({ ownerID: "5bfdc1d20227b938b4ac8f69" }).then(()=> {
+    NewsItem.insertMany(records).then(docs => {
       res.json({ authToken, userID: req.user._id });
-    }
+    }).catch(next);
   }).catch(next);
-
 });
 
 

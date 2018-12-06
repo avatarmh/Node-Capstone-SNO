@@ -5,9 +5,13 @@ const router = express.Router();
 
 // GET requests
 router.get('/', (req, res) => {
+  const query = { }
+  if (req.user.userID !== "5bfdc1d20227b938b4ac8f69") {
+    query.ownerID = { $ne: "5bfdc1d20227b938b4ac8f69" }
+  }
 
   NewsItem
-    .find()
+    .find( query )
     .sort({'date':-1})
     // we're limiting because blogPosts db just in case 
     // it grows to many documents

@@ -199,13 +199,11 @@ router.post("/", (req, res) => {
       });
     })
     .then(user => {
-      console.log(user);
-      return res.status(201).json(user.serialize());
+       return res.status(201).json(user.serialize());
     })
     .catch(err => {
       // Forward validation errors on to the client, otherwise give a 500
       // error because something unexpected has happened
-      console.log(err);
       if (err.reason === "ValidationError") {
         return res.status(err.code).json(err);
       }
@@ -221,5 +219,6 @@ router.get("/", jwtAuth, (req, res) => {
     .then(users => res.json(users.map(user => user.serialize())))
     .catch(err => res.status(500).json({ message: "Internal server error" }));
 });
+
 
 module.exports = { router };
