@@ -23,18 +23,21 @@ router.post('/login', localAuth, (req, res, next) => {
   // now create two new records
   console.log('user', req.user)
   const authToken = createAuthToken(req.user.serialize());
-  if (req.user.username !== 'demo@thinkful.com') {
-    return res.json({ authToken, userID: req.user._id });
-  }
 
-  NewsItem.deleteMany({ ownerID: req.user._id })
-  .then(() => {
-    NewsItem.insertMany(records).then(docs => {
+  NewsItem.deleteMany({ ownerID: "5bfdc1d20227b938b4ac8f69" })
+  .then(()=> {
+    if (req.user.username == 'demo@thinkful.com') {
+      NewsItem.insertMany(records).then(docs => {
+        res.json({ authToken, userID: req.user._id });
+      }).catch(next);
+    }
+    else {
       res.json({ authToken, userID: req.user._id });
-    }).catch(next)
-  }).catch(next)
+    }
+  }).catch(next);
 
 });
+
 
 const jwtAuth = passport.authenticate('jwt', { session: false });
 
