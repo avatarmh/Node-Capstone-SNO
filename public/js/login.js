@@ -1,4 +1,8 @@
 'use strict';
+$(document).on("click","#new-password",function(){
+  alert("Coming soon! ");
+ });
+
 $(document).ready(function() {
   // check if demo
   var username = $("input[name=email]");
