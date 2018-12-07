@@ -1,6 +1,6 @@
 'use strict';
-$(document).on("click","#new-password",function(){
-  alert("Coming soon! ");
+$(document).on("click","#new-password",function() {
+  alert("Coming soon!");
  });
 
 $(document).ready(function() {
