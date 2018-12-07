@@ -64,7 +64,7 @@ button, input[type="button"], input[type="submit"] {
    text-align: center;
 }
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 576px) {
     form {
         width: 50%;
         margin: auto

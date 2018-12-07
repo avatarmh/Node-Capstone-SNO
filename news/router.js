@@ -6,9 +6,9 @@ const router = express.Router();
 // GET requests
 router.get('/', (req, res) => {
   const query = { }
-  if (req.user.userID !== "5bfdc1d20227b938b4ac8f69") {
-    query.ownerID = { $ne: "5bfdc1d20227b938b4ac8f69" }
-  }
+  // if (req.user.userID !== "5bfdc1d20227b938b4ac8f69") {
+  //   query.ownerID = { $ne: "5bfdc1d20227b938b4ac8f69" }
+  // }
 
   NewsItem
     .find( query )

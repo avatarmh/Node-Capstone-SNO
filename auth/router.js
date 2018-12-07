@@ -25,6 +25,7 @@ router.post('/login', localAuth, (req, res, next) => {
   const authToken = createAuthToken(req.user.serialize());
 
   if (req.user.username !== 'demo@thinkful.com') {
+    console.log(req.user.username)
       return res.json({ authToken, userID: req.user._id })
   }
   

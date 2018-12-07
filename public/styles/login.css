@@ -1,5 +1,5 @@
 header {
-     position: fixed;
+    position: fixed;
     background-color: white;
     top: 0;
     right: 0;
@@ -9,8 +9,9 @@ main {
     margin-top: 80px;
 }
 
-form {
+form.login {
     margin: 2rem 0;
+
 }
 
 form input[type="email"] {
@@ -33,7 +34,7 @@ input {
 
 .new-password {
     float: right;
-    color: #00A65E;
+    color: blue;
     margin-top: 0;
     font-size: 10px;
 }
@@ -48,9 +49,10 @@ input {
     text-align: center;
 }
 
-@media only screen and (min-width: 720px) {
-    form {
+
+@media only screen and (min-width: 576px) {
+    form.login {
         width: 50%;
-        margin: auto;
+        margin: auto
     }
 }

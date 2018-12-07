@@ -21,7 +21,7 @@ ________________________________________________________________________
 
 ## Thinkful Node Capstone
 
-# Analysis and Redesign of an Existing Website for Responsive, Content-driven, Mobile-first Full-stack with Back-end Added, A11y and Privacy Compliance
+# Analysis and Redesign of an Existing Website for Responsiveness, Content-driven, Mobile-first Full-stack with Back-end Added, A11y and Privacy Compliance
 
 Miriam Heller, Thinkful Full-Stack Web Development Student
 
